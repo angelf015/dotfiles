@@ -5,3 +5,4 @@ udiskie -t &
 xmodmap ~/.Xmodmap
 setxkbmap latam &
 mpd &
+fish wallpaper.fish &

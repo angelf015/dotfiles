@@ -13,3 +13,6 @@ alias gp "git push"
 alias gs "git status"
 alias gl "git log"
 set -gx PATH $HOME/.local/bin $PATH
+
+starship init fish | source
+
