@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Directorio donde se encuentran las imágenes
+fondos="/home/archi/wallpaper"
+
+# Tiempo en segundos entre cada cambio de fondo
+intervalo=300
+
+# Bucle infinito
+while true; do
+    # Obtén el nombre de una imagen aleatoria del directorio de fondos
+    fondo=$(ls $fondos | shuf -n 1)
+
+    # Establece el fondo de escritorio
+    feh --bg-fill "$fondos/$fondo"
+
+    # Espera el intervalo especificado
+    sleep $intervalo
+done

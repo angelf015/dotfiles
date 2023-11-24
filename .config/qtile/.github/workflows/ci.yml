@@ -1,0 +1,49 @@
+name: check
+
+on: [ push, pull_request ]
+
+jobs:
+  config:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ '3.10' ]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libxkbcommon-dev
+
+          pip install mypy psutil
+          pip install git+https://github.com/qtile/qtile@master
+          pip install git+https://github.com/elParaguayo/qtile-extras@main
+
+      - run: qtile --version
+
+      - name: "cmd: black"
+        uses: psf/black@stable
+        with:
+          options: "--check --diff"
+          src: "."
+
+      - name: "cmd: mypy"
+        if: success() || failure()
+        run: mypy config.py
+
+      - name: "cmd: python"
+        if: success() || failure()
+        run: python config.py
+
+      - name: "cmd: qtile check"
+        if: success() || failure()
+        run: qtile check -c ./config.py
