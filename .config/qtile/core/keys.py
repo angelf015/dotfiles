@@ -17,16 +17,16 @@ if not cfg.term:
 
 keys = [Key(*key) for key in [  # type: ignore
     # Switch between windows in current stack pane
-    ([mod], "h", lazy.layout.down()),
-    ([mod], "j", lazy.layout.up()),
-    ([mod], "k", lazy.layout.left()),
-    ([mod], "l", lazy.layout.right()),
+    ([mod], "down", lazy.layout.down()),
+    ([mod], "up", lazy.layout.up()),
+    ([mod], "left", lazy.layout.left()),
+    ([mod], "right", lazy.layout.right()),
 
     # move windows between columns
-    ([mod, "shift"], "h", lazy.layout.shuffle_left()),
-    ([mod, "shift"], "j", lazy.layout.shuffle_down()),
-    ([mod, "shift"], "k", lazy.layout.shuffle_up()),
-    ([mod, "shift"], "l", lazy.layout.shuffle_right()),
+    ([mod], "h", lazy.layout.shuffle_left()),
+    ([mod], "j", lazy.layout.shuffle_down()),
+    ([mod], "k", lazy.layout.shuffle_up()),
+    ([mod], "l", lazy.layout.shuffle_right()),
 
     # increase/decrease window size
     ([mod], "u", lazy.layout.shrink()),
@@ -66,7 +66,8 @@ keys = [Key(*key) for key in [  # type: ignore
 
     # app launcher
     ([mod], "m", lazy.spawn(".config/rofi/bin/launcher")),
-    ([mod], "r", lazy.spawn("rofi -show drun")),
+    ([mod, "shift"], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "r", lazy.spawn("sh .config/rofi/bin/music")),
 
     # web browser
     ([mod], "b", lazy.spawn(cfg.browser)),

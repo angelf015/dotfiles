@@ -88,7 +88,7 @@ mpd = lambda bg, fg: [
         scroll_interval=.04,
         scroll_repeat=True,
         scroll_delay=10,
-        port=7777
+        port=6600
     )
 ]
 

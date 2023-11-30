@@ -49,7 +49,7 @@ floating_layout = layout.Floating(
             "maketag",
             "pavucontrol",
             "pinentry-gtk-2",
-            "kitty",
+            "arandr",
             "qt5ct",
             "ssh-askpass",
             "steam",
