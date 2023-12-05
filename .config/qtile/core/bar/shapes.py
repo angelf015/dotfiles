@@ -37,6 +37,7 @@ groups = lambda bg: GroupBox(
         palette.yellow,
         palette.red,
         palette.blue,
+        palette.peach,
         palette.mauve,
         palette.green,
     ],
