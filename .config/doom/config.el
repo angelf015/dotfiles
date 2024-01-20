@@ -21,7 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Fira Code Nerd Font" :size 13)
+(setq doom-font (font-spec :family "Fira Code Nerd Font" :size 15)
       doom-variable-pitch-font (font-spec :family "Fira Code Nerd Font" :size 14))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -81,3 +81,142 @@
 
 (setq-default explicit-shell-file-name (executable-find "fish"))
 
+(use-package centaur-tabs
+  :init
+  (setq centaur-tabs-enable-key-bindings t)
+  :config
+  (setq centaur-tabs-style "bar"
+        centaur-tabs-height 24
+        centaur-tabs-set-icons t
+        centaur-tabs-show-new-tab-button t
+        centaur-tabs-set-modified-marker t
+        centaur-tabs-show-navigation-buttons t
+        centaur-tabs-set-bar 'under
+        centaur-tabs-show-count nil
+        centaur-tabs-cycle-scope 'tabs
+        ;; centaur-tabs-label-fixed-length 15
+        ;; centaur-tabs-gray-out-icons 'buffer
+        ;; centaur-tabs-plain-icons t
+        x-underline-at-descent-line t
+        centaur-tabs-left-edge-margin nil)
+  (centaur-tabs-change-fonts (face-attribute 'default :font) 110)
+  (centaur-tabs-headline-match)
+  ;; (centaur-tabs-enable-buffer-alphabetical-reordering)
+  ;; (setq centaur-tabs-adjust-buffer-order t)
+  (centaur-tabs-mode t)
+  (setq uniquify-separator "/")
+  (setq uniquify-buffer-name-style 'forward)
+  (defun centaur-tabs-buffer-groups ()
+    "`centaur-tabs-buffer-groups' control buffers' group rules.
+
+Group centaur-tabs with mode if buffer is derived from `eshell-mode' `emacs-lisp-mode' `dired-mode' `org-mode' `magit-mode'.
+All buffer name start with * will group to \"Emacs\".
+Other buffer group by `centaur-tabs-get-group-name' with project name."
+    (list
+     (cond
+      ;; ((not (eq (file-remote-p (buffer-file-name)) nil))
+      ;; "Remote")
+      ((or (string-equal "*" (substring (buffer-name) 0 1))
+           (memq major-mode '(magit-process-mode
+                              magit-status-mode
+                              magit-diff-mode
+                              magit-log-mode
+                              magit-file-mode
+                              magit-blob-mode
+                              magit-blame-mode
+                              )))
+       "Emacs")
+      ((derived-mode-p 'prog-mode)
+       "Editing")
+      ((derived-mode-p 'dired-mode)
+       "Dired")
+      ((memq major-mode '(helpful-mode
+                          help-mode))
+       "Help")
+      ((memq major-mode '(org-mode
+                          org-agenda-clockreport-mode
+                          org-src-mode
+                          org-agenda-mode
+                          org-beamer-mode
+                          org-indent-mode
+                          org-bullets-mode
+                          org-cdlatex-mode
+                          org-agenda-log-mode
+                          diary-mode))
+       "OrgMode")
+      (t
+       (centaur-tabs-get-group-name (current-buffer))))))
+  :hook
+  (dashboard-mode . centaur-tabs-local-mode)
+  (term-mode . centaur-tabs-local-mode)
+  (calendar-mode . centaur-tabs-local-mode)
+  (org-agenda-mode . centaur-tabs-local-mode)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward)
+  ("C-S-<prior>" . centaur-tabs-move-current-tab-to-left)
+  ("C-S-<next>" . centaur-tabs-move-current-tab-to-right)
+  (:map evil-normal-state-map
+        ("g t" . centaur-tabs-forward)
+        ("g T" . centaur-tabs-backward)))
+
+(add-to-list 'load-path "~/.emacs.d/plugins/evil-markdown")
+(require 'evil-markdown)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+
+(map! :map markdown-mode-map
+      :localleader
+      "p" #'markdown-preview)
+
+
+(condition-case nil
+    (require 'use-package)
+  (file-error
+   (require 'package)
+   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+   (package-initialize)
+   (package-refresh-contents)
+   (package-install 'use-package)
+   (setq use-package-always-ensure t)
+   (require 'use-package)))
+
+
+(require 'lsp-java)
+(add-hook 'java-mode-hook #'lsp)
+
+(condition-case nil
+    (require 'use-package)
+  (file-error
+   (require 'package)
+   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+   (package-initialize)
+   (package-refresh-contents)
+   (package-install 'use-package)
+   (setq use-package-always-ensure t)
+   (require 'use-package)))
+
+(use-package projectile)
+(use-package flycheck)
+(use-package yasnippet :config (yas-global-mode))
+(use-package lsp-mode :hook ((lsp-mode . lsp-enable-which-key-integration)))
+(use-package hydra)
+(use-package company)
+(use-package lsp-ui)
+(use-package which-key :config (which-key-mode))
+(use-package lsp-java :config (add-hook 'java-mode-hook 'lsp))
+(use-package dap-mode :after lsp-mode :config (dap-auto-configure-mode))
+(use-package dap-java :ensure nil)
+(use-package helm-lsp)
+(use-package lsp-treemacs)
+
+(require 'lsp-java-boot)
+
+;; to enable the lenses
+(add-hook 'lsp-mode-hook #'lsp-lens-mode)
+(add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
+
+
+(add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)

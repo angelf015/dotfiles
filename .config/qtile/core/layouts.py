@@ -7,7 +7,8 @@ config = {
     "border_focus": palette.pink,
     "border_normal": palette.base,
     "border_width": 0,
-    "margin": 10,
+    # "margin": 10,
+    "margin": 0,
     "single_border_width": 0,
     "single_margin": 10,
 }
@@ -26,8 +27,9 @@ layouts = [
         margin=8,
     ),
     layout.Bsp(**config),
-    layout.Matrix(columns=3, **config),
+
     layout.RatioTile(**config),
+    layout.Matrix(columns=2, **config),
 ]
 
 floating_layout = layout.Floating(

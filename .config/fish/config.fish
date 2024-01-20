@@ -16,3 +16,7 @@ set -gx PATH $HOME/.local/bin $PATH
 
 starship init fish | source
 
+#et -gx PATH $PATH ~/.sdkman/bin
+
+#set -gx PATH $HOME/.sdkman/bin/sdkman-init.sh
+#set -gx PATH $PATH ~/.sdkman/candidates/java/18.0.1-open/bin/

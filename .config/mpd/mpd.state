@@ -1,10 +1,10 @@
-sw_volume: 96
+sw_volume: 80
 audio_device_state:0:ALSA [Bit-perfect]
 audio_device_state:1:PulseAudio
 audio_device_state:1:Visualizer
 state: pause
-current: 18
-time: 137.577000
+current: 139
+time: 22.241000
 random: 1
 repeat: 1
 single: 0
@@ -13,369 +13,144 @@ crossfade: 1
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Hillsong_en_Español_Océanos_Donde_Mis_Pies_Pueden_Fallar.flac
-1:Hillsong en Español - Quien Dices Que Soy.flac
-2:Hillsong Worship - Quien Dices Que Soy.flac
-3:Hillsong Worship - A Ti Me Rindo.flac
-4:Coldplay - Don't Panic.flac
-5:Coldplay - Shiver.flac
-6:Coldplay - Spies.flac
-7:Coldplay - Yellow.flac
-8:Coldplay - Trouble.flac
-9:Coldplay - We Never Change.flac
-10:Coldplay_Everything's_Not_Lost_Includes_Hidden_Track_'Life_Is_For.flac
-11:Coldplay - In My Place.flac
-12:Coldplay - The Scientist.flac
-13:Coldplay - Clocks.flac
-14:Coldplay - Daylight.flac
-15:Coldplay - Warning Sign.flac
-16:Coldplay - A Rush of Blood to the Head.flac
-17:Coldplay - What If.flac
-18:Coldplay - White Shadows.flac
-19:Coldplay - Fix You.flac
-20:Coldplay - Talk.flac
-21:Coldplay - Speed of Sound.flac
-22:Coldplay - Low.flac
-23:Coldplay - The Hardest Part.flac
-24:Coldplay - Twisted Logic.flac
-25:Coldplay - Viva La Vida.flac
-26:Viva_La_Vida_or_Death_and_All_His_Friends_CD_1_TRACK_8_FLAC.flac
-27:Mylo Xyloto CD 1 TRACK 2 (FLAC).flac
-28:Coldplay - Paradise.flac
-29:Coldplay - Charlie Brown.flac
-30:Coldplay - Every Teardrop Is a Waterfall.flac
-31:Ghost Stories CD 1 TRACK 1 (FLAC).flac
-32:Coldplay - Magic.flac
-33:Coldplay - Ink.flac
-34:Coldplay - True Love.flac
-35:Coldplay - A Sky Full of Stars.flac
-36:Coldplay - A Head Full of Dreams.flac
-37:A Head Full of Dreams CD 1 TRACK 2 (FLAC).flac
-38:Coldplay - Hymn for the Weekend.flac
-39:Coldplay - Everglow.flac
-40:A Head Full of Dreams CD 1 TRACK 6 (FLAC).flac
-41:A Head Full of Dreams CD 1 TRACK 9 (FLAC).flac
-42:Coldplay - Up&Up.flac
-43:Coldplay - Daddy.flac
-44:Everyday Life CD 2 TRACK 6 (FLAC).flac
-45:Everyday Life CD 1 TRACK 7 (FLAC).flac
-46:Everyday Life CD 2 TRACK 2 (FLAC).flac
-47:Everyday Life CD 2 TRACK 4 (FLAC).flac
-48:Everyday Life CD 2 TRACK 7 (FLAC).flac
-49:Everyday Life CD 2 TRACK 8 (FLAC).flac
-50:Dead By Sunrise - Fire.flac
-51:Dead By Sunrise - Too Late.flac
-52:Dead By Sunrise - Crawl Back In.flac
-53:Dead By Sunrise - Let Down.flac
-54:Dead By Sunrise - Give Me Your Name.flac
-55:Dead By Sunrise - Into You.flac
-56:Dead By Sunrise - Walking in Circles.flac
-57:Dead By Sunrise - In the Darkness.flac
-58:Generacion 12 - Vuelvo a Casa.flac
-59:Generacion 12 - Encontré.flac
-60:Generacion_12_Quiero_Conocer_a_Jesús_Yeshua___Nuestro_Dios.flac
-61:Hillsong UNITED - Oceans (Where Feet May Fail).flac
-62:Hillsong Worship - Who You Say I Am.flac
-63:Hillsong Worship - So Will I (100 Billion X).flac
-64:Night Visions (Deluxe) CD 1 TRACK 1 (FLAC).flac
-65:Night Visions (Deluxe) CD 1 TRACK 2 (FLAC).flac
-66:Night Visions (Deluxe) CD 1 TRACK 3 (FLAC).flac
-67:Night Visions (Deluxe) CD 1 TRACK 4 (FLAC).flac
-68:Night Visions (Deluxe) CD 1 TRACK 5 (FLAC).flac
-69:Night Visions (Deluxe) CD 1 TRACK 6 (FLAC).flac
-70:Night Visions (Deluxe) CD 1 TRACK 7 (FLAC).flac
-71:Imagine Dragons - Nothing Left To Say _ Rocks (Medley).flac
-72:Night Visions (Deluxe) CD 1 TRACK 14 (FLAC).flac
-73:Night Visions (Deluxe) CD 1 TRACK 15 (FLAC).flac
-74:Night Visions (Deluxe) CD 1 TRACK 16 (FLAC).flac
-75:Night Visions (Deluxe) CD 1 TRACK 17 (FLAC).flac
-76:Night Visions (Deluxe) CD 1 TRACK 18 (FLAC).flac
-77:Smoke + Mirrors CD 1 TRACK 3 (FLAC).flac
-78:Smoke + Mirrors CD 1 TRACK 5 (FLAC).flac
-79:Smoke + Mirrors CD 1 TRACK 6 (FLAC).flac
-80:Smoke + Mirrors CD 1 TRACK 7 (FLAC).flac
-81:Smoke + Mirrors CD 1 TRACK 8 (FLAC).flac
-82:Smoke + Mirrors CD 1 TRACK 9 (FLAC).flac
-83:Smoke + Mirrors CD 1 TRACK 10 (FLAC).flac
-84:Smoke + Mirrors CD 1 TRACK 11 (FLAC).flac
-85:Smoke + Mirrors CD 1 TRACK 12 (FLAC).flac
-86:Smoke + Mirrors CD 1 TRACK 13 (FLAC).flac
-87:Evolve CD 1 TRACK 1 (FLAC).flac
-88:Evolve CD 1 TRACK 2 (FLAC).flac
-89:Evolve CD 1 TRACK 3 (FLAC).flac
-90:Imagine Dragons - Believer.flac
-91:Evolve CD 1 TRACK 6 (FLAC).flac
-92:Evolve CD 1 TRACK 7 (FLAC).flac
-93:Evolve CD 1 TRACK 9 (FLAC).flac
-94:Evolve CD 1 TRACK 10 (FLAC).flac
-95:Evolve CD 1 TRACK 11 (FLAC).flac
-96:Imagine Dragons - Natural.flac
-97:Origins (Deluxe) CD 1 TRACK 7 (FLAC).flac
-98:Origins (Deluxe) CD 1 TRACK 13 (FLAC).flac
-99:Imagine_Dragons_Enemy_from_the_series_Arcane_League_of_Legends.flac
-100:Lauren Daigle - Rescue.flac
-101:Lauren Daigle - You Say.flac
-102:Lauren Daigle - Look Up Child.flac
-103:Lauren Daigle - Tú Dices.flac
-104:Lauren Daigle - Thank God I Do.flac
-105:Un Corazón - Espíritu ven (Mi oración).flac
-106:Un Corazón - Vuelvo a ti feat. Lowsan Melgar.flac
-107:LEDGER - Not Dead Yet.flac
-108:LEDGER - Warrior (feat. John Cooper).flac
-109:LEDGER - Iconic.flac
-110:LEDGER - My Arms.flac
-111:Ledger - Completely.flac
-112:The 2nd Law CD 1 TRACK 1 (FLAC).flac
-113:The 2nd Law CD 1 TRACK 5 (FLAC).flac
-114:Drones CD 1 TRACK 5 (FLAC).flac
-115:Drones CD 1 TRACK 8 (FLAC).flac
-116:Muse - Aftermath.flac
-117:Paramore - All We Know.flac
-118:Paramore - Pressure.flac
-119:Paramore - Emergency.flac
-120:Paramore - Brighter.flac
-121:Paramore - Here We Go Again.flac
-122:Paramore - Never Let This Go.flac
-123:Paramore - Whoa.flac
-124:Paramore - Conspiracy.flac
-125:Paramore - Franklin.flac
-126:Riot! CD 1 TRACK 1 (FLAC).flac
-127:Riot! CD 1 TRACK 2 (FLAC).flac
-128:Riot! CD 1 TRACK 3 (FLAC).flac
-129:Riot! CD 1 TRACK 5 (FLAC).flac
-130:Riot! CD 1 TRACK 6 (FLAC).flac
-131:Riot! CD 1 TRACK 7 (FLAC).flac
-132:Riot! CD 1 TRACK 8 (FLAC).flac
-133:Riot! CD 1 TRACK 9 (FLAC).flac
-134:Riot! CD 1 TRACK 10 (FLAC).flac
-135:Riot! CD 1 TRACK 11 (FLAC).flac
-136:Riot! CD 1 TRACK 12 (FLAC).flac
-137:Paramore - Misguided Ghosts.flac
-138:Paramore - Careful.flac
-139:Paramore - Ignorance.flac
-140:Paramore - Playing God.flac
-141:Brand New Eyes CD 1 TRACK 4 (FLAC).flac
-142:Paramore - Turn It Off.flac
-143:Paramore - Feeling Sorry.flac
-144:Paramore - Looking Up.flac
-145:Paramore - Where the Lines Overlap.flac
-146:Paramore - All I Wanted.flac
-147:Paramore CD 1 TRACK 1 (FLAC).flac
-148:Paramore CD 1 TRACK 2 (FLAC).flac
-149:Paramore CD 1 TRACK 3 (FLAC).flac
-150:Paramore CD 1 TRACK 4 (FLAC).flac
-151:Paramore - Ain't It Fun.flac
-152:Paramore CD 1 TRACK 7 (FLAC).flac
-153:Paramore CD 1 TRACK 8 (FLAC).flac
-154:Paramore - Still into You.flac
-155:Paramore CD 1 TRACK 10 (FLAC).flac
-156:Paramore CD 1 TRACK 12 (FLAC).flac
-157:Paramore CD 1 TRACK 13 (FLAC).flac
-158:Paramore CD 1 TRACK 14 (FLAC).flac
-159:Paramore CD 1 TRACK 16 (FLAC).flac
-160:Paramore CD 1 TRACK 17 (FLAC).flac
-161:Paramore - Hard Times.flac
-162:Paramore - Rose-Colored Boy.flac
-163:Paramore - Told You So.flac
-164:Paramore - Forgiveness.flac
-165:Paramore - Pool.flac
-166:Paramore - Grudges.flac
-167:Paramore - Caught in the Middle.flac
-168:After Laughter CD 1 TRACK 10 (FLAC).flac
-169:Paramore - Tell Me How.flac
-170:Paramore - This Is Why.flac
-171:Paramore - Big Man, Little Dignity.flac
-172:Paramore - You First.flac
-173:Paramore - Liar.flac
-174:Paramore - Crave.flac
-175:Skillet - Collide.flac
-176:Comatose CD 1 TRACK 1 (FLAC).flac
-177:Skillet - The Last Night.flac
-178:Skillet - Yours to Hold.flac
-179:Comatose CD 1 TRACK 4 (FLAC).flac
-180:Comatose CD 1 TRACK 5 (FLAC).flac
-181:Skillet - The Older I Get.flac
-182:Comatose CD 1 TRACK 8 (FLAC).flac
-183:Skillet - Say Goodbye.flac
-184:Comatose CD 1 TRACK 10 (FLAC).flac
-185:Skillet - Looking for Angels.flac
-186:Skillet - Monster.flac
-187:Skillet - Don't Wake Me.flac
-188:Skillet - Awake and Alive.flac
-189:Skillet - One Day Too Late.flac
-190:Skillet - It's Not Me, It's You.flac
-191:Skillet - Believe.flac
-192:Skillet - Forgiven.flac
-193:Skillet - Sometimes.flac
-194:Skillet - Never Surrender.flac
-195:Skillet - Lucy.flac
-196:Skillet - Would It Matter.flac
-197:Rise (Deluxe Edition) CD 1 TRACK 1 (FLAC).flac
-198:Rise (Deluxe Edition) CD 1 TRACK 2 (FLAC).flac
-199:Skillet - Good to Be Alive.flac
-200:Rise (Deluxe Edition) CD 1 TRACK 5 (FLAC).flac
-201:Skillet - American Noise.flac
-202:Skillet - Madness in Me.flac
-203:Skillet - Salvation.flac
-204:Skillet - Fire and Fury.flac
-205:Rise (Deluxe Edition) CD 1 TRACK 10 (FLAC).flac
-206:Skillet - Hard to Find.flac
-207:Rise (Deluxe Edition) CD 1 TRACK 12 (FLAC).flac
-208:Skillet - Battle Cry.flac
-209:Rise (Deluxe Edition) CD 1 TRACK 14 (FLAC).flac
-210:Skillet - Freakshow.flac
-211:Unleashed CD 1 TRACK 1 (FLAC).flac
-212:Skillet - Back from the Dead.flac
-213:Skillet - Stars.flac
-214:Skillet - I Want to Live.flac
-215:Unleashed CD 1 TRACK 5 (FLAC).flac
-216:Skillet - Famous.flac
-217:Skillet - Lions.flac
-218:Unleashed CD 1 TRACK 8 (FLAC).flac
-219:Unleashed CD 1 TRACK 9 (FLAC).flac
-220:Unleashed CD 1 TRACK 10 (FLAC).flac
-221:Skillet - Saviors of the World.flac
-222:Unleashed CD 1 TRACK 12 (FLAC).flac
-223:Victorious CD 1 TRACK 1 (FLAC).flac
-224:Victorious CD 1 TRACK 3 (FLAC).flac
-225:Victorious CD 1 TRACK 4 (FLAC).flac
-226:Victorious CD 1 TRACK 5 (FLAC).flac
-227:Skillet - Rise Up.flac
-228:Victorious CD 1 TRACK 7 (FLAC).flac
-229:Victorious CD 1 TRACK 8 (FLAC).flac
-230:Skillet - Reach.flac
-231:Victorious CD 1 TRACK 10 (FLAC).flac
-232:Victorious CD 1 TRACK 11 (FLAC).flac
-233:Skillet - Back to Life.flac
-234:Twenty One Pilots - Implicit Demand For Proof.mp3
-235:Twenty One Pilots - Fall Away.mp3
-236:Twenty One Pilots - The Pantaloon.mp3
-237:Twenty One Pilots - Addict With A Pen.mp3
-238:Twenty One Pilots - Friend, Please.mp3
-239:Twenty One Pilots - Johnny Boy.mp3
-240:Twenty One Pilots - Air Catcher.mp3
-241:Twenty One Pilots - Trapdoor.mp3
-242:Twenty One Pilots - A Car, a Torch, a Death.mp3
-243:Twenty One Pilots - Taxi Cab.mp3
-244:Twenty One Pilots - Before You Start Your Day.mp3
-245:Twenty One Pilots - Isle Of Flightless Birds.mp3
-246:Twenty One Pilots - Guns For Hands.mp3
-247:Twenty One Pilots - Holding On To You.mp3
-248:Twenty One Pilots - Ode To Sleep.mp3
-249:Twenty One Pilots - Slowtown.mp3
-250:Regional At Best CD 1 TRACK 5 (FLAC).flac
-251:Twenty One Pilots - Forest.mp3
-252:Twenty One Pilots - Glowing Eyes.mp3
-253:Twenty One Pilots - Kitchen Sink.mp3
-254:Twenty One Pilots - Anathema.mp3
-255:Twenty One Pilots - Lovely.mp3
-256:Twenty One Pilots - Ruby.mp3
-257:Regional At Best CD 1 TRACK 12 (FLAC).flac
-258:Twenty One Pilots - Be Concerned.mp3
-259:Twenty One Pilots - Clear.mp3
-260:Twenty One Pilots - Ode to Sleep.flac
-261:Vessel CD 1 TRACK 2 (FLAC).flac
-262:Twenty One Pilots - Migraine.flac
-263:Vessel CD 1 TRACK 4 (FLAC).flac
-264:Vessel CD 1 TRACK 5 (FLAC).flac
-265:Twenty One Pilots - Semi-Automatic.flac
-266:Vessel CD 1 TRACK 7 (FLAC).flac
-267:Vessel CD 1 TRACK 8 (FLAC).flac
-268:Twenty One Pilots - Guns for Hands.flac
-269:Vessel CD 1 TRACK 11 (FLAC).flac
-270:Twenty One Pilots - Truce.flac
-271:Twenty One Pilots - Heavydirtysoul.flac
-272:Twenty One Pilots - Stressed Out.flac
-273:Twenty One Pilots - Ride.flac
-274:Twenty One Pilots - Fairly Local.flac
-275:Twenty One Pilots - Tear in My Heart.flac
-276:Twenty One Pilots - Lane Boy.flac
-277:Blurryface CD 1 TRACK 7 (FLAC).flac
-278:Blurryface CD 1 TRACK 8 (FLAC).flac
-279:Twenty One Pilots - Polarize.flac
-280:Blurryface CD 1 TRACK 10 (FLAC).flac
-281:Blurryface CD 1 TRACK 11 (FLAC).flac
-282:Blurryface CD 1 TRACK 12 (FLAC).flac
-283:Blurryface CD 1 TRACK 13 (FLAC).flac
-284:Blurryface CD 1 TRACK 14 (FLAC).flac
-285:Trench CD 1 TRACK 3 (FLAC).flac
-286:Trench CD 1 TRACK 4 (FLAC).flac
-287:Trench CD 1 TRACK 5 (FLAC).flac
-288:Trench CD 1 TRACK 6 (FLAC).flac
-289:Trench CD 1 TRACK 9 (FLAC).flac
-290:Trench CD 1 TRACK 10 (FLAC).flac
-291:Trench CD 1 TRACK 11 (FLAC).flac
-292:Trench CD 1 TRACK 13 (FLAC).flac
-293:Trench CD 1 TRACK 14 (FLAC).flac
-294:Twice - Mi Corazón Late Por Ti.flac
-295:Twice - Oh Gran Rey.flac
-296:Twice - Por La Causa De Cristo.flac
-297:Twice - El Que Resucitó.flac
-298:Twice - Sana Nuestra Nación.flac
-299:Twice - Valiente Seré.flac
-300:Twice - Asombro.flac
-301:Twice - Invades Este Lugar.flac
-302:Twice - Extravagante.flac
-303:Twice - Me Alegraré.flac
-304:Twice - El Cordero y El León.flac
-305:Twice - Por Siempre Cantaré.flac
-306:Twice - Tu Palabra.flac
-307:Twice - Hermoso Nombre.flac
-308:Twice - Santo Espíritu.flac
-309:Twice - Rey De Los Cielos.flac
-310:Twice - Ya No Soy Esclavo.flac
-311:Twice - Inmenso Amor.flac
-312:Twice - Por Siempre y Siempre.flac
-313:Twice - Eres Mi Padre (Salmo 18).flac
-314:Twice - En Jesús.flac
-315:Twice - Creo En Ti.flac
-316:Twice - En Ti Yo Confiaré.flac
-317:Twice - En Tu Libertad.flac
-318:Twice - Por La Cruz.flac
-319:Twice - Salmo 34.flac
-320:Un Corazón - Jesucristo basta.flac
-321:Un Corazón - SALMO 23 feat. Marco Barrientos.flac
-322:Un Corazón - Carta de amor.flac
-323:Un Corazón - Más Que Nunca.flac
-324:Un Corazón - Cielo En La Tierra.flac
-325:Un Corazón - Tus Palabras.flac
-326:Un Corazón - Sueños.flac
-327:Within Temptation - Mother Earth.flac
-328:Within Temptation - Our Farewell.flac
-329:Within Temptation - See Who I Am.flac
-330:Within Temptation - Jillian (I'd Give My Heart).flac
-331:Within Temptation - Stand My Ground.flac
-332:Within Temptation - Forsaken.flac
-333:Within Temptation - Angels.flac
-334:Within Temptation - Memories.flac
-335:Within Temptation - Aquarius.flac
-336:Within Temptation - It's the Fear (Demo Version).flac
-337:Within Temptation - Somewhere.flac
-338:Within Temptation - A Dangerous Mind.flac
-339:Within Temptation - The Swan Song.flac
-340:Within Temptation - Destroyed (Demo Version).flac
-341:Within Temptation - Shot in the Dark.flac
-342:Within Temptation - In the Middle of the Night.flac
-343:Within Temptation - Faster.flac
-344:Within Temptation - Fire and Ice.flac
-345:Within Temptation - Iron.flac
-346:Within Temptation - Where is the Edge.flac
-347:Within Temptation - Sinéad.flac
-348:Within Temptation - Lost.flac
-349:Within Temptation - Murder.flac
-350:Within Temptation - A Demon's Fate.flac
-351:Within Temptation - Stairway to the Skies.flac
-352:Within Temptation - The Last Dance.flac
-353:Within Temptation - I Don't Wanna.flac
-354:Within Temptation - Empty Eyes.flac
-355:Within Temptation - Let Us Burn.flac
-356:Within Temptation - The Reckoning.flac
-357:Within Temptation - Endless War.flac
-358:Within Temptation - Raise Your Banner.flac
-359:Within Temptation - Supernova.flac
-360:Within Temptation - Holy Ground.flac
-361:Within Temptation - In Vain.flac
-362:Within Temptation - Firelight.flac
-363:Within Temptation - Mad World.flac
-364:Within Temptation - Mercy Mirror.flac
+0:Hillsong en Español - Quien Dices Que Soy.flac
+1:Hillsong Worship - Quien Dices Que Soy.flac
+2:Hillsong Worship - A Ti Me Rindo.flac
+3:Coldplay - Shiver.flac
+4:Coldplay - Trouble.flac
+5:Coldplay - We Never Change.flac
+6:Coldplay_Everything's_Not_Lost_Includes_Hidden_Track_'Life_Is_For.flac
+7:Coldplay - Fix You.flac
+8:Coldplay - Low.flac
+9:Coldplay - Twisted Logic.flac
+10:Coldplay - Paradise.flac
+11:Coldplay - True Love.flac
+12:Coldplay - A Head Full of Dreams.flac
+13:Coldplay - Daddy.flac
+14:Everyday Life CD 2 TRACK 4 (FLAC).flac
+15:Dead By Sunrise - Fire.flac
+16:Dead By Sunrise - Too Late.flac
+17:Dead By Sunrise - Crawl Back In.flac
+18:Dead By Sunrise - Give Me Your Name.flac
+19:Dead By Sunrise - In the Darkness.flac
+20:Generacion 12 - Vuelvo a Casa.flac
+21:Generacion 12 - Encontré.flac
+22:Generacion_12_Quiero_Conocer_a_Jesús_Yeshua___Nuestro_Dios.flac
+23:Hillsong Worship - Who You Say I Am.flac
+24:Night Visions (Deluxe) CD 1 TRACK 2 (FLAC).flac
+25:Night Visions (Deluxe) CD 1 TRACK 5 (FLAC).flac
+26:Night Visions (Deluxe) CD 1 TRACK 17 (FLAC).flac
+27:Smoke + Mirrors CD 1 TRACK 6 (FLAC).flac
+28:Smoke + Mirrors CD 1 TRACK 8 (FLAC).flac
+29:Smoke + Mirrors CD 1 TRACK 9 (FLAC).flac
+30:Smoke + Mirrors CD 1 TRACK 11 (FLAC).flac
+31:Smoke + Mirrors CD 1 TRACK 13 (FLAC).flac
+32:Evolve CD 1 TRACK 3 (FLAC).flac
+33:Imagine Dragons - Believer.flac
+34:Evolve CD 1 TRACK 6 (FLAC).flac
+35:Evolve CD 1 TRACK 7 (FLAC).flac
+36:Evolve CD 1 TRACK 9 (FLAC).flac
+37:Evolve CD 1 TRACK 10 (FLAC).flac
+38:Imagine Dragons - Natural.flac
+39:Lauren Daigle - Rescue.flac
+40:Lauren Daigle - Tú Dices.flac
+41:Lauren Daigle - Thank God I Do.flac
+42:Un Corazón - Espíritu ven (Mi oración).flac
+43:LEDGER - Not Dead Yet.flac
+44:LEDGER - Warrior (feat. John Cooper).flac
+45:Ledger - Completely.flac
+46:The 2nd Law CD 1 TRACK 5 (FLAC).flac
+47:Muse - Aftermath.flac
+48:Paramore - Emergency.flac
+49:Paramore - Here We Go Again.flac
+50:Paramore - Whoa.flac
+51:Paramore - Franklin.flac
+52:Riot! CD 1 TRACK 1 (FLAC).flac
+53:Riot! CD 1 TRACK 2 (FLAC).flac
+54:Riot! CD 1 TRACK 3 (FLAC).flac
+55:Riot! CD 1 TRACK 5 (FLAC).flac
+56:Riot! CD 1 TRACK 10 (FLAC).flac
+57:Paramore - Ignorance.flac
+58:Brand New Eyes CD 1 TRACK 4 (FLAC).flac
+59:Paramore CD 1 TRACK 1 (FLAC).flac
+60:Paramore CD 1 TRACK 2 (FLAC).flac
+61:Paramore CD 1 TRACK 3 (FLAC).flac
+62:Paramore CD 1 TRACK 4 (FLAC).flac
+63:Paramore - Ain't It Fun.flac
+64:Paramore CD 1 TRACK 8 (FLAC).flac
+65:Paramore CD 1 TRACK 10 (FLAC).flac
+66:Paramore CD 1 TRACK 12 (FLAC).flac
+67:Paramore CD 1 TRACK 14 (FLAC).flac
+68:Paramore CD 1 TRACK 17 (FLAC).flac
+69:Paramore - Rose-Colored Boy.flac
+70:Paramore - Grudges.flac
+71:After Laughter CD 1 TRACK 10 (FLAC).flac
+72:Paramore - You First.flac
+73:Paramore - Liar.flac
+74:Comatose CD 1 TRACK 1 (FLAC).flac
+75:Comatose CD 1 TRACK 5 (FLAC).flac
+76:Skillet - Say Goodbye.flac
+77:Comatose CD 1 TRACK 10 (FLAC).flac
+78:Skillet - Monster.flac
+79:Skillet - Awake and Alive.flac
+80:Skillet - It's Not Me, It's You.flac
+81:Skillet - Sometimes.flac
+82:Skillet - Lucy.flac
+83:Skillet - Salvation.flac
+84:Skillet - Fire and Fury.flac
+85:Skillet - Battle Cry.flac
+86:Skillet - Freakshow.flac
+87:Skillet - Back from the Dead.flac
+88:Skillet - Famous.flac
+89:Unleashed CD 1 TRACK 8 (FLAC).flac
+90:Victorious CD 1 TRACK 3 (FLAC).flac
+91:Skillet - Rise Up.flac
+92:Victorious CD 1 TRACK 8 (FLAC).flac
+93:Twenty One Pilots - The Pantaloon.mp3
+94:Twenty One Pilots - Friend, Please.mp3
+95:Twenty One Pilots - A Car, a Torch, a Death.mp3
+96:Regional At Best CD 1 TRACK 5 (FLAC).flac
+97:Twenty One Pilots - Glowing Eyes.mp3
+98:Twenty One Pilots - Anathema.mp3
+99:Twenty One Pilots - Ode to Sleep.flac
+100:Twenty One Pilots - Migraine.flac
+101:Vessel CD 1 TRACK 8 (FLAC).flac
+102:Vessel CD 1 TRACK 11 (FLAC).flac
+103:Twenty One Pilots - Truce.flac
+104:Twenty One Pilots - Heavydirtysoul.flac
+105:Twenty One Pilots - Lane Boy.flac
+106:Blurryface CD 1 TRACK 10 (FLAC).flac
+107:Blurryface CD 1 TRACK 11 (FLAC).flac
+108:Blurryface CD 1 TRACK 12 (FLAC).flac
+109:Blurryface CD 1 TRACK 13 (FLAC).flac
+110:Blurryface CD 1 TRACK 14 (FLAC).flac
+111:Trench CD 1 TRACK 3 (FLAC).flac
+112:Trench CD 1 TRACK 9 (FLAC).flac
+113:Trench CD 1 TRACK 10 (FLAC).flac
+114:Trench CD 1 TRACK 11 (FLAC).flac
+115:Trench CD 1 TRACK 14 (FLAC).flac
+116:Twice - Invades Este Lugar.flac
+117:Twice - Me Alegraré.flac
+118:Twice - Por Siempre Cantaré.flac
+119:Twice - Tu Palabra.flac
+120:Twice - Rey De Los Cielos.flac
+121:Twice - En Jesús.flac
+122:Twice - Creo En Ti.flac
+123:Twice - En Ti Yo Confiaré.flac
+124:Twice - Por La Cruz.flac
+125:Un Corazón - SALMO 23 feat. Marco Barrientos.flac
+126:Un Corazón - Sueños.flac
+127:Within Temptation - Our Farewell.flac
+128:Within Temptation - See Who I Am.flac
+129:Within Temptation - Stand My Ground.flac
+130:Within Temptation - Angels.flac
+131:Within Temptation - Aquarius.flac
+132:Within Temptation - Faster.flac
+133:Within Temptation - Fire and Ice.flac
+134:Within Temptation - Where is the Edge.flac
+135:Within Temptation - Sinéad.flac
+136:Within Temptation - Lost.flac
+137:Within Temptation - Murder.flac
+138:Within Temptation - The Last Dance.flac
+139:Within Temptation - I Don't Wanna.flac
 playlist_end

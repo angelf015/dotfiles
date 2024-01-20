@@ -52,3 +52,4 @@
 
 (package! evil-tutor)
 (package! catppuccin-theme)
+(package! centaur-tabs)
