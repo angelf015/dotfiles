@@ -8,3 +8,7 @@ mpd &
 #fish wallpaper.fish &
 
 xset s off
+
+# varables para vifm
+#set -gx PATH $PATH ~/.config/vifm/vifmrun
+#set -gx PATH $PATH ~/.config/vifm/vifmimg
