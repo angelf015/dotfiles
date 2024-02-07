@@ -92,3 +92,71 @@
 
 ;; If you enable global minor mode
 (global-git-gutter-mode +1)
+
+;; Config for fish
+(setq shell-file-name (executable-find "bash"))
+
+
+;; git gutter fringe
+(use-package! git-gutter-fringe
+  :hook (prog-mode . git-gutter-mode)
+  :config
+  (setq git-gutter:update-interval 2))
+
+;; Save to focus out
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+
+;; Duplicar lineas
+(defun duplicate-line-or-region (&optional n)
+  "Duplica la línea actual o la región si está activa N veces."
+  (interactive "p")
+  (if (region-active-p)
+      (let ((region (buffer-substring-no-properties (region-beginning) (region-end))))
+        (goto-char (region-end))
+        (dotimes (_ (or n 1)) (insert "\n" region)))
+    (let ((line (buffer-substring-no-properties (line-beginning-position) (line-end-position))))
+      (end-of-line)
+      (dotimes (_ (or n 1)) (insert "\n" line)))))
+
+;; Asignar la función a un atajo de teclado, por ejemplo `SPC d l`
+(map! :leader
+      :desc "Duplicate line or region"
+      "d l" #'duplicate-line-or-region)
+
+;; Java lsp
+(require 'lsp-java)
+(add-hook 'java-mode-hook #'lsp)
+
+(condition-case nil
+    (require 'use-package)
+  (file-error
+   (require 'package)
+   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+   (package-initialize)
+   (package-refresh-contents)
+   (package-install 'use-package)
+   (setq use-package-always-ensure t)
+   (require 'use-package)))
+
+(use-package projectile)
+(use-package flycheck)
+(use-package yasnippet :config (yas-global-mode))
+(use-package lsp-mode :hook ((lsp-mode . lsp-enable-which-key-integration)))
+(use-package hydra)
+(use-package company)
+(use-package lsp-ui)
+(use-package which-key :config (which-key-mode))
+(use-package lsp-java :config (add-hook 'java-mode-hook 'lsp))
+(use-package dap-mode :after lsp-mode :config (dap-auto-configure-mode))
+(use-package dap-java :ensure nil)
+(use-package helm-lsp)
+(use-package helm
+  :config (helm-mode))
+(use-package lsp-treemacs)
+
+;;Spring boot experimental
+(require 'lsp-java-boot)
+
+;; to enable the lenses
+(add-hook 'lsp-mode-hook #'lsp-lens-mode)
+(add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)

@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
  '(package-selected-packages
-   '(git-gutter treemacs-evil treemacs-all-the-icons doom-themes)))
+   '(helm-mode-manager markdown-preview-mode magit lsp-java helm-lsp git-gutter-fringe evil-tutor ac-html)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
