@@ -2,8 +2,8 @@ picom &
 udiskie -t &
 
 #reassign keys to customer keyboard
-xmodmap ~/.Xmodmap
-#setxkbmap latam &
+# xmodmap ~/.Xmodmap
+setxkbmap latam &
 mpd &
 #fish wallpaper.fish &
 

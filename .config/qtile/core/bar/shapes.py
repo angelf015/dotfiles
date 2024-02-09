@@ -190,7 +190,8 @@ disk = lambda bg, fg: [
     ),
     widget.DF(
         **base(bg, fg),
-        **powerline("arrow_right"),
+        # **powerline("arrow_right"),
+        **rectangle("right"),
         format="{f} GB  ",
         padding=0,
         partition="/home",
@@ -250,7 +251,7 @@ widgets = lambda: [
     *cpu(palette.green, palette.base),
     *ram(palette.yellow, palette.base),
     *disk(palette.teal, palette.base),
-    *battery(palette.mauve, palette.base),
+    # *battery(palette.mauve, palette.base),
     sep(palette.surface2),
     *clock(palette.pink, palette.base),
     widget.Spacer(length=1),

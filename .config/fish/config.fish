@@ -41,3 +41,4 @@ set -g FONTPREVIEW_BG_COLOR "#1e1e2e"
 set -g FONTPREVIEW_FG_COLOR "#f38ba8"
 set -gx PATH $HOME/.config/emacs/bin $PATH
 
+fnm env --use-on-cd | source

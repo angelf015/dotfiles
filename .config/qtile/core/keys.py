@@ -60,9 +60,8 @@ keys = [Key(*key) for key in [  # type: ignore
     # tools
     ([mod], "e", lazy.spawn("nemo")),
     ([mod], "p", lazy.spawn(
-        "xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 "
-        "--rotate normal --rate 144")),
-    ([mod], "o", lazy.spawn("xrandr --output eDP-1 --mode 1366x768 --pos 0x0 --rotate normal")),
+        "xrandr --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 144 --set TearFree on")),
+    # ([mod], "o", lazy.spawn("xrandr --output eDP-1 --mode 1366x768 --pos 0x0 --rotate normal")),
 
     # app launcher
     ([mod], "m", lazy.spawn(".config/rofi/bin/launcher")),
