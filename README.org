@@ -1,14 +1,14 @@
 #+title: Dotfiles para Archlinux con Qtile como window manager
 
-** Instalación de Archlinux
+* Instalación de Archlinux
 
 *Agregue la instalación de Archlinux por si a alguien le llega interesar, ya que no hay mucha información en español que describa paso a paso la instalación limpia de Archlinux de manera manual*
 
 [[documents/install-arch.org]]
 
-** Configuración de Archlinux (Dotfiles)
+* Configuración de Archlinux (Dotfiles)
 
-*** Gestor de ventanas
+** Gestor de ventanas
 
 El gestor de ventanas que uso es Qtile, Qtile es un gestor de ventanas para el escritorio de Linux que está escrito en Python, es completamente programable y configurable, lo que significa que puedes ajustar su comportamiento y apariencia exactamente a tus necesidades.
 Antes de instalar Qtile es necesario instalar Python, ya que sin el no es posible usar Qtile, para esta instalación y configuración no es necesario conocer este lenguaje de programación, pero si deseas personalizar a tu gusto Qtile, es recomendable saber por lo menos cosas basicas de Python.
@@ -39,7 +39,7 @@ El creador de esta configuración de Qtile es jx11r, aqui les dejo el repositori
 
 Pero antes de usar de esta configuración es necesario instalar los paquetes que se utilizan en esta configuración, ya que sin estos no funciona la configuración de jx11r.
 
-1. Paquetes necesarios
+- Paquetes necesarios
     - *otf-hasklig-nerd*: fuente (Font)
     - *pacman-contrib*: scripts y herramientas contribuidos para pacman
     - *pamixer*: controla los niveles de volumen
@@ -51,7 +51,7 @@ Pero antes de usar de esta configuración es necesario instalar los paquetes que
 sudo pacman -S otf-hasklig-nerd pacman-contrib pamixer python-dbus-next python-psutil ttf-nerd-fonts-symbols-mono
 #+end_src
 
-2. Paquetes opcionales
+- Paquetes opcionales
     - *playerctl*: es una utilidad de línea de comandos y una biblioteca para controlar reproductores multimedia
     - *brightnessctl*: Este programa le permite leer y controlar el brillo del dispositivo
 
@@ -59,7 +59,7 @@ sudo pacman -S otf-hasklig-nerd pacman-contrib pamixer python-dbus-next python-p
 sudo pacman -S playerctl brightnessctl
 #+end_src
 
-3. Ahora si podemos clonar el repositorio de jx11r y agregarlo a nuestra carpeta de configuración
+- Ahora si podemos clonar el repositorio de jx11r y agregarlo a nuestra carpeta de configuración
 
 #+begin_src sh
 git clone https://github.com/jx11r/qtile.git ~/.config/qtile
@@ -69,11 +69,11 @@ git clone https://github.com/jx11r/qtile.git ~/.config/qtile
 
 [[documents/qtile.org]]
 
-*** Herramientas
+** Herramientas
 
 Ahora instalaremos algunas herramientas que nos facilitaran el trabajo en este sistema operativo.
 
-**** Kitty o Alacritty
+*** Kitty o Alacritty
 
 Por default Archlinux trae instalaco xterm como terminal, puedes usar esa terminal que esta por default o instalar Kitty o Alacritty, esto es decición tuya, yo solo te dejare las dos y tu decides cual instalar. Puedes instalar ambas, no hay ningun problema.
 
@@ -89,13 +89,13 @@ sudo pacman -S kitty
 sudo pacman -S alacritty
 #+end_src
 
-**** Fish o Bash
+*** Fish o Bash
 
 Por default Archlinux trae instalado Bash como shell, pero la puedes cambiar segun tus necesidades o gustos, esto depende de ti. Aqui te dejo la configuración de Bash y Fish para que decidas con cual quieres trabajar, esto no quiere decir que no puedas usar las dos al mismo tiempo, pero es recomendable que solo uses una.
 
 *# La shell es es un programa que proporciona una interfaz de usuario para acceder a los servicios del sistema operativo. Funciona como una capa intermedia entre el usuario y el núcleo del sistema operativo, permitiendo al usuario interactuar con el sistema mediante la ejecución de comandos.*
 
-***** Bash
+**** Bash
 - Bash: es una interfaz de usuario de línea de comandos popular, específicamente un shell de Unix; así como un lenguaje de scripting.
 Como mensione anteriormente, Bash ya esta instalada por default en Archlinux y es la que estas usando en este momento, asi que no es necesario instalarla, pero si no esta seguro de que shell estas usando, puedes ejecutar el siguiente comando:
 
@@ -146,6 +146,6 @@ Ahora para instalar este plugin guardamos el archivo con Ctrl + o, confirmamos e
 
 - Temas: para los temas personalmente a mi no me gustan los que trae Oh My Bash, pero si deceas instalar alguno, lo puedes revisar en el repositorio que te deje anteriormente. Si no instalas algun tema puedes ver como aplicamos un tema para la Powerline mas abajo.
 
-***** Fish
+**** Fish
 - Fish: fish es un shell de línea de comandos inteligente y fácil de usar para Linux, macOS y el resto de la familia.
 
