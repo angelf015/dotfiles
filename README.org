@@ -73,29 +73,29 @@ git clone https://github.com/jx11r/qtile.git ~/.config/qtile
 
 Ahora instalaremos algunas herramientas que nos facilitaran el trabajo en este sistema operativo.
 
-- Kitty o Alacritty
+**** Kitty o Alacritty
 
 Por default Archlinux trae instalaco xterm como terminal, puedes usar esa terminal que esta por default o instalar Kitty o Alacritty, esto es decición tuya, yo solo te dejare las dos y tu decides cual instalar. Puedes instalar ambas, no hay ningun problema.
 
-1. *Kitty*: es un emulador de terminal basado en GPU, rápido y rico en funciones.
+- *Kitty*: es un emulador de terminal basado en GPU, rápido y rico en funciones.
 
 #+begin_src sh
 sudo pacman -S kitty
 #+end_src
 
-2. *Alacritty*: es un emulador de terminal moderno que viene con valores predeterminados sensibles, pero permite una configuración extensa, al parecer aun esta en fase beta, pero se puede usar sin problemas.
+- *Alacritty*: es un emulador de terminal moderno que viene con valores predeterminados sensibles, pero permite una configuración extensa, al parecer aun esta en fase beta, pero se puede usar sin problemas.
 
 #+begin_src sh
 sudo pacman -S alacritty
 #+end_src
 
-- Fish o Bash
+**** Fish o Bash
 
 Por default Archlinux trae instalado Bash como shell, pero la puedes cambiar segun tus necesidades o gustos, esto depende de ti. Aqui te dejo la configuración de Bash y Fish para que decidas con cual quieres trabajar, esto no quiere decir que no puedas usar las dos al mismo tiempo, pero es recomendable que solo uses una.
 
-*\* La shell es es un programa que proporciona una interfaz de usuario para acceder a los servicios del sistema operativo. Funciona como una capa intermedia entre el usuario y el núcleo del sistema operativo, permitiendo al usuario interactuar con el sistema mediante la ejecución de comandos.*
+*# La shell es es un programa que proporciona una interfaz de usuario para acceder a los servicios del sistema operativo. Funciona como una capa intermedia entre el usuario y el núcleo del sistema operativo, permitiendo al usuario interactuar con el sistema mediante la ejecución de comandos.*
 
-1. Bash: es una interfaz de usuario de línea de comandos popular, específicamente un shell de Unix; así como un lenguaje de scripting.
+- Bash: es una interfaz de usuario de línea de comandos popular, específicamente un shell de Unix; así como un lenguaje de scripting.
 Como mensione anteriormente, Bash ya esta instalada por default en Archlinux y es la que estas usando en este momento, asi que no es necesario instalarla, pero si no esta seguro de que shell estas usando, puedes ejecutar el siguiente comando:
 
 #+begin_src sh
@@ -103,45 +103,45 @@ echo $SHELL
 #+end_src
 
 Ahora puedes personalizar bash segun tus necesidades, aqui te dejo algunas herramientas que te facilitan el uso de bash, puedes elegir cual instalar o usar:
-    -  Oh My Bash: [[https://github.com/ohmybash/oh-my-bash]]
-    Oh My Bash es un framework para gestionar la configuración y personalización de la línea de comandos Bash. Con puedes instalar plugins para agilizar el trabajo de la shell asi como instalar temas para la Powerline.
+-  Oh My Bash: [[https://github.com/ohmybash/oh-my-bash]]
+Oh My Bash es un framework para gestionar la configuración y personalización de la línea de comandos Bash. Con este framework puedes instalar plugins para agilizar el trabajo de la shell asi como instalar temas para la Powerline.
 
-    Para instalar Oh My Bash, puedes seguir la guia que esta en el repo, pero te dejo aqui el metodo de insalación. Si llegas a presentar algun problema con este comando, es mejor ver la documentacion oficial.
-    
-    #+begin_src sh
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-    #+end_src
+Para instalar Oh My Bash, puedes seguir la guia que esta en el repo, pero te dejo aqui el metodo de instalación. Si llegas a presentar algun problema con este comando, es mejor ver la documentacion oficial.
 
-    Al instalar Oh My Bash podras ver en tu home el archivo .bashrc, si ejecutas el comando `cat ~/.bashrc` podras ver el contenido del archivo y ver las configuraciones que trae por default, para editar el archivo e instalar algunos plugins puedes usar nano.
+#+begin_src sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+#+end_src
 
-    a. Plugins
+Al instalar Oh My Bash podras ver en tu home el archivo .bashrc, si ejecutas el comando =cat ~/.bashrc= podras ver el contenido del archivo y ver las configuraciones que trae por default, para editar el archivo e instalar algunos plugins puedes usar nano.
 
-    #+begin_src sh
-    nano .bashrc
-    #+end_src
+- Plugins
 
-    Para moverte dentro de nano puedes usar las teclas dirección (flechas). En la parte de plugins veras que ya hay dos plugins preinstalados:
+#+begin_src sh
+nano .bashrc
+#+end_src
 
-    #+begin_src sh
-    plugins=(
-        git
-        bashmarks
-    )
-    #+end_src
+Para moverte dentro de nano puedes usar las teclas dirección (flechas). En la parte de plugins veras que ya hay dos plugins preinstalados:
 
-    Si deceas ver que plugins para bash estan disponibles, te dejo esta URL donde se listan en carpetas todos los plugins disponibles: [[https://github.com/ohmybash/oh-my-bash/tree/master/plugins]]
+#+begin_src sh
+plugins=(
+    git
+    bashmarks
+)
+#+end_src
 
-    Ahora instalaremos el plugin sudo, este plugin te ayuda a completar algun comando que quieras ejecutar con sudo, por ejemplo, si escribes `pacman -S git` pero se te olvido escribir la palabra sudo al principio, entonces este plugin te permite acompletar esto presionando dos veces la tecla Esc. Entonces la parte de plugins deberia de quedar asi: 
+Si deceas ver que plugins para bash estan disponibles, te dejo esta URL donde se listan en carpetas todos los plugins disponibles: [[https://github.com/ohmybash/oh-my-bash/tree/master/plugins]]
 
-    plugins=(
-        git
-        bashmarks
-        sudo
-    )
-    
-    Ahora para instalar este plugin guardamos el archivo con Ctrl + o, confirmamos el guardado y salimos del editor con Ctrl + x. y reiniciamos la configuración con source ~/.bashrc. Con esto ya deberia de estar instalado el plugin sudo, ahora solo faltaria probarlo.
+Ahora instalaremos el plugin sudo, este plugin te ayuda a completar algun comando que quieras ejecutar con sudo, por ejemplo, si escribes `pacman -S git` pero se te olvido escribir la palabra sudo al principio, entonces este plugin te permite acompletar esto presionando dos veces la tecla Esc. Entonces la parte de plugins deberia de quedar asi: 
 
-    b. Temas: para los temas personalmente a mi no me gustan los que trae Oh My Bash, pero si deceas instalar alguno, lo puedes revisar en el repositorio que te deje anteriormente. Si no instalas algun tema puedes ver como aplicamos un tema para la Powerline mas abajo.
+plugins=(
+    git
+    bashmarks
+    sudo
+)
 
-2. Fish: fish es un shell de línea de comandos inteligente y fácil de usar para Linux, macOS y el resto de la familia.
+Ahora para instalar este plugin guardamos el archivo con Ctrl + o, confirmamos el guardado y salimos del editor con Ctrl + x. y reiniciamos la configuración con source ~/.bashrc. Con esto ya deberia de estar instalado el plugin sudo, ahora solo faltaria probarlo.
+
+- Temas: para los temas personalmente a mi no me gustan los que trae Oh My Bash, pero si deceas instalar alguno, lo puedes revisar en el repositorio que te deje anteriormente. Si no instalas algun tema puedes ver como aplicamos un tema para la Powerline mas abajo.
+
+- Fish: fish es un shell de línea de comandos inteligente y fácil de usar para Linux, macOS y el resto de la familia.
 
