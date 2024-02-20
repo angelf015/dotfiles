@@ -95,6 +95,7 @@ Por default Archlinux trae instalado Bash como shell, pero la puedes cambiar seg
 
 *# La shell es es un programa que proporciona una interfaz de usuario para acceder a los servicios del sistema operativo. Funciona como una capa intermedia entre el usuario y el núcleo del sistema operativo, permitiendo al usuario interactuar con el sistema mediante la ejecución de comandos.*
 
+***** Bash
 - Bash: es una interfaz de usuario de línea de comandos popular, específicamente un shell de Unix; así como un lenguaje de scripting.
 Como mensione anteriormente, Bash ya esta instalada por default en Archlinux y es la que estas usando en este momento, asi que no es necesario instalarla, pero si no esta seguro de que shell estas usando, puedes ejecutar el siguiente comando:
 
@@ -131,17 +132,20 @@ plugins=(
 
 Si deceas ver que plugins para bash estan disponibles, te dejo esta URL donde se listan en carpetas todos los plugins disponibles: [[https://github.com/ohmybash/oh-my-bash/tree/master/plugins]]
 
-Ahora instalaremos el plugin sudo, este plugin te ayuda a completar algun comando que quieras ejecutar con sudo, por ejemplo, si escribes `pacman -S git` pero se te olvido escribir la palabra sudo al principio, entonces este plugin te permite acompletar esto presionando dos veces la tecla Esc. Entonces la parte de plugins deberia de quedar asi: 
+Ahora instalaremos el plugin sudo, este plugin te ayuda a completar algun comando que quieras ejecutar con sudo, por ejemplo, si escribes =pacman -S git= pero se te olvido escribir la palabra sudo al principio, entonces este plugin te permite acompletar esto presionando dos veces la tecla Esc. Entonces la parte de plugins deberia de quedar asi: 
 
+#+begin_src sh
 plugins=(
     git
     bashmarks
     sudo
 )
+#+end_src
 
-Ahora para instalar este plugin guardamos el archivo con Ctrl + o, confirmamos el guardado y salimos del editor con Ctrl + x. y reiniciamos la configuración con source ~/.bashrc. Con esto ya deberia de estar instalado el plugin sudo, ahora solo faltaria probarlo.
+Ahora para instalar este plugin guardamos el archivo con Ctrl + o, confirmamos el guardado y salimos del editor con Ctrl + x. y reiniciamos la configuración con el comando =source ~/.bashrc=. Con esto ya deberia de estar instalado el plugin sudo, ahora solo faltaria probarlo.
 
 - Temas: para los temas personalmente a mi no me gustan los que trae Oh My Bash, pero si deceas instalar alguno, lo puedes revisar en el repositorio que te deje anteriormente. Si no instalas algun tema puedes ver como aplicamos un tema para la Powerline mas abajo.
 
+***** Fish
 - Fish: fish es un shell de línea de comandos inteligente y fácil de usar para Linux, macOS y el resto de la familia.
 
