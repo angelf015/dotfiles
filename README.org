@@ -1,17 +1,10 @@
-# dotfiles
-Hola, ¿me puedes crear una guía para una instalación básica de Archlinux de manera manual?
-ChatGPT
-¡Claro! Aquí tienes una guía paso a paso para instalar Arch Linux de manera manual:
+#+title: Dotfiles para Archlinux con Qtile como window manager
 
-1. Preparación:
+** Instalación de Archlinux
 
-Descarga la última imagen ISO de Arch Linux desde el sitio oficial.
-Crea un medio de instalación, como una unidad USB booteable, utilizando herramientas como dd en Linux o Rufus en Windows.
-2. Arranque desde el medio de instalación:
+*Agregue la instalación de Archlinux por si a alguien le llega interesar, ya que no hay mucha información en español que describa paso a paso la instalación limpia de Archlinux de manera manual*
 
-Inserta el medio de instalación en tu computadora y arranca desde él.
-En el menú de inicio, selecciona la opción para arrancar desde el medio de instalación.
-3. Configuración del teclado:
+[[documents/install-arch.org]]
 
 Una vez que inicies desde el medio de instalación, asegúrate de configurar el diseño de tu teclado con el comando:
 Copy code
