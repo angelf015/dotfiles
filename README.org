@@ -20,3 +20,41 @@ Antes de instalar Qtile es necesario instalar Python, ya que sin el no es posibl
 #+begin_src sh
 sudo pacman -S python
 #+end_src
+
+- Qtile y Qtile-extras
+Para instalar Qtile es nesesario instalar estos dos paquetes, el paquete *qtile* es el manejador de ventanas basico, pero si quieres que tenga mas herramientas de personalización es necesario instalar *qtile-extras*
+*Si deseas instalar mas de dos paquetes al mismo tiempo, puedes colocarlos en la misma linea de comandos usando un espacio como separador*
+
+#+begin_src sh
+sudo pacman -S qtile qtile-extras
+#+end_src
+
+Con esto ya podrias reiniciar tu PC e iniciar sesión con Qtile como tu manejador de ventanas, pero esta es una instalación basica de qtile, por lo que los atajos de teclado de Qtile son los que tiene por default y es posible que no los conozcas, para eso es necesario configurar Qtile segun nuestras necesidades.
+
+*Yo uso una configuración de Qtile que no es mia, es de otra persona que ha creado esta configuración y ha decidido compartirla para que mas personas la puedan usar, esta configuración es de mis favoritas y es la que vamos a instalar.*
+
+El creador de esta configuración de Qtile es jx11r, aqui les dejo el repositorio de su configuración:
+
+[[https://github.com/jx11r/qtile]]
+
+Pero antes de usar de esta configuración es necesario instalar los paquetes que se utilizan en esta configuración, ya que sin estos no funciona la configuración de jx11r.
+
+1. Paquetes necesarios
+    - otf-hasklig-nerd: fuente (Font)
+    - pacman-contrib: scripts y herramientas contribuidos para pacman
+    - pamixer: controla los niveles de volumen
+    - python-dbus-next: es una biblioteca de Python para DBus que pretende ser una biblioteca de alto nivel con todas las funciones y orientada principalmente a la integración de aplicaciones en entornos móviles y de escritorio de Linux.
+    - python-psutil: es una biblioteca multiplataforma para recuperar información sobre procesos en ejecución y utilización del sistema
+    - ttf-nerd-fonts-symbols-mono: fuente (Font)
+
+#+begin_src sh
+sudo pacman -S otf-hasklig-nerd pacman-contrib pamixer python-dbus-next python-psutil ttf-nerd-fonts-symbols-mono
+#+end_src
+
+2. Paquetes opcionales
+    - playerctl: es una utilidad de línea de comandos y una biblioteca para controlar reproductores multimedia
+    - brightnessctl: Este programa le permite leer y controlar el brillo del dispositivo
+
+#+begin_src sh
+sudo pacman -S playerctl brightnessctl
+#+end_src
