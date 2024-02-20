@@ -1,0 +1,3 @@
+#+title: Instalación de archlinux
+
+* Este es el readme de instalación de archlinux test
