@@ -7,6 +7,7 @@
 [[documents/install-arch.org]]
 
 * Configuración de Archlinux (Dotfiles)
+** TODO falta agregar firefox git curl wget
 
 ** Gestor de ventanas
 
@@ -72,6 +73,15 @@ git clone https://github.com/jx11r/qtile.git ~/.config/qtile
 ** Herramientas
 
 Ahora instalaremos algunas herramientas que nos facilitaran el trabajo en este sistema operativo.
+
+*** Rofi
+
+Para buscar aplicaciones instaladas y poder ejecutarlas.
+
+#+begin_src sh
+sudo pacman -S rofi
+#+end_src
+
 
 *** Kitty o Alacritty
 
@@ -187,6 +197,12 @@ Para los temas de la Powerline pueden instalar el plugin tide =fisher install Il
 Si deceas ver mas temas para la poweline de Fish, aqui te dejo otro paquete que te ayuda con eso, este paquete casi no lo he probado, asi que solo te dejo la URL
 
 [[https://github.com/oh-my-fish/oh-my-fish]]
+
+*Ahora como paso final es establecer Fish como la shell por default, esto en caso de que quieras usar Fish, si deceas usar Bash entonces omite este paso*
+
+#+begin_src sh
+chsh -s /usr/bin/fish
+#+end_src
 
 *** Lxarandr
 
