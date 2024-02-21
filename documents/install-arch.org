@@ -246,10 +246,10 @@ hwclock --systohc --utc
 - Crea un archivo /etc/hostname y establece el nombre de tu sistema:
 
 #+begin_src sh
-echo arch > /etc/hostname
+echo archlinux > /etc/hostname
 #+end_src 
 
-Aqui he puesto "arch" como el nombre de mi sistema, tu puedes poner el nombre que mas te guste.
+Aqui he puesto "archlinux" como el nombre de mi sistema, tu puedes poner el nombre que mas te guste.
 
 ** Configuración del archivo hosts:
 - Edita /etc/hosts y agrega las siguientes líneas:
@@ -257,10 +257,10 @@ Aqui he puesto "arch" como el nombre de mi sistema, tu puedes poner el nombre qu
 #+begin_src sh
 127.0.0.1 localhost
 ::1 localhost
-127.0.1.1 arch
+127.0.1.1 archlinux
 #+end_src
 
-De la misma forma reemplaza arch con el nombre de tu sistema
+De la misma forma reemplaza archlinux con el nombre de tu sistema
 
 ** Contraseña de root:
 - Establece una contraseña para el usuario root:
@@ -269,11 +269,38 @@ De la misma forma reemplaza arch con el nombre de tu sistema
 passwd
 #+end_src
 
+** Networkmanager
+
+#+begin_src sh
+pacman -S networkmanager
+systemctl enable NetworkManager
+#+end_src
+
 ** Instalación del gestor de arranque:
 - Instala un gestor de arranque, como GRUB, para poder arrancar desde el disco:
 
 #+begin_src sh
 pacman -S grub grub-install --target=i386-pc /dev/sdX grub-mkconfig -o /boot/grub/grub.cfg
+#+end_src
+
+** Creación de usuario
+
+#+begin_src sh
+useradd -m username
+passwd username
+usermod -aG wheel,video,audio,storage username
+#+end_src
+
+Para tener privilegios de superusuario necesitamos sudo:
+
+#+begin_src sh
+pacman -S sudo
+#+end_src
+
+Edita /etc/sudoers con nano y descomenta la línea con "wheel":
+
+#+begin_src sh
+nano /etc/sudoers
 #+end_src
 
 ** Finalización y reinicio:
@@ -285,4 +312,4 @@ exit umount -R /mnt reboot
 
 ¡Eso es todo! Después de reiniciar, deberías tener un sistema Arch Linux funcional y listo para usar. Pero aun es una instalación basica, si quieres un entorno de escritorio ve al README principal.
 
-[[./README.org]]
+[[../README.org]]

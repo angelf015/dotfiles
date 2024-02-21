@@ -6,8 +6,35 @@
 
 [[documents/install-arch.org]]
 
-* Configuración de Archlinux (Dotfiles)
-** TODO falta agregar firefox git curl wget
+** Primeros pasos
+
+Despues de la instalación basica de Archlinux, deberiamos de validar la conexión a internet, si no estas conectado por cable es necesario conectarte por Wifi.
+
+#+begin_src sh
+nmcli device wifi list
+nmcli device wifi connect NOMBRE_DE_WIFI password CONTRASEÑA
+#+end_src
+
+Ahora para instalar entornos de escritorio es necesario instalar xorg.
+
+#+begin_src sh
+sudo pacman -S xorg
+#+end_src
+
+Ahora es necesario instalar paquetes que nos ayudaran descargar archivos y repositorios desde la terminal
+
+#+begin_src sh
+sudo pacman -S git curl wget firefox
+#+end_src
+
+* Configuración de Archlinux
+
+** Inicio de sesión
+
+#+begin_src sh
+sudo pacman -S lightdm lightdm-gtk-greeter
+sudo systemctl enable lightdm
+#+end_src
 
 ** Gestor de ventanas
 
@@ -64,6 +91,12 @@ sudo pacman -S playerctl brightnessctl
 
 #+begin_src sh
 git clone https://github.com/jx11r/qtile.git ~/.config/qtile
+#+end_src
+
+Ahora solo reiniciamos el sistema y podremos iniciar sesión con Lightdm y Qtile
+
+#+begin_src sh
+reboot
 #+end_src
 
 *Con esta configuración ya deberias de poder usar Qtile como manejador de ventanas, si quieres saber mas hacerca de la configuración o como moverte con este manejador, te dejo un pequeño manual para que puedas configurar y saber usar Qtile*
