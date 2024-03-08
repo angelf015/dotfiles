@@ -1,0 +1,44 @@
+#+title: Qtile
+
+* Este documento explica la configuración de Qtile, asi como sus atajos de teclado
+
+Como podemos ver en la ruta =~/.config/qtile/= podemos encontrar multiples archivos de Python
+
+#+begin_src shell
+ls ~/.config/qtile/
+#+end_src
+
+#+RESULTS:
+| cfg.json    |
+| config.py   |
+| core        |
+| extras      |
+| LICENSE     |
+| __pycache__ |
+| utils       |
+
+El archivo cfg.json contiene una pequeña configuración que toma Qtile para asignar valores por default.
+
+#+begin_src shell
+cat ~/.config/qtile/cfg.json
+#+end_src
+
+#+RESULTS:
+| {            |                 |
+| "bar":       | "shapes",       |
+| "bar2":      | "",             |
+| "browser":   | "brave",        |
+| "term":      | "kitty",        |
+| "term2":     | "wezterm",      |
+| "wallpaper": | "~/wp/arch.jpg"        |
+| }            |                 |
+
+Aqui te dare una breve explicación de los que se espera en cada una de estas propiedades.
+- *bar*:
+  Aqui te dare una breve explicación de los que se espera en cada una de estas propiedades.
+  - *bar*: Define la barra que se mostrara en la pantalla principal
+  - *bar2*: Define la barra que se mostrara en la pantalla secundaria, en caso de que este conectada una.
+  - *browser*: El valor para esta propiedad es el navegador que deceas abrir con el atajo de teclado que se definira en el archivo keys
+  - *term*: Define la terminal por defecto que utilizara Qtile, aqui podria ir Kitty o Alacritty, dependiendo cual hayas instalado
+  - *term2*: Define la terminal secundaria que utilizara Qtile
+  - *wallpaper*: Define la imagen que se mostrara como fondo de escritorio
