@@ -49,10 +49,9 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+
+
 (package! evil-tutor)
-
 (package! catppuccin-theme)
-
 (package! treemacs-nerd-icons :pin "9876cb478145a0ec4e36f64ff6583f3de7126216")
-
 (package! git-gutter-fringe)

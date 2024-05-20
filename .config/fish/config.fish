@@ -7,11 +7,20 @@ end
 bind \cs '__ethp_commandline_toggle_sudo.fish'
 
 # Alias git
-alias ga "git add"
-alias gc "git commit"
+alias ga "git add ."
+alias gc "git commit -m"
 alias gp "git push"
 alias gs "git status"
 alias gl "git log"
+alias gpp "git pull"
+
+# Alias's to modified commands
+alias mkdir "mkdir -p"
+alias sdnfi "sudo dnf install"
+alias .. "cd .."
+alias ... "cd ..."
+alias ls "lsd"
+
 set -gx PATH $HOME/.local/bin $PATH
 
 starship init fish | source
@@ -42,3 +51,7 @@ set -g FONTPREVIEW_FG_COLOR "#f38ba8"
 set -gx PATH $HOME/.config/emacs/bin $PATH
 
 fnm env --use-on-cd | source
+
+set -g EDITOR "nvim"
+
+source "$HOME/.cargo/env.fish"
