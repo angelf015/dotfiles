@@ -116,6 +116,11 @@ sudo pacman -S rofi
 #+end_src
 
 
+TODO: FORMATEAR
+Instalar mpc, dunst para notificaciones, maim para imprimir pantalla, viewnior, xdg-user-dir
+
+
+
 *** Kitty o Alacritty
 
 Por default Archlinux trae instalaco xterm como terminal, puedes usar esa terminal que esta por default o instalar Kitty o Alacritty, esto es decición tuya, yo solo te dejare las dos y tu decides cual instalar. Puedes instalar ambas, no hay ningun problema.
