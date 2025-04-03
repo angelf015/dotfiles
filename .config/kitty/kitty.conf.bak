@@ -1,7 +1,34 @@
-# BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-include current-theme.conf
-# END_KITTY_THEME
+# Fonts
+font_family                     DankMono Nerd Font
+bold_font                       auto
+italic_font                     auto
+bold_italic_font                auto
+font_size                       15
 
-font_size 12.0
-window_padding_width 10
+# Include
+#include                         $HOME/.config/kitty/colors.conf
+include                         $HOME/.config/kitty/themes/tokyonight_moon.conf
+include                         $HOME/.config/kitty/tabs.conf
+include                         $HOME/.config/kitty/mappings.conf
+
+# Padding
+window_padding_width            5
+
+# Cursors
+cursor_shape                    beam
+cursor_beam_thickness           1
+
+# Size
+remember_window_size            yes
+initial_window_width            640
+initial_window_height           400
+
+# Layouts
+enabled_layouts                 horizontal,splits,grid,fat
+window_resize_step_cells        1
+window_resize_step_lines        1
+
+# Border
+window_border_width             0
+hide_window_decorations         yes
+allow_remote_control            yes

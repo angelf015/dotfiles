@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
+(setq doom-font (font-spec :family "DankMono Nerd Font" :size 17 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "DankMono Nerd Font" :size 17))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -125,3 +125,36 @@
 
 ;; deshacer granular
 (setq evil-want-fine-undo t)
+
+;; Cambiar de buffers con Shift + H y Shift + L
+(map! :n "H" #'previous-buffer)
+(map! :n "L" #'next-buffer)
+
+;; Remover las tildes ~
+(remove-hook 'text-mode-hook #'vi-tilde-fringe-mode)
+(global-vi-tilde-fringe-mode -1)
+
+
+;; Temporal, solo para pruebas
+(after! lsp-mode
+  (setq lsp-java-server-install-dir "~/.emacs.d/eclipse.jdt.ls/"))
+
+
+;; org
+(after! org
+  (setq org-directory "~/workspace/org/"
+        org-default-notes-file (expand-file-name "notes.org" org-directory)
+        org-ellipsis " ▼ "
+        org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
+        org-superstar-itembullet-alist '((?+ . ?➤) (?- . ?✦)) ; changes +/- symbols in item lists
+        org-log-done 'time
+        org-hide-emphasis-markers t
+        ;; ex. of org-link-abbrev-alist in action
+        ;; [[arch-wiki:Name_of_Page][Description]]
+        org-link-abbrev-alist    ; This overwrites the default Doom org-link-abbrev-list
+          '(("google" . "http://www.google.com/search?q=")
+            ("arch-wiki" . "https://wiki.archlinux.org/index.php/")
+            ("ddg" . "https://duckduckgo.com/?q=")
+            ("wiki" . "https://en.wikipedia.org/wiki/"))
+        org-table-convert-region-max-lines 20000
+          )) ; Task has been cancelled
