@@ -61,4 +61,5 @@ if status is-interactive
     set -gx PATH /usr/bin/python3 $PATH
     # Helix
     set -g HELIX_RUNTIME "~/src/helix/runtime"
+    set -Ux NEOVIM_BIN /opt/homebrew/bin/nvim
 end

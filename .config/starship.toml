@@ -25,53 +25,38 @@ $line_break$character"""
 
 palette = 'nord'
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-orange = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
-
 [palettes.nord]
-polar_night_0 = "#2E3440"
-polar_night_1 = "#3B4252"
-polar_night_2 = "#434C5E"
-polar_night_3 = "#4C566A"
-snow_storm_0 = "#D8DEE9"
-snow_storm_1 = "#E5E9F0"
-snow_storm_2 = "#ECEFF4"
-frost_blue = "#81A1C1"
-frost_cyan = "#88C0D0"
-aurora_red = "#BF616A"
-aurora_orange = "#D08770"
-aurora_yellow = "#EBCB8B"
-aurora_green = "#A3BE8C"
-aurora_purple = "#B48EAD"
+rosewater = "#f0c674"
+flamingo = "#cc6666"
+pink = "#b294bb"
+orange = "#de935f"
+red = "#cc6666"
+maroon = "#a54242"
+peach = "#d08770"
+yellow = "#f0c674"
+green = "#8abeb7"
+teal = "#8abeb7"
+sky = "#81a2be"
+sapphire = "#81a2be"
+blue = "#5e81ac"
+lavender = "#b48ead"
+text = "#d8dee9"
+subtext1 = "#e5e9f0"
+subtext0 = "#eceff4"
+overlay2 = "#4c566a"
+overlay1 = "#434c5e"
+overlay0 = "#3b4252"
+surface2 = "#2e3440"
+surface1 = "#2e3440"
+surface0 = "#2e3440"
+base = "#2e3440"
+mantle = "#3b4252"
+crust = "#434c5e"
 
+# OS Module
 [os]
 disabled = false
-style = "bold fg:snow_storm_0"
+style = "fg:text"
 
 [os.symbols]
 Windows = "󰍲"
@@ -79,9 +64,9 @@ Ubuntu = "󰕈"
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
-Macos = "󰀵"
+Macos = ""
 Manjaro = ""
-Linux = "󰣇"
+Linux = "󰌽"
 Gentoo = "󰣨"
 Fedora = "󰣛"
 Alpine = ""
@@ -94,91 +79,122 @@ Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
+# Username Module
 [username]
 show_always = true
-style_user = "bold fg:snow_storm_0"
-style_root = "bold fg:snow_storm_0"
+style_user = "fg:blue"
+style_root = "fg:blue"
 format = '[ $user ]($style)'
 
+# Local IP Module
+[localip]
+ssh_only = false
+style = "fg:surface0"
+format = '[ $localipv4 ]($style)'
+disabled = false
+
+# Directory Module
 [directory]
-style = "bold dimmed fg:snow_storm_0"
-# style = "bold fg:polar_night_1"
+style = "fg:peach"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+# Git Branch Module
 [git_branch]
 symbol = ""
-format = '[[ $symbol $branch ](fg:aurora_green)]($style)'
+style = "fg:teal"
+format = '[[ $symbol $branch ](fg:green)]($style)'
 
+# Git Status Module
 [git_status]
-style = "bold"
-format = '[[($all_status $ahead_behind )](fg:aurora_green)]($style)'
+style = "fg:teal"
+format = '[[($all_status$ahead_behind )](fg:green)]($style)'
 
+# Node.js Module
 [nodejs]
 symbol = ""
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# C Module
 [c]
 symbol = " "
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# Rust Module
 [rust]
 symbol = ""
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# Go Module
 [golang]
 symbol = ""
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# PHP Module
 [php]
 symbol = ""
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# Java Module
 [java]
 symbol = " "
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# Kotlin Module
 [kotlin]
 symbol = ""
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# Haskell Module
 [haskell]
 symbol = ""
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# Python Module
 [python]
 symbol = ""
-style = "fg:frost_cyan"
-format = '[[ $symbol( $version) ](fg:frost_cyan)]($style)'
+style = "fg:teal"
+format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
+# Docker Context Module
 [docker_context]
 symbol = ""
-style = "fg:polar_night_1"
-format = '[[ $symbol( $context) ](fg:polar_night_2)]($style)'
+style = "fg:mantle"
+format = '[[ $symbol( $context) ](fg:color_bg3)]($style)'
 
+# Time Module
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:aurora_orange"
-format = '[[  $time ](fg:aurora_purple)]($style)'
+style = "fg:peach"
+format = '[[  $time ](fg:purple)]($style)'
 
+# Line Break Module
 [line_break]
 disabled = false
 
+# Character Module
 [character]
 disabled = false
-success_symbol = '[](bold fg:aurora_green)'
-error_symbol = '[](bold fg:aurora_red)'
-vimcmd_symbol = '[](bold fg:aurora_green)'
-vimcmd_replace_one_symbol = '[](bold fg:aurora_purple)'
-vimcmd_replace_symbol = '[](bold fg:aurora_purple)'
-vimcmd_visual_symbol = '[](bold fg:frost_blue)'
+success_symbol = '[](bold fg:green)'
+error_symbol = '[](bold fg:red)'
+vimcmd_symbol = '[](bold fg:creen)'
+vimcmd_replace_one_symbol = '[](bold fg:purple)'
+vimcmd_replace_symbol = '[](bold fg:purple)'
+vimcmd_visual_symbol = '[](bold fg:lavender)'
