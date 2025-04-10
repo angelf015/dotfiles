@@ -61,5 +61,11 @@ if status is-interactive
     set -gx PATH /usr/bin/python3 $PATH
     # Helix
     set -g HELIX_RUNTIME "~/src/helix/runtime"
+
+    # For neovide
     set -Ux NEOVIM_BIN /opt/homebrew/bin/nvim
+
+    # Jenv
+    set -Ux PATH $HOME/.jenv/bin $PATH
+    status --is-interactive; and source (jenv init -|psub)
 end

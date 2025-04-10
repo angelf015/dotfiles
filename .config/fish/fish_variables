@@ -9,6 +9,7 @@ SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR --export NEOVIM_BIN:/opt/homebrew/bin/nvim
+SETUVAR --export --path PATH:/Users/arch/\x2ejenv/bin\x1e/usr/bin/python3\x1e/Users/arch/\x2ebun/bin\x1e/Users/arch/\x2ebun/bin\x1e/Users/arch/\x2elocal/state/fnm_multishells/58924_1744257426175/bin\x1e/Users/arch/\x2econfig/emacs/bin\x1e/Users/arch/\x2econfig/vifm/\x1e/Users/arch/\x2elocal/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/openjdk\x4021/bin\x1e/opt/homebrew/opt/openjdk\x4017/bin\x1e/Users/arch/\x2ejenv/shims\x1e/Users/arch/\x2ejenv/shims\x1e/usr/bin/python3\x1e/Users/arch/\x2ebun/bin\x1e/Users/arch/\x2ebun/bin\x1e/Users/arch/\x2elocal/state/fnm_multishells/6114_1744250626241/bin\x1e/Users/arch/\x2econfig/emacs/bin\x1e/Users/arch/\x2econfig/vifm/\x1e/Users/arch/\x2elocal/bin\x1e/opt/homebrew/bin\x1e/Users/arch/\x2ecargo/bin\x1e/usr/local/bin\x1e/System/Cryptexes/App/usr/bin\x1e/usr/bin\x1e/bin\x1e/usr/sbin\x1e/sbin\x1e/var/run/com\x2eapple\x2esecurity\x2ecryptexd/codex\x2esystem/bootstrap/usr/local/bin\x1e/var/run/com\x2eapple\x2esecurity\x2ecryptexd/codex\x2esystem/bootstrap/usr/bin\x1e/var/run/com\x2eapple\x2esecurity\x2ecryptexd/codex\x2esystem/bootstrap/usr/appleinternal/bin
 SETUVAR --export THEME:tokyo_night
 SETUVAR --export THEMEE:tokyo_night
 SETUVAR --export THEMES:nord
