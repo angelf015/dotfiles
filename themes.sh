@@ -1,14 +1,12 @@
 #!/usr/bin/bash
 
 # Opciones de temas
-# THEMES_DIR="$HOME/.config/starship-themes"
-THEMES=("Catppuccin Mocha" "Catppuccin Latte" "Nord" "Tokyo Night" "Everforest" "OneDark")
+THEMES=("Catppuccin Mocha" "Catppuccin Latte" "Nord" "Tokyo Night" "Everforest" "OneDark" "Solarized")
 
 # Mostrar opciones y elegir tema
 echo "Elige un tema para la terminal:"
 select THEME in "${THEMES[@]}"; do
   if [[ -n "$THEME" ]]; then
-    # export STARSHIP_CONFIG="$THEMES_DIR/$THEME"
     echo "Usando el tema: $THEME"
     # Usar case para asignar variables según el tema seleccionado
     case "$THEME" in
@@ -31,7 +29,7 @@ select THEME in "${THEMES[@]}"; do
       STARSHIP="nord.toml"
       ;;
     "Tokyo Night")
-      WEZTERM="tokyonight"
+      WEZTERM="Tokyo Night Moon"
       NVIM="tokyonight"
       ZELLIJ="tokyonight"
       STARSHIP="tokyonight.toml"
@@ -48,6 +46,12 @@ select THEME in "${THEMES[@]}"; do
       ZELLIJ="onedark"
       STARSHIP="onedark.toml"
       ;;
+    "Solarized")
+      WEZTERM="Solarized (dark) (terminal.sexy)"
+      NVIM="solarized-osaka"
+      ZELLIJ="onedark"
+      STARSHIP="solarized.toml"
+      ;;
     *)
       echo "Opción no válida."
       ;;
@@ -59,11 +63,21 @@ select THEME in "${THEMES[@]}"; do
   fi
 done
 
+# Cambia el tema en Wezterm, Nvim, Zellij y Starship
+
 # Wezterm
 color="config.color_scheme = \"$WEZTERM\""
+colors="config.colors = wezterm.color.get_builtin_schemes()[\"$WEZTERM\"]"
+theme="theme = \"$WEZTERM\","
 sed -i '' "/config.color_scheme/ {
   s/.*/$color/
-  }" /Users/arch/.config/wezterm/wezterm.lua
+  }" /Users/arch/.config/wezterm/lua/config/options.lua
+sed -i '' "/config.colors/ {
+  s/.*/$colors/
+  }" /Users/arch/.config/wezterm/lua/config/options.lua
+sed -i '' "/theme/ {
+  s/.*/$theme/
+  }" /Users/arch/.config/wezterm/lua/plugins/tabline.lua
 
 # Nvim
 color="colorscheme = \"$NVIM\""

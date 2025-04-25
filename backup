@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # Copy dotfiles
-rsync -a --delete ~/.config/fish ~/dotfiles/.config
+# rsync -a --delete ~/.config/fish ~/dotfiles/.config
 rsync -a --delete ~/.config/kitty ~/dotfiles/.config
 # rsync -a --delete ~/.config/mpd ~/dotfiles/.config
 # rsync -a --delete ~/.config/ncmpcpp ~/dotfiles/.config

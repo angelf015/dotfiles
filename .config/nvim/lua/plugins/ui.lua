@@ -1,9 +1,8 @@
 return {
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nord",
+colorscheme = "nord"
     },
   },
   {
@@ -21,7 +20,7 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
-      transparent_background = false, -- disables setting the background color.
+      transparent_background = true, -- disables setting the background color.
       integrations = {
         aerial = true,
         alpha = true,
@@ -37,10 +36,6 @@ return {
         lsp_trouble = true,
         mason = true,
         markdown = true,
-        -- mini = {
-        --   enabled = true,
-        --   indentscope_color = "red",
-        -- },
         native_lsp = {
           enabled = true,
           underlines = {
@@ -113,14 +108,14 @@ return {
     "neanias/everforest-nvim",
     version = false,
     lazy = false,
-    priority = 1000, -- make sure to load this before all the other start plugins
+    priority = 1000, -- Make sure to load this before all the other start plugins
     -- Optional; default configuration will be used if setup isn't called.
   },
   {
     "rebelot/kanagawa.nvim",
     version = false,
     lazy = false,
-    priority = 1000, -- make sure to load this before all the other start plugins
+    priority = 1000, -- Make sure to load this before all the other start plugins
   },
   {
     "AlexvZyl/nordic.nvim",
@@ -135,6 +130,11 @@ return {
   },
   {
     "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "craftzdog/solarized-osaka.nvim",
     lazy = false,
     priority = 1000,
   },

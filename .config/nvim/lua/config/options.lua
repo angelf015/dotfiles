@@ -2,6 +2,8 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 -- vim.opt.colorcolumn = "120"
+vim.opt.number = false
+vim.opt.relativenumber = false
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "org" },
   callback = function()

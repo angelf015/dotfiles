@@ -4,7 +4,7 @@ return {
   {
     -- Plugin: obsidian.nvim
     -- URL: https://github.com/epwalsh/obsidian.nvim
-    -- Description: A Neovim plugin for integrating with Obsidian, a powerful knowledge base that works on top of a local folder of plain text Markdown files.
+    -- Description: A Neovim plugin for integrating with Obsidian, a powerful knowledge base that works on top a local folder of plain text Markdown files.
     "epwalsh/obsidian.nvim",
     version = "*", -- Use the latest release instead of the latest commit (recommended)
 
@@ -16,7 +16,7 @@ return {
     },
 
     opts = {
-      -- Define workspaces for Obsidian
+      -- Define workspace for Obsidian
       workspaces = {
         {
           name = "brain", -- Name of the workspace
@@ -92,10 +92,10 @@ return {
       note_id_func = function(title)
         -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
         -- In this case a note with the title 'My new note' will be given an ID that looks
-        -- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
+        -- like '1657296016-my-new-note', and therefore the filename '1657296016-my-new-note.md'
         local suffix = ""
         if title ~= nil then
-          -- If title is given, transform it into valid file name.
+          -- If title is given, transform it into valid filename.
           suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
         else
           -- If title is nil, just add 4 random uppercase letters to the suffix.
