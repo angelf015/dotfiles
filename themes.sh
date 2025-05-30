@@ -12,42 +12,49 @@ select THEME in "${THEMES[@]}"; do
     case "$THEME" in
     "Catppuccin Mocha")
       WEZTERM="Catppuccin Mocha"
+      GHOSTTY="catppuccin-mocha"
       NVIM="catppuccin-mocha"
       ZELLIJ="catppuccin_mocha"
       STARSHIP="catppuccin_mocha.toml"
       ;;
     "Catppuccin Latte")
-      WEZTERM="Catppuccin Latte"
+      WEZTERM="catppuccin-latte"
+      GHOSTTY="Catppuccin Latte"
       NVIM="catppuccin-latte"
       ZELLIJ="catppuccin_latte"
       STARSHIP="catppuccin_latte.toml"
       ;;
     "Nord")
       WEZTERM="nord"
-      NVIM="nord"
+      GHOSTTY="nord"
+      NVIM="onenord"
       ZELLIJ="nord"
       STARSHIP="nord.toml"
       ;;
     "Tokyo Night")
       WEZTERM="Tokyo Night Moon"
+      GHOSTTY="tokyonight"
       NVIM="tokyonight"
       ZELLIJ="tokyonight"
       STARSHIP="tokyonight.toml"
       ;;
     "Everforest")
       WEZTERM="Everforest Dark (Gogh)"
+      GHOSTTY="Everforest Dark - Hard"
       NVIM="everforest"
       ZELLIJ="everforest"
       STARSHIP="everforest.toml"
       ;;
     "OneDark")
       WEZTERM="One Dark (Gogh)"
+      GHOSTTY="OneHalfDark"
       NVIM="onedark"
       ZELLIJ="onedark"
       STARSHIP="onedark.toml"
       ;;
     "Solarized")
       WEZTERM="Solarized (dark) (terminal.sexy)"
+      GHOSTTY="Solarized Dark - Patched"
       NVIM="solarized-osaka"
       ZELLIJ="onedark"
       STARSHIP="solarized.toml"
@@ -98,3 +105,9 @@ sed -i '' "/default_layout \"/ {
 
 # Starship
 cp "/Users/arch/dotfiles/.config/starship/$STARSHIP" /Users/arch/.config/starship.toml
+
+# Ghostty
+layout="theme                          = $GHOSTTY"
+sed -i '' "/theme                          =/ {
+  s/.*/$layout/
+  }" /Users/arch/.config/ghostty/config

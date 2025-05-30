@@ -2,8 +2,8 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 -- vim.opt.colorcolumn = "120"
-vim.opt.number = false
-vim.opt.relativenumber = false
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "org" },
   callback = function()
@@ -34,3 +34,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end,
 })
+
+-- Blink cursor
+vim.opt.guicursor = {
+  "n-v-c:block-Cursor/lCursor-blinkon100-blinkoff100",
+  "i-ci:ver25-Cursor/lCursor-blinkon100-blinkoff100",
+  "r-cr:hor20-Cursor/lCursor-blinkon100-blinkoff100",
+}

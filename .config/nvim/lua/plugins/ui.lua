@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-colorscheme = "nord"
+colorscheme = "onenord"
     },
   },
   {
@@ -20,7 +20,7 @@ colorscheme = "nord"
     lazy = true,
     name = "catppuccin",
     opts = {
-      transparent_background = true, -- disables setting the background color.
+      transparent_background = false, -- disables setting the background color.
       integrations = {
         aerial = true,
         alpha = true,
@@ -31,7 +31,12 @@ colorscheme = "nord"
         gitsigns = true,
         headlines = true,
         illuminate = true,
-        indent_blankline = { enabled = true },
+        indent_blankline = {
+          enabled = true,
+          scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+          colored_indent_levels = false,
+        },
+        -- indent_blankline = { enabled = true },
         leap = true,
         lsp_trouble = true,
         mason = true,
@@ -51,7 +56,11 @@ colorscheme = "nord"
         noice = true,
         notify = true,
         semantic_tokens = true,
-        snacks = true,
+        snacks = {
+          enabled = false,
+          indent_scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+        },
+        -- snacks = true,
         telescope = true,
         treesitter = true,
         treesitter_context = true,
@@ -127,15 +136,39 @@ colorscheme = "nord"
     "shaunsingh/nord.nvim",
     lazy = false,
     priority = 1000,
+    setup = function()
+      vim.nord_disable_background = false
+      vim.g.nord_uniform_diff_background = true
+    end,
   },
   {
     "navarasu/onedark.nvim",
     lazy = false,
     priority = 1000,
+    config = function()
+      require("onedark").setup({
+        style = "darker",
+        transparent = false,
+        ending_tildes = true,
+      })
+    end,
   },
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = false,
     priority = 1000,
+  },
+  {
+    "rmehri01/onenord.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "sainnhe/gruvbox-material",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.g.gruvbox_material_enable_italic = true
+    end,
   },
 }

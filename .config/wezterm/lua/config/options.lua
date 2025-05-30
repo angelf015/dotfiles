@@ -25,8 +25,8 @@ local function options(config)
 	config.animation_fps = 144
 
 	-- Set color scheme
-	config.color_scheme = "nord"
-	config.colors = wezterm.color.get_builtin_schemes()["nord"]
+config.color_scheme = "nord"
+config.colors = wezterm.color.get_builtin_schemes()["nord"]
 	-- config.window_background_opacity = 0.9
 
 	-- Font style without ligatures

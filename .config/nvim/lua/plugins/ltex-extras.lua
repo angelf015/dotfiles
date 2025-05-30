@@ -8,7 +8,7 @@ return {
       server_opts = {
         -- Table <string> : languages for witch dictionaries will be loaded, e.g. { "es-AR", "en-US" }
         -- https://valentjn.github.io/ltex/supported-languages.html#natural-languages
-        load_langs = { "es-MX" }, -- en-US as default
+        load_langs = { "es-es" }, -- en-US as default
         -- boolean : whether to load dictionaries on startup
         init_check = true,
         -- string : relative or absolute path to store dictionaries

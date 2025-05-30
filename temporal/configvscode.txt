@@ -1,0 +1,189 @@
+{
+  "workbench.colorTheme": "Nord",
+  "editor.fontSize": 17,
+  "editor.scrollbar.vertical": "auto",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.enabled": false,
+  "editor.minimap.side": "left",
+  "editor.fontFamily": "'Dank Mono Nerd Font'",
+  "extensions.autoUpdate": false,
+  "workbench.statusBar.visible": false,
+  "terminal.external.linuxExec": "kitty",
+  "terminal.explorerKind": "both",
+  "terminal.sourceControlRepositoriesKind": "both",
+  "telemetry.telemetryLevel": "off",
+  "editor.matchBrackets": "never",
+  "git.openRepositoryInParentFolders": "never",
+  "files.autoSave": "afterDelay",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.guides.indentation": false,
+  "indenticator.color.dark": "rgba(255,255,255,0.1)",
+  "indenticator.inner.width": 0.1,
+  "breadcrumbs.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#00FF0010"
+    },
+    {
+      "column": 100,
+      "color": "#BDB76B15"
+    },
+    {
+      "column": 120,
+      "color": "#FA807219"
+    }
+  ],
+  "editor.unicodeHighlight.includeComments": true,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "tab.activeBorderTop": "#00FF00",
+      "tab.unfocusedActiveBorderTop": "#00FF0088",
+      "textCodeBlock.background": "#00000055"
+    },
+    "editor.wordHighlightStrongBorder": "#FF6347",
+    "editor.wordHighlightBorder": "#FFD700",
+    "editor.selectionHighlightBorder": "#A9A9A9"
+  },
+  "workbench.editor.revealIfOpen": true,
+  "workbench.tree.indent": 20,
+  "emmet.variables": {
+    "lang": "es"
+  },
+  "cSpell.diagnosticLevel": "Hint",
+  "trailing-spaces.backgroundColor": "rgba(255,0,0,0.1)",
+  "trailing-spaces.includeEmptyLines": false,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.detectJdksAtStart": false,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.debug.settings.hotCodeReplace": "auto",
+  "java.dependency.packagePresentation": "hierarchical",
+  "java.maxConcurrentBuilds": 16,
+  "java.sources.organizeImports.staticStarThreshold": 1,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "env": {
+        "JAVA_HOME": "/home/arch/.sdkman/candidates/java/21.0.4-tem"
+      },
+      "args": [
+        "--rcfile",
+        "/home/arch/.config/Code/User/globalStorage/pleiades.java-extension-pack-jdk/.bashrc"
+      ]
+    },
+    "JavaSE-17 LTS": {
+      "overrideName": true,
+      "env": {
+        "JAVA_HOME": "/home/arch/.jdks/corretto-17.0.12"
+      },
+      "path": "bash",
+      "args": [
+        "--rcfile",
+        "/home/arch/.config/Code/User/globalStorage/pleiades.java-extension-pack-jdk/.bashrc"
+      ]
+    },
+    "JavaSE-21 LTS": {
+      "overrideName": true,
+      "env": {
+        "JAVA_HOME": "/home/arch/.sdkman/candidates/java/21.0.4-tem"
+      },
+      "path": "bash",
+      "args": [
+        "--rcfile",
+        "/home/arch/.config/Code/User/globalStorage/pleiades.java-extension-pack-jdk/.bashrc"
+      ]
+    },
+    "JavaSE-23": {
+      "overrideName": true,
+      "env": {
+        "JAVA_HOME": "/usr/lib/jvm/java-23-openjdk"
+      },
+      "path": "bash",
+      "args": [
+        "--rcfile",
+        "/home/arch/.config/Code/User/globalStorage/pleiades.java-extension-pack-jdk/.bashrc"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "JavaSE-23",
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "/opt/homebrew/Cellar/openjdk@21/21.0.7"
+    },
+    {
+      "environmentVariable": "ZDOTDIR",
+      "value": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+    }
+  ],
+  "window.menuBarVisibility": "toggle",
+  "window.customTitleBarVisibility": "never",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/Users/arch/Library/Java/JavaVirtualMachines/corretto-1.8.0_442/Contents/Home"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "/opt/homebrew/Cellar/openjdk@17/17.0.15"
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/opt/homebrew/Cellar/openjdk@21/21.0.7"
+    },
+    {
+      "name": "JavaSE-23",
+      "path": "/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home",
+      "default": true
+    }
+  ],
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "env": {
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk@21/21.0.7",
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+      }
+    },
+    "JavaSE-1.8 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/arch/Library/Java/JavaVirtualMachines/corretto-1.8.0_442/Contents/Home"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-17 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk@17/17.0.15"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-21 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk@21/21.0.7"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-23": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home"
+      },
+      "path": "zsh"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "JavaSE-23",
+  "java.import.gradle.java.home": "/opt/homebrew/Cellar/openjdk@21/21.0.7"
+}
