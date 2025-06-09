@@ -4,14 +4,35 @@ macos-titlebar-style           = tabs
 background-opacity             = 0.95
 background-blur-radius         = 20
 
-#font-family                    = DankMono Nerd Font
-#font-family-bold               = DankMono Nerd Font
-#font-family-italic             = DankMono Nerd Font
-#font-family-bold-italic        = DankMono Nerd Font
-font-family                    = FiraCode Nerd Font
-font-family-bold               = FiraCode Mono Nerd Font
-font-family-italic             = FiraCode Mono Nerd Font
-font-family-bold-italic        = FiraCode Mono Nerd Font
+font-family                    = ""
+
+#font-family = "DankMono Nerd Font Mono"
+#font-family-bold = "DankMono Nerd Font Mono Bold"
+#font-style-bold = "Bold"
+#font-family-italic = "DankMono Nerd Font Mono Italic"
+#font-style-italic = "Italic"
+#font-synthetic-style = "no-bold-italic"
+
+#####
+
+font-family                    = FiraCode Nerd Font Mono
+font-family-bold = "FiraCode Nerd Font Mono SemBd"
+font-style-bold = "SemBd"
+font-family-italic = "FiraCode Nerd Font Mono Ret"
+font-style-italic = "Ret"
+font-family-bold-italic = "FiraCode Nerd Font Mono Bold"
+font-style-bold-italic = "Bold"
+
+#####
+
+#font-family = "JetBrainsMono Nerd Font Mono"
+#font-style = "Regular"
+#font-family-bold = "JetBrainsMono NFM Bold"
+#font-style-bold = "Bold"
+#font-family-italic = "JetBrainsMono NFM Italic"
+#font-style-italic = "Italic"
+#font-family-bold-italic = "JetBrainsMono NFM Bold Italic"
+#font-style-bold-italic = "Bold Italic"
 
 font-size                      = 17
 window-inherit-font-size       = true

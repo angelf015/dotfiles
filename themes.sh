@@ -19,7 +19,7 @@ select THEME in "${THEMES[@]}"; do
       ;;
     "Catppuccin Latte")
       WEZTERM="catppuccin-latte"
-      GHOSTTY="Catppuccin Latte"
+      GHOSTTY="catppuccin-latte"
       NVIM="catppuccin-latte"
       ZELLIJ="catppuccin_latte"
       STARSHIP="catppuccin_latte.toml"

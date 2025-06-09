@@ -32,7 +32,7 @@ config.colors = wezterm.color.get_builtin_schemes()["nord"]
 	-- Font style without ligatures
 	config.font = require("wezterm").font_with_fallback({
 		{
-			family = "DankMono Nerd Font",
+			family = "FiraCode Nerd Font",
 			harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 		},
 	})
@@ -41,7 +41,7 @@ config.colors = wezterm.color.get_builtin_schemes()["nord"]
 		{
 			italic = true,
 			intensity = "Bold",
-			font = wezterm.font("DankMono Nerd Font", {
+			font = wezterm.font("FiraCode Nerd Font", {
 				italic = true,
 				weight = "Regular",
 			}),
