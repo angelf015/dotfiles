@@ -36,8 +36,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- Blink cursor
-vim.opt.guicursor = {
-  "n-v-c:block-Cursor/lCursor-blinkon100-blinkoff100",
-  "i-ci:ver25-Cursor/lCursor-blinkon100-blinkoff100",
-  "r-cr:hor20-Cursor/lCursor-blinkon100-blinkoff100",
-}
+-- vim.opt.guicursor = {
+--   "n-v-c:block-Cursor/lCursor-blinkon100-blinkoff100",
+--   "i-ci:ver25-Cursor/lCursor-blinkon100-blinkoff100",
+--   "r-cr:hor20-Cursor/lCursor-blinkon100-blinkoff100",
+-- }

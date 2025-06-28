@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-colorscheme = "onenord"
+      colorscheme = "onenord",
     },
   },
   {
@@ -12,6 +12,10 @@ colorscheme = "onenord"
       styles = {
         sidebars = "transparent",
         floats = "transparent",
+        comments = { italic = true },
+        keywords = { bold = true },
+        functions = { italic = true },
+        variables = { bold = true },
       },
     },
   },
@@ -21,6 +25,20 @@ colorscheme = "onenord"
     name = "catppuccin",
     opts = {
       transparent_background = false, -- disables setting the background color.
+      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = {},
+        functions = { "italic" },
+        keywords = { "bold" },
+        strings = { "italic" },
+        variables = { "bold" },
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+      },
       integrations = {
         aerial = true,
         alpha = true,
@@ -118,13 +136,38 @@ colorscheme = "onenord"
     version = false,
     lazy = false,
     priority = 1000, -- Make sure to load this before all the other start plugins
-    -- Optional; default configuration will be used if setup isn't called.
   },
   {
     "rebelot/kanagawa.nvim",
     version = false,
     lazy = false,
     priority = 1000, -- Make sure to load this before all the other start plugins
+    config = function()
+      require("kanagawa").setup({
+        compile = false, -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
+        commentStyle = { italic = true },
+        functionStyle = { italic = true },
+        keywordStyle = { bold = true },
+        statementStyle = { bold = true },
+        typeStyle = {},
+        transparent = false, -- do not set background color
+        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+        terminalColors = true, -- define vim.g.terminal_color_{0,17}
+        colors = { -- add/modify theme and palette colors
+          palette = {},
+          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        },
+        overrides = function(colors) -- add/modify highlights
+          return {}
+        end,
+        theme = "wave", -- Load "wave" theme
+        background = { -- map the value of 'background' option to a theme
+          dark = "wave", -- try "dragon" !
+          light = "lotus",
+        },
+      })
+    end,
   },
   {
     "AlexvZyl/nordic.nvim",
@@ -137,7 +180,7 @@ colorscheme = "onenord"
     lazy = false,
     priority = 1000,
     setup = function()
-      vim.nord_disable_background = false
+      vim.nord_disable_background = true
       vim.g.nord_uniform_diff_background = true
     end,
   },
@@ -147,9 +190,21 @@ colorscheme = "onenord"
     priority = 1000,
     config = function()
       require("onedark").setup({
-        style = "darker",
+        style = "darker", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
         transparent = false,
         ending_tildes = true,
+        code_style = {
+          comments = "italic",
+          keywords = "bold",
+          functions = "italic",
+          strings = "italic",
+          variables = "bold",
+        },
+
+        -- Lualine options --
+        lualine = {
+          transparent = true, -- lualine center bar transparency
+        },
       })
     end,
   },
@@ -160,8 +215,36 @@ colorscheme = "onenord"
   },
   {
     "rmehri01/onenord.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
+    config = function()
+      require("onenord").setup({
+        theme = "dark", -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+        borders = true, -- Split window borders
+        fade_nc = false, -- Fade non-current windows, making them more distinguishable
+        -- Style that is applied to various groups: see `highlight-args` for options
+        styles = {
+          comments = "italic",
+          strings = "italic",
+          keywords = "bold",
+          functions = "italic",
+          variables = "bold",
+          diagnostics = "NONE",
+        },
+        disable = {
+          background = false, -- Disable setting the background color
+          float_background = false, -- Disable setting the background color for floating windows
+          cursorline = false, -- Disable the cursorline
+          eob_lines = true, -- Hide the end-of-buffer lines
+        },
+        -- Inverse highlight for different groups
+        inverse = {
+          match_paren = false,
+        },
+        custom_highlights = {}, -- Overwrite default highlight groups
+        custom_colors = {}, -- Overwrite default colors
+      })
+    end,
   },
   {
     "sainnhe/gruvbox-material",

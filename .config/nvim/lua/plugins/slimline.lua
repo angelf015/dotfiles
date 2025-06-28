@@ -1,0 +1,40 @@
+return {
+  "sschleemilch/slimline.nvim",
+  enabled = true,
+  opts = {
+    bold = true, -- makes primary parts bold
+
+    -- Global style. Can be overwritten using `configs.<component>.style`
+    style = "bg", -- "bg" or "fg"
+
+    configs = {
+      mode = {
+        verbose = true, -- Mode as single letter or as a word
+        hl = {
+          normal = "Type",
+          insert = "String",
+          pending = "Boolean",
+          visual = "Keyword",
+          command = "Function",
+        },
+      },
+    },
+    spaces = {
+      components = "",
+      left = "",
+      right = "",
+    },
+
+    -- Seperator configuartion
+    sep = {
+      hide = {
+        first = false, -- hides the first separator of the line
+        last = false, -- hides the last separator of the line
+      },
+      -- left = "", -- left separator of components
+      -- right = "", -- right separator of components
+      left = "",
+      right = "",
+    },
+  },
+}

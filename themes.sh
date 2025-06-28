@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+# INFO: Zellij se puede omitir, ya que, lo reemplaze con la funcionalidad de Ghostty, Wezterm muy poco usado y reemplazado por Ghostty
+
+# TODO: Falta por agregar el emulador de terminal Iterm2, usado solo ocasionalmente. Kitty se elimina por carecer de personalización de ventanas
+
 # Opciones de temas
 THEMES=("Catppuccin Mocha" "Catppuccin Latte" "Nord" "Tokyo Night" "Everforest" "OneDark" "Solarized")
 
@@ -8,6 +12,7 @@ echo "Elige un tema para la terminal:"
 select THEME in "${THEMES[@]}"; do
   if [[ -n "$THEME" ]]; then
     echo "Usando el tema: $THEME"
+
     # Usar case para asignar variables según el tema seleccionado
     case "$THEME" in
     "Catppuccin Mocha")
@@ -27,6 +32,7 @@ select THEME in "${THEMES[@]}"; do
     "Nord")
       WEZTERM="nord"
       GHOSTTY="nord"
+      #INFO: Para nvim puede ser nord o onenord, onenord mejora la legibilidad de codigó
       NVIM="onenord"
       ZELLIJ="nord"
       STARSHIP="nord.toml"
@@ -87,8 +93,8 @@ sed -i '' "/theme/ {
   }" /Users/arch/.config/wezterm/lua/plugins/tabline.lua
 
 # Nvim
-color="colorscheme = \"$NVIM\""
-sed -i '' "/colorscheme/ {
+color="      colorscheme = \"$NVIM\","
+sed -i '' "/      colorscheme/ {
   s/.*/$color/
   }" /Users/arch/.config/nvim/lua/plugins/ui.lua
 
