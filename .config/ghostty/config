@@ -1,7 +1,7 @@
 window-decoration              = true
 macos-option-as-alt            = false
 macos-titlebar-style           = tabs
-background-opacity             = 0.95
+background-opacity             = 1.95
 background-blur-radius         = 20
 
 font-family                    = ""

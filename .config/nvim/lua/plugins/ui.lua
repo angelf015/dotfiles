@@ -135,39 +135,7 @@ return {
     "neanias/everforest-nvim",
     version = false,
     lazy = false,
-    priority = 1000, -- Make sure to load this before all the other start plugins
-  },
-  {
-    "rebelot/kanagawa.nvim",
-    version = false,
-    lazy = false,
-    priority = 1000, -- Make sure to load this before all the other start plugins
-    config = function()
-      require("kanagawa").setup({
-        compile = false, -- enable compiling the colorscheme
-        undercurl = true, -- enable undercurls
-        commentStyle = { italic = true },
-        functionStyle = { italic = true },
-        keywordStyle = { bold = true },
-        statementStyle = { bold = true },
-        typeStyle = {},
-        transparent = false, -- do not set background color
-        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-        terminalColors = true, -- define vim.g.terminal_color_{0,17}
-        colors = { -- add/modify theme and palette colors
-          palette = {},
-          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-        },
-        overrides = function(colors) -- add/modify highlights
-          return {}
-        end,
-        theme = "wave", -- Load "wave" theme
-        background = { -- map the value of 'background' option to a theme
-          dark = "wave", -- try "dragon" !
-          light = "lotus",
-        },
-      })
-    end,
+    priority = 1000,
   },
   {
     "AlexvZyl/nordic.nvim",
@@ -247,11 +215,77 @@ return {
     end,
   },
   {
-    "sainnhe/gruvbox-material",
-    lazy = false,
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
+    config = true,
+    opts = {
+      terminal_colors = true, -- add neovim terminal colors
+      undercurl = true,
+      underline = true,
+      bold = true,
+      italic = {
+        strings = true,
+        emphasis = true,
+        comments = true,
+        operators = true,
+        folds = true,
+      },
+      strikethrough = true,
+      invert_selection = false,
+      invert_signs = false,
+      invert_tabline = false,
+      inverse = true, -- invert background for search, diffs, statuslines and errors
+      contrast = "", -- can be "hard", "soft" or empty string
+      palette_overrides = {},
+      overrides = {},
+      dim_inactive = false,
+      transparent_mode = false,
+    },
+  },
+  {
+    "everviolet/nvim",
+    name = "evergarden",
+    priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+    opts = {
+      theme = {
+        variant = "fall", -- 'winter'|'fall'|'spring'|'summer'
+        accent = "green",
+      },
+      editor = {
+        transparent_background = false,
+        sign = { color = "none" },
+        float = {
+          color = "mantle",
+          invert_border = false,
+        },
+        completion = {
+          color = "surface0",
+        },
+      },
+      style = {
+        tabline = { "reverse" },
+        search = { "italic", "reverse" },
+        incsearch = { "italic", "reverse" },
+        types = { "italic" },
+        keyword = { "bold" },
+        comment = { "italic" },
+      },
+    },
+  },
+  {
+    "Koalhack/darcubox-nvim",
     config = function()
-      vim.g.gruvbox_material_enable_italic = true
+      require("darcubox").setup({
+        options = {
+          transparent = false,
+          styles = {
+            comments = { italic = true }, -- italic
+            functions = { italic = true }, -- bold
+            keywords = { bold = true },
+            types = { italic = true, bold = true }, -- italics and bold
+          },
+        },
+      })
     end,
   },
 }
