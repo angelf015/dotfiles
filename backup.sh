@@ -16,7 +16,7 @@ rsync -a --delete ~/.config/nvim-alt ~/dotfiles/.config
 rsync -a --delete ~/.config/zellij ~/dotfiles/.config
 rsync -a --delete ~/.ideavimrc ~/dotfiles
 rsync -a --delete ~/.config/ghostty ~/dotfiles/.config
-rsync -a --delete ~/.local/bin ~/dotfiles/.local/bin
+rsync -a --delete ~/.local/bin ~/dotfiles/.local
 # rsync -a --delete ~/wallpaper ~/dotfiles
 # rsync -a --delete ~/.bashrc ~/dotfiles
 # rsync -a --delete ~/.Xmodmap ~/dotfiles
