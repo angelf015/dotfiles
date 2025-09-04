@@ -8,6 +8,22 @@ return {
 
     configs = {
       mode = {
+        -- Only rounded: path, git, filetype_lsp
+        path = {
+          hl = {
+            primary = "Define",
+          },
+        },
+        git = {
+          hl = {
+            primary = "Function",
+          },
+        },
+        filetype_lsp = {
+          hl = {
+            primary = "String",
+          },
+        },
         verbose = true, -- Mode as single letter or as a word
         hl = {
           normal = "Type",
@@ -18,22 +34,22 @@ return {
         },
       },
     },
-    spaces = {
-      components = "",
-      left = "",
-      right = "",
-    },
-
-    -- Seperator configuartion
-    sep = {
-      hide = {
-        first = false, -- hides the first separator of the line
-        last = false, -- hides the last separator of the line
-      },
-      -- left = "", -- left separator of components
-      -- right = "", -- right separator of components
-      left = "",
-      right = "",
-    },
+    -- spaces = {
+    --   components = "",
+    --   left = "",
+    --   right = "",
+    -- },
+    --
+    -- -- Seperator configuartion
+    -- sep = {
+    --   hide = {
+    --     first = false, -- hides the first separator of the line
+    --     last = false, -- hides the last separator of the line
+    --   },
+    --   -- left = "", -- left separator of components
+    --   -- right = "", -- right separator of components
+    --   left = "",
+    --   right = "",
+    -- },
   },
 }

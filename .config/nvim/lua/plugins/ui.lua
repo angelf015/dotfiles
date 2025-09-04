@@ -152,26 +152,56 @@ return {
       vim.g.nord_uniform_diff_background = true
     end,
   },
+  -- {
+  --   "navarasu/onedark.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("onedark").setup({
+  --       style = "cool", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+  --       transparent = false,
+  --       ending_tildes = true,
+  --       code_style = {
+  --         comments = "italic",
+  --         keywords = "bold",
+  --         functions = "italic",
+  --         strings = "italic",
+  --         variables = "bold",
+  --       },
+  --
+  --       -- Lualine options --
+  --       lualine = {
+  --         transparent = true, -- lualine center bar transparency
+  --       },
+  --     })
+  --   end,
+  -- },
   {
-    "navarasu/onedark.nvim",
-    lazy = false,
-    priority = 1000,
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
     config = function()
-      require("onedark").setup({
-        style = "darker", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-        transparent = false,
-        ending_tildes = true,
-        code_style = {
+      require("onedarkpro").setup({
+        styles = { -- For example, to apply bold and italic, use "bold,italic"
+          types = "italic",
+          methods = "italic",
+          numbers = "NONE",
+          strings = "italic",
           comments = "italic",
           keywords = "bold",
-          functions = "italic",
-          strings = "italic",
+          constants = "bold",
+          functions = "bold,italic",
+          operators = "NONE",
           variables = "bold",
+          parameters = "italic",
+          conditionals = "bold",
+          virtual_text = "italic",
         },
-
-        -- Lualine options --
-        lualine = {
-          transparent = true, -- lualine center bar transparency
+        options = {
+          cursorline = true, -- Use cursorline highlighting?
+          transparency = false, -- Use a transparent background?
+          terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
+          lualine_transparency = false, -- Center bar transparency?
+          highlight_inactive_windows = false, -- When the window is out of focus, change the normal background?
         },
       })
     end,

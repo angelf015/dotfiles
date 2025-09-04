@@ -1,0 +1,50 @@
+# todo.nvim
+
+A simple To-do plugin for Neovim for each project and preview as Markdown
+
+## Installation
+
+```lua
+-- lazy.nvim
+{
+    'TimothyGCY/todo.nvim',
+    config = function()
+        require('todo')
+    end
+}
+```
+
+## Features
+
+#### 1. User Commands
+
+- TodoList
+
+> Open a new tab and list all the todos of current project
+
+- TodoAdd
+
+> Create a new entry of todo, `:TodoAdd foo bar`
+
+#### 2. Keymaps
+
+| Keymap | Function |
+| - | - |
+| `` | Toggle todo/task completion |
+| `dd` | Delete todo |
+| `a` | Create a new entry of todo |
+| `e` | Modify todo's description |
+| `r` | Reload todo list |
+| `q` | Close todo list |
+
+---
+
+> **Note**
+This plugin will create a local file `.nvim_todo.json` to the project's root directory, you might want to include this file to your `.gitignore`, based on your preference.
+
+## TODO
+- [ ] Customisation
+- keymaps
+- ???
+- [ ] Telescope integration (maybe?)
+- [ ] ???

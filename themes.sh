@@ -53,7 +53,7 @@ select THEME in "${THEMES[@]}"; do
       ;;
     "OneDark")
       WEZTERM="One Dark (Gogh)"
-      GHOSTTY="OneHalfDark"
+      GHOSTTY="onedark"
       NVIM="onedark"
       ZELLIJ="onedark"
       STARSHIP="onedark.toml"

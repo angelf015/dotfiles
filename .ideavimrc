@@ -6,7 +6,8 @@ let mapleader=" "
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-set number relativenumber
+"set number relativenumber
+set norelativenumber
 set clipboard=unnamedplus
 set scrolloff=5
 set history=1000
@@ -129,10 +130,37 @@ nmap <leader>ms :action ScopeViewPopupMenu<CR>
 nmap <leader>mt :action EditorTabPopupMenu<CR>
 nmap <leader>mw :action ToolWindowsGroup<CR>
 
+" configuration for flash
+nmap s <Action>(flash.search)
+xmap s <Action>(flash.search)
+
+
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
 
 Plug 'preservim/nerdtree'
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
-Plug 'machakann/vim-highlightedyank'set clipboard^=ideaput
+Plug 'machakann/vim-highlightedyank'
+set clipboard^=ideaput
+Plug 'vim-matchit'
+Plug 'chrisbra/matchit'
+set matchit
+
+Plug 'tpope/vim-surround'
+
+" Para seleccionar todo el texto del buffer
+" Atajo: vae
+Plug 'kana/vim-textobj-entire'
+
+" Para eliminar argumentos, parametros de funciones
+" Eliminar argumento: daa
+" Cambiar argumento: cia
+" Seleccionar argumento: vaa/via
+Plug 'vim-scripts/argtextobj.vim'
+
+" Para eliminar funciones, clases, bloques de código
+" Eliminar cuerpo de función: dif
+" Cambiar función entera: caf
+" Seleccionar cuerpo o toda la función: vaf/vif
+set functiontextobj
