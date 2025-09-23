@@ -2,8 +2,6 @@
 
 # INFO: Zellij se puede omitir, ya que, lo reemplaze con la funcionalidad de Ghostty, Wezterm muy poco usado y reemplazado por Ghostty
 
-# TODO: Falta por agregar el emulador de terminal Iterm2, usado solo ocasionalmente. Kitty se elimina por carecer de personalización de ventanas
-
 # Opciones de temas
 THEMES=("Catppuccin Mocha" "Catppuccin Latte" "Nord" "Tokyo Night" "Everforest" "OneDark" "Solarized")
 
