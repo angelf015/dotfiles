@@ -1,7 +1,7 @@
 return {
   "sschleemilch/slimline.nvim",
   opts = {
-    bold = true, -- makes primary parts bold
+    bold = false, -- makes primary parts bold
 
     -- Global style. Can be overwritten using `configs.<component>.style`
     style = "bg", -- "bg" or "fg"

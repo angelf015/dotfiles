@@ -40,23 +40,19 @@ nnoremap <c-u> <c-u>zz
 xnoremap < <gv
 xnoremap > >gv
 
-nmap <leader>h :nohlsearch<CR>
+nmap <esc> :nohlsearch<CR>
 
 """ Window navigation
-nnoremap <c-\> :action SplitVertically<CR>
-nnoremap <c--> :action SplitHorizontally<CR>
-nnoremap <c-=> :action Unsplit<CR>
+nnoremap <leader>w/ :action SplitVertically<CR>
+nnoremap <leader>w- :action SplitHorizontally<CR>
+nnoremap <leader>w= :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 "nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
-nnoremap <c-z> :action TogglePresentationMode<CR>
+nnoremap <leader>uz :action TogglePresentationMode<CR>
 
-" Tab navigation
-nnoremap <leader>bN :bnext<CR>
-nnoremap <leader>bP :bprevious<CR>
-" nmap <C-Tab> :action PreviousTab<CR>
-" nmap <Tab> :action NextTab<CR>
-nmap <leader>t :action GotoTest<CR>
+nmap <leader>te :action GotoTest<CR>
 nmap <leader>bd :action CloseContent<CR>
+nmap <leader>d :edit DuplicateLine<CR>
 
 " Move selected line / block of text in visual mode
 xnoremap J :m '>+1<CR>gv=gv
@@ -97,7 +93,7 @@ nmap ]c :action JumpToNextChange<CR>
 nnoremap <leader>cr :action RenameElement<CR>
 nnoremap <leader>cR :action RenameFile<CR>
 nnoremap <leader>cf :action ReformatCode<CR>
-nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>ca :action ShowIntentionActions<CR>
 nnoremap <leader>cl :action ActivateProblemsViewToolWindow<CR>
 nnoremap <leader>co :action OptimizeImports<CR>

@@ -198,7 +198,7 @@ return {
         },
         options = {
           cursorline = true, -- Use cursorline highlighting?
-          transparency = false, -- Use a transparent background?
+          transparency = true, -- Use a transparent background?
           terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
           lualine_transparency = false, -- Center bar transparency?
           highlight_inactive_windows = false, -- When the window is out of focus, change the normal background?
@@ -230,7 +230,7 @@ return {
           diagnostics = "NONE",
         },
         disable = {
-          background = false, -- Disable setting the background color
+          background = true, -- Disable setting the background color
           float_background = false, -- Disable setting the background color for floating windows
           cursorline = false, -- Disable the cursorline
           eob_lines = true, -- Hide the end-of-buffer lines
@@ -314,6 +314,37 @@ return {
             keywords = { bold = true },
             types = { italic = true, bold = true }, -- italics and bold
           },
+        },
+      })
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("kanagawa").setup({
+        compile = false, -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
+        commentStyle = { italic = true },
+        functionStyle = {},
+        keywordStyle = { italic = true },
+        statementStyle = { bold = true },
+        typeStyle = {},
+        transparent = false, -- do not set background color
+        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+        terminalColors = true, -- define vim.g.terminal_color_{0,17}
+        colors = { -- add/modify theme and palette colors
+          palette = {},
+          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        },
+        overrides = function() -- add/modify highlights
+          return {}
+        end,
+        theme = "wave", -- Load "wave" theme
+        background = { -- map the value of 'background' option to a theme
+          dark = "wave", -- try "dragon" !
+          light = "lotus",
         },
       })
     end,

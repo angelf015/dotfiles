@@ -1,7 +1,7 @@
 window-decoration              = true
 macos-option-as-alt            = false
 macos-titlebar-style           = tabs
-background-opacity             = 1.95
+background-opacity             = 0.9
 background-blur-radius         = 20
 
 font-family                    = ""
@@ -15,24 +15,24 @@ font-family                    = ""
 
 #####
 
-font-family                    = FiraCode Nerd Font Mono
-font-family-bold = "FiraCode Nerd Font Mono SemBd"
-font-style-bold = "SemBd"
-font-family-italic = "FiraCode Nerd Font Mono Ret"
-font-style-italic = "Ret"
-font-family-bold-italic = "FiraCode Nerd Font Mono Bold"
-font-style-bold-italic = "Bold"
+#font-family                    = FiraCode Nerd Font Mono
+#font-family-bold = "FiraCode Nerd Font Mono SemBd"
+#font-style-bold = "SemBd"
+#font-family-italic = "FiraCode Nerd Font Mono Ret"
+#font-style-italic = "Ret"
+#font-family-bold-italic = "FiraCode Nerd Font Mono Bold"
+#font-style-bold-italic = "Bold"
 
 #####
 
-#font-family = "JetBrainsMono Nerd Font Mono"
-#font-style = "Regular"
-#font-family-bold = "JetBrainsMono NFM Bold"
-#font-style-bold = "Bold"
-#font-family-italic = "JetBrainsMono NFM Italic"
-#font-style-italic = "Italic"
-#font-family-bold-italic = "JetBrainsMono NFM Bold Italic"
-#font-style-bold-italic = "Bold Italic"
+font-family = "JetBrainsMono Nerd Font Mono"
+font-style = "Regular"
+font-family-bold = "JetBrainsMono NFM Bold"
+font-style-bold = "Bold"
+font-family-italic = "JetBrainsMono NFM Italic"
+font-style-italic = "Italic"
+font-family-bold-italic = "JetBrainsMono NFM Bold Italic"
+font-style-bold-italic = "Bold Italic"
 
 font-size                      = 17
 window-inherit-font-size       = true
