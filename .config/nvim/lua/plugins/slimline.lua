@@ -1,5 +1,6 @@
 return {
   "sschleemilch/slimline.nvim",
+  enabled = false,
   opts = {
     bold = false, -- makes primary parts bold
 
