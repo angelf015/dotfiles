@@ -134,7 +134,7 @@
       "commands": [
         "flash-vscode.backspace"
       ]
-    },
+    }
   ],
   "vim.normalModeKeyBindings": [
     {
