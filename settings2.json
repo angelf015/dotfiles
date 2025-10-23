@@ -1,0 +1,601 @@
+{
+  "cSpell.language": "es-ES",
+  "editor.scrollbar.vertical": "auto",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.enabled": false,
+  "editor.minimap.side": "right",
+  "workbench.statusBar.visible": true,
+  "terminal.explorerKind": "both",
+  "terminal.sourceControlRepositoriesKind": "both",
+  "telemetry.telemetryLevel": "off",
+  "git.openRepositoryInParentFolders": "never",
+  "files.autoSave": "afterDelay",
+  "editor.linkedEditing": true,
+  "editor.guides.indentation": false,
+  "indenticator.color.dark": "rgba(255,255,255,0.1)",
+  "indenticator.inner.width": 0.1,
+  "breadcrumbs.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#00FF0010"
+    },
+    {
+      "column": 100,
+      "color": "#BDB76B15"
+    },
+    {
+      "column": 120,
+      "color": "#FA807219"
+    }
+  ],
+  "editor.unicodeHighlight.includeComments": true,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "tab.activeBorderTop": "#00FF00",
+      "tab.unfocusedActiveBorderTop": "#00FF0088",
+      "textCodeBlock.background": "#00000055"
+    },
+    "editor.wordHighlightStrongBorder": "#FF6347",
+    "editor.wordHighlightBorder": "#FFD700",
+    "editor.selectionHighlightBorder": "#A9A9A9"
+  },
+  "workbench.editor.revealIfOpen": true,
+  "workbench.tree.indent": 20,
+  "emmet.variables": {
+    "lang": "es"
+  },
+  "trailing-spaces.backgroundColor": "rgba(255,0,0,0.1)",
+  "trailing-spaces.includeEmptyLines": false,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.detectJdksAtStart": false,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.debug.settings.hotCodeReplace": "auto",
+  "java.dependency.packagePresentation": "hierarchical",
+  "java.maxConcurrentBuilds": 16,
+  "java.sources.organizeImports.staticStarThreshold": 1,
+  "editor.minimap.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "update.showReleaseNotes": false,
+  "workbench.colorTheme": "OneNord",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontSize": 15,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "1",
+        "5",
+        "g",
+        "k",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "after": [
+        "1",
+        "5",
+        "g",
+        "j",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "commands": [
+        ":tabp"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "commands": [
+        ":tabn"
+      ]
+    },
+    {
+      "before": [
+        "s"
+      ],
+      "commands": [
+        "flash-vscode.start"
+      ]
+    },
+    {
+      "before": [
+        "S"
+      ],
+      "commands": [
+        "flash-vscode.startSelection"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "commands": [
+        "flash-vscode.backspace"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "f"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.formatDocument"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "D"
+      ],
+      "commands": [
+        "editor.action.revealDeclaration"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "I"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "y"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "K"
+      ],
+      "commands": [
+        "editor.action.triggerParameterHints"
+      ],
+      "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ],
+      "when": "editorFocus"
+    },
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ],
+      "when": "editorFocus"
+    },
+    {
+      "before": [
+        "]",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ],
+      "when": "editorFocus"
+    },
+    {
+      "before": [
+        "[",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ],
+      "when": "editorFocus"
+    },
+    {
+      "before": [
+        "]",
+        "w"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ],
+      "when": "editorFocus"
+    },
+    {
+      "before": [
+        "[",
+        "w"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ],
+      "when": "editorFocus"
+    },
+    {
+      "before": [
+        "[",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "B"
+      ],
+      "commands": [
+        "workbench.action.moveEditorLeftInGroup"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "B"
+      ],
+      "commands": [
+        "workbench.action.moveEditorRightInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsToTheRight"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsToTheLeft"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "d"
+      ],
+      "commands": [
+        "workbench.actions.view.toggleProblems"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.replaceInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ],
+      "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "workbench.action.quickTextSearch"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.openRecent"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "g"
+      ],
+      "commands": [
+        "workbench.scm.focus"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ],
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "A"
+      ],
+      "commands": [
+        "editor.action.sourceAction"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "p"
+      ],
+      "commands": [
+        "markdown.showPreview"
+      ],
+      "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "u"
+      ],
+      "commands": [
+        "typescript.removeUnusedImports"
+      ]
+    }
+  ],
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/Users/arch/Library/Java/JavaVirtualMachines/corretto-1.8.0_442/Contents/Home"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "/opt/homebrew/Cellar/openjdk@17/17.0.17"
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/opt/homebrew/Cellar/openjdk@21/21.0.9"
+    },
+    {
+      "name": "JavaSE-23",
+      "path": "/Users/arch/Library/Java/JavaVirtualMachines/openjdk-23.0.2/Contents/Home"
+    },
+    {
+      "name": "JavaSE-25",
+      "path": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home",
+      "default": true
+    }
+  ],
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "env": {
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home",
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+      }
+    },
+    "JavaSE-1.8 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/arch/Library/Java/JavaVirtualMachines/corretto-1.8.0_442/Contents/Home"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-17 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk@17/17.0.17"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-21 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk@21/21.0.9"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-23": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/arch/Library/Java/JavaVirtualMachines/openjdk-23.0.2/Contents/Home"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-25 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home"
+      },
+      "path": "zsh"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "JavaSE-25 LTS",
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home"
+    },
+    {
+      "environmentVariable": "ZDOTDIR",
+      "value": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+    }
+  ],
+  "java.import.gradle.java.home": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home",
+  "editor.matchBrackets": "never",
+  "redhat.telemetry.enabled": false
+}

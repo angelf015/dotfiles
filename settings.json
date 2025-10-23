@@ -1,0 +1,753 @@
+{
+  "cSpell.language": "es-ES",
+  "workbench.colorTheme": "OneNord",
+  "editor.fontSize": 16,
+  "editor.scrollbar.vertical": "auto",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.enabled": false,
+  "editor.minimap.side": "right",
+  "editor.fontFamily": "'Fira Code'",
+  "extensions.autoUpdate": false,
+  "workbench.statusBar.visible": true,
+  "terminal.explorerKind": "both",
+  "terminal.sourceControlRepositoriesKind": "both",
+  "telemetry.telemetryLevel": "off",
+  "editor.matchBrackets": "never",
+  "git.openRepositoryInParentFolders": "never",
+  "files.autoSave": "afterDelay",
+  "editor.linkedEditing": true,
+  "editor.guides.indentation": false,
+  "indenticator.color.dark": "rgba(255,255,255,0.1)",
+  "indenticator.inner.width": 0.1,
+  "breadcrumbs.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#00FF0010"
+    },
+    {
+      "column": 100,
+      "color": "#BDB76B15"
+    },
+    {
+      "column": 120,
+      "color": "#FA807219"
+    }
+  ],
+  "editor.unicodeHighlight.includeComments": true,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "tab.activeBorderTop": "#00FF00",
+      "tab.unfocusedActiveBorderTop": "#00FF0088",
+      "textCodeBlock.background": "#00000055"
+    },
+    "editor.wordHighlightStrongBorder": "#FF6347",
+    "editor.wordHighlightBorder": "#FFD700",
+    "editor.selectionHighlightBorder": "#A9A9A9"
+  },
+  "workbench.editor.revealIfOpen": true,
+  "workbench.tree.indent": 20,
+  "emmet.variables": {
+    "lang": "es"
+  },
+  "cSpell.diagnosticLevel": "Hint",
+  "trailing-spaces.backgroundColor": "rgba(255,0,0,0.1)",
+  "trailing-spaces.includeEmptyLines": false,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.detectJdksAtStart": false,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.debug.settings.hotCodeReplace": "auto",
+  "java.dependency.packagePresentation": "hierarchical",
+  "java.maxConcurrentBuilds": 16,
+  "java.sources.organizeImports.staticStarThreshold": 1,
+  "editor.minimap.enabled": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+    {
+      "before": [
+        "s"
+      ],
+      "commands": [
+        "flash-vscode.start"
+      ]
+    },
+    {
+      "before": [
+        "S"
+      ],
+      "commands": [
+        "flash-vscode.startSelection"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "commands": [
+        "flash-vscode.backspace"
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "f"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.formatDocument"
+        }
+      ]
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.vimrc",
+  "vim.easymotion": true,
+  "vim.useCtrlKeys": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.focusLeftGroup"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.focusBelowGroup"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.focusAboveGroup"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.focusRightGroup"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openRecent"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "actions.find"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.findInFiles"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "s"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.findInFiles"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s",
+        "r"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.startFindReplaceAction"
+        }
+      ]
+    },
+    // Buffers y ventanas
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "b"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.showAllEditors"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "d"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": ":w"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "n"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.newWindow"
+        }
+      ]
+    },
+    // Git
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "s"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.view.scm"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "l"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "gitlens.showCommitSearch"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "d"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.revealDefinition"
+        }
+      ]
+    },
+    // LSP
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.revealDefinition"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "D"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.revealDefinitionAside"
+        }
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.quickFix"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.rename"
+        }
+      ]
+    },
+    // Diagnóstico
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "d"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.marker.nextInFiles"
+        }
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.marker.prev"
+        }
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.marker.next"
+        }
+      ]
+    },
+    // Comentarios
+    {
+      "before": [
+        "g",
+        "c"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "c",
+        "c"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "scrollPageDown",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "S",
+        "h"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.previousEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "S",
+        "l"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.nextEditor"
+        }
+      ]
+    },
+    // Alternativa si la anterior no funciona (usando mayúsculas)
+    {
+      "before": [
+        "H"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.previousEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.nextEditor"
+        }
+      ]
+    },
+    // También puedes usar estos comandos más específicos
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "n"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.nextEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "p"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.previousEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "f"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.formatDocument"
+        }
+      ]
+    },
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-c>": true,
+    "<C-v>": true,
+    "<C-f>": false,
+    "<S-j>": false,
+    "<S-l>": false,
+    "J": false,
+    "L": false,
+  },
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "g",
+        "c"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "scrollPageDown",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "deleteLeft"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "scrollPageDown",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/Users/arch/Library/Java/JavaVirtualMachines/corretto-1.8.0_442/Contents/Home"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "/opt/homebrew/Cellar/openjdk@17/17.0.17"
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/opt/homebrew/Cellar/openjdk@21/21.0.9"
+    },
+    {
+      "name": "JavaSE-23",
+      "path": "/Users/arch/Library/Java/JavaVirtualMachines/openjdk-23.0.2/Contents/Home"
+    },
+    {
+      "name": "JavaSE-25",
+      "path": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home",
+      "default": true
+    }
+  ],
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "env": {
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home",
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+      }
+    },
+    "JavaSE-1.8 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/arch/Library/Java/JavaVirtualMachines/corretto-1.8.0_442/Contents/Home"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-17 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk@17/17.0.17"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-21 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk@21/21.0.9"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-23": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/Users/arch/Library/Java/JavaVirtualMachines/openjdk-23.0.2/Contents/Home"
+      },
+      "path": "zsh"
+    },
+    "JavaSE-25 LTS": {
+      "overrideName": true,
+      "env": {
+        "ZDOTDIR": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk",
+        "JAVA_HOME": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home"
+      },
+      "path": "zsh"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "JavaSE-25 LTS",
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home"
+    },
+    {
+      "environmentVariable": "ZDOTDIR",
+      "value": "/Users/arch/Library/Application Support/Code/User/globalStorage/pleiades.java-extension-pack-jdk"
+    }
+  ],
+  "java.import.gradle.java.home": "/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home",
+  "[shellscript]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
+  },
+}

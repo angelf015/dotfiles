@@ -8,70 +8,70 @@ THEMES=("Catppuccin Mocha" "Catppuccin Latte" "Nord" "Tokyo Night" "Everforest" 
 # Mostrar opciones y elegir tema
 echo "Elige un tema para la terminal:"
 select THEME in "${THEMES[@]}"; do
-  if [[ -n "$THEME" ]]; then
-    echo "Usando el tema: $THEME"
+	if [[ -n "$THEME" ]]; then
+		echo "Usando el tema: $THEME"
 
-    # Usar case para asignar variables según el tema seleccionado
-    case "$THEME" in
-    "Catppuccin Mocha")
-      WEZTERM="Catppuccin Mocha"
-      GHOSTTY="catppuccin-mocha"
-      NVIM="catppuccin-mocha"
-      ZELLIJ="catppuccin_mocha"
-      STARSHIP="catppuccin_mocha.toml"
-      ;;
-    "Catppuccin Latte")
-      WEZTERM="catppuccin-latte"
-      GHOSTTY="catppuccin-latte"
-      NVIM="catppuccin-latte"
-      ZELLIJ="catppuccin_latte"
-      STARSHIP="catppuccin_latte.toml"
-      ;;
-    "Nord")
-      WEZTERM="nord"
-      GHOSTTY="nord"
-      #INFO: Para nvim puede ser nord o onenord, onenord mejora la legibilidad de codigó
-      NVIM="onenord"
-      ZELLIJ="nord"
-      STARSHIP="nord.toml"
-      ;;
-    "Tokyo Night")
-      WEZTERM="Tokyo Night Moon"
-      GHOSTTY="tokyonight"
-      NVIM="tokyonight"
-      ZELLIJ="tokyonight"
-      STARSHIP="tokyonight.toml"
-      ;;
-    "Everforest")
-      WEZTERM="Everforest Dark (Gogh)"
-      GHOSTTY="Everforest Dark - Hard"
-      NVIM="everforest"
-      ZELLIJ="everforest"
-      STARSHIP="everforest.toml"
-      ;;
-    "OneDark")
-      WEZTERM="One Dark (Gogh)"
-      GHOSTTY="onedark"
-      NVIM="onedark"
-      ZELLIJ="onedark"
-      STARSHIP="onedark.toml"
-      ;;
-    "Solarized")
-      WEZTERM="Solarized (dark) (terminal.sexy)"
-      GHOSTTY="Solarized Dark - Patched"
-      NVIM="solarized-osaka"
-      ZELLIJ="onedark"
-      STARSHIP="solarized.toml"
-      ;;
-    *)
-      echo "Opción no válida."
-      ;;
-    esac
+		# Usar case para asignar variables según el tema seleccionado
+		case "$THEME" in
+		"Catppuccin Mocha")
+			WEZTERM="Catppuccin Mocha"
+			GHOSTTY="catppuccin-mocha"
+			NVIM="catppuccin-mocha"
+			ZELLIJ="catppuccin_mocha"
+			STARSHIP="catppuccin_mocha.toml"
+			;;
+		"Catppuccin Latte")
+			WEZTERM="catppuccin-latte"
+			GHOSTTY="catppuccin-latte"
+			NVIM="catppuccin-latte"
+			ZELLIJ="catppuccin_latte"
+			STARSHIP="catppuccin_latte.toml"
+			;;
+		"Nord")
+			WEZTERM="nord"
+			GHOSTTY="nord"
+			#INFO: Para nvim puede ser nord o onenord, onenord mejora la legibilidad de codigó
+			NVIM="onenord"
+			ZELLIJ="nord"
+			STARSHIP="nord.toml"
+			;;
+		"Tokyo Night")
+			WEZTERM="Tokyo Night Moon"
+			GHOSTTY="tokyonight"
+			NVIM="tokyonight"
+			ZELLIJ="tokyonight"
+			STARSHIP="tokyonight.toml"
+			;;
+		"Everforest")
+			WEZTERM="Everforest Dark (Gogh)"
+			GHOSTTY="Everforest Dark - Hard"
+			NVIM="everforest"
+			ZELLIJ="everforest"
+			STARSHIP="everforest.toml"
+			;;
+		"OneDark")
+			WEZTERM="One Dark (Gogh)"
+			GHOSTTY="onedark"
+			NVIM="onedark"
+			ZELLIJ="onedark"
+			STARSHIP="onedark.toml"
+			;;
+		"Solarized")
+			WEZTERM="Solarized (dark) (terminal.sexy)"
+			GHOSTTY="Solarized Dark - Patched"
+			NVIM="solarized-osaka"
+			ZELLIJ="onedark"
+			STARSHIP="solarized.toml"
+			;;
+		*)
+			echo "Opción no válida."
+			;;
+		esac
 
-    break # Salir del loop select después de una selección válida
-  else
-    echo "Opción inválida. Intenta de nuevo."
-  fi
+		break # Salir del loop select después de una selección válida
+	else
+		echo "Opción inválida. Intenta de nuevo."
+	fi
 done
 
 # Cambia el tema en Wezterm, Nvim, Zellij y Starship

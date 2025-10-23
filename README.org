@@ -1,5 +1,3 @@
 #+title: Dotfiles para Archlinux y MacOs
 
 * Notas
-
-  - El README se limpia por obsolescencia, pero se mantiene para referencia.
