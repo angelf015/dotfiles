@@ -4,7 +4,7 @@ return function(config)
 	local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 	tabline.setup({
 		options = {
-theme = "nord",
+theme = "Tokyo Night Moon",
 			section_separators = {
 				left = wezterm.nerdfonts.ple_right_half_circle_thick,
 				right = wezterm.nerdfonts.ple_left_half_circle_thick,
