@@ -47,7 +47,7 @@ cursor-opacity                 = 0.8
 cursor-style                   = underline
 link-url                       = true
 mouse-hide-while-typing        = true
-theme                          = TokyoNight Moon
+theme                          = tokyonight_moon
 window-vsync                   = true
 
 # Other
