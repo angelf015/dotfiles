@@ -1,8 +1,7 @@
 window-decoration              = true
 window-padding-color = extend-always
-macos-option-as-alt            = false
 macos-titlebar-style           = tabs
-background-opacity             = 0.9
+background-opacity             = 0.95
 background-blur-radius         = 20
 
 font-family                    = ""
@@ -34,8 +33,11 @@ font-family-italic = "JetBrainsMono NFM Italic"
 font-style-italic = "Italic"
 font-family-bold-italic = "JetBrainsMono NFM Bold Italic"
 font-style-bold-italic = "Bold Italic"
+#font-thicken = true
+# O un ajuste manual más sutil:
+font-synthetic-style = bold
 
-font-size                      = 16
+font-size                      = 13
 window-inherit-font-size       = true
 
 # Look and Feel
@@ -50,6 +52,11 @@ mouse-hide-while-typing        = true
 theme                          = tokyonight_moon
 window-vsync                   = true
 
+# Color adjustments for more vivid colors (matching WezTerm)
+adjust-cell-width              = 0
+adjust-box-thickness           = 0
+minimum-contrast               = 1.0
+
 # Other
 clipboard-paste-protection     = true
 clipboard-trim-trailing-spaces = true
@@ -62,12 +69,12 @@ shell-integration              = zsh
 shell-integration-features     = cursor,sudo,title
 
 
-window-padding-color = extend
 window-step-resize = true
 window-padding-balance = true
 #gtk-wide-tabs = false
-#gtk-custom-css = "style.css"
+gtk-custom-css = "style.css"
 #gtk-titlebar-style = tabs
+window-colorspace = display-p3
 
 ### Mac Alt Fix
 ##macos-option-as-alt = left

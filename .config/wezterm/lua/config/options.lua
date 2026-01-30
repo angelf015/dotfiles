@@ -20,70 +20,60 @@ local function options(config)
 	config.send_composed_key_when_left_alt_is_pressed = true
 	config.send_composed_key_when_right_alt_is_pressed = true
 
-	-- Increase number of drawn frames
-	config.max_fps = 144
-	config.animation_fps = 144
+	-- Optimize scrollback for tmux usage
+	config.scrollback_lines = 3000
+
+	-- Optimize frame rate for performance
+	config.max_fps = 60
+	config.animation_fps = 60
 
 	-- Set color scheme
-config.color_scheme = "Tokyo Night Moon"
-config.colors = wezterm.color.get_builtin_schemes()["Tokyo Night Moon"]
-	-- config.window_background_opacity = 0.9
+	config.color_scheme = "Tokyo Night Moon"
+	config.colors = wezterm.color.get_builtin_schemes()["Tokyo Night Moon"]
+	config.window_background_opacity = 0.9
+	config.macos_window_background_blur = 20
 
-	-- Font style without ligatures
-	config.font = require("wezterm").font_with_fallback({
-		{
-			family = "FiraCode Nerd Font",
-			harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
-		},
-	})
+	-- Font style with ligatures
+	config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Medium" })
 
 	config.font_rules = {
 		{
 			italic = true,
 			intensity = "Bold",
-			font = wezterm.font("FiraCode Nerd Font", {
+			font = wezterm.font("JetBrainsMono Nerd Font Mono", {
 				italic = true,
-				weight = "Regular",
+				weight = "Medium",
 			}),
 		},
 	}
 
 	-- Font size
-	config.font_size = 16
+	config.font_size = 15
 	config.line_height = 1.2
 
-	-- Disable window resize UI
-	config.window_decorations = "RESIZE"
+	-- Use integrated titlebar with terminal colors
+	config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
 	-- Disable window padding
 	config.window_padding = {
 		left = 0,
 		right = 0,
-		top = 0,
+		top = 40,
 		bottom = 0,
 	}
 
-	-- Dimming of inactive panes
+	-- Disable dimming of inactive panes (tmux handles this)
 	config.inactive_pane_hsb = {
 		saturation = 1.0,
-		brightness = 0.9,
+		brightness = 1.0,
 	}
 
 	-- Underline
 	config.underline_position = "150%"
 	config.underline_thickness = "200%"
 
-	-- Set terminal style for tab bar
-	config.use_fancy_tab_bar = false
-
-	-- Hide new tab button
-	config.show_new_tab_button_in_tab_bar = false
-
-	-- Increase max tab width
-	config.tab_max_width = 32
-
-	-- Update status faster
-	config.status_update_interval = 500
+	-- Disable tab bar (using tmux instead)
+	config.enable_tab_bar = false
 end
 
 return options

@@ -1,27 +1,13 @@
--- LazyVim auto format
 vim.g.autoformat = true
 
 -- Snacks animations
 -- Set to `false` to globally disable all snacks animations
 vim.g.snacks_animate = true
 
--- LazyVim picker to use.
--- Can be one of: telescope, fzf
--- Leave it to "auto" to automatically use the picker
--- enabled with `:LazyExtras`
-vim.g.lazyvim_picker = "auto"
-
--- LazyVim completion engine to use.
--- Can be one of: nvim-cmp, blink.cmp
--- Leave it to "auto" to automatically use the completion engine
--- enabled with `:LazyExtras`
-vim.g.lazyvim_cmp = "auto"
-
 -- if the completion engine supports the AI source,
 -- use that instead of inline suggestions
 vim.g.ai_cmp = true
 
--- LazyVim root dir detection
 -- Each entry can be:
 -- * the name of a detector function like `lsp` or `cwd`
 -- * a pattern or array of patterns like `.git` or `lua`.
@@ -32,9 +18,7 @@ vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 -- This sets `vim.o.shell` and does some additional configuration for:
 -- * pwsh
 -- * powershell
--- LazyVim.terminal.setup("pwsh")
 
--- Set LSP servers to be ignored when used with `util.root.detectors.lsp`
 -- for detecting the LSP root
 vim.g.root_lsp_ignore = { "copilot" }
 
@@ -57,15 +41,14 @@ opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
 opt.expandtab = true -- Use spaces instead of tabs
 opt.fillchars = {
-    foldopen = "",
-    foldclose = "",
-    fold = " ",
-    foldsep = " ",
-    diff = "╱",
-    eob = " ",
+  foldopen = "",
+  foldclose = "",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
 }
 opt.foldlevel = 99
-opt.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
@@ -107,46 +90,7 @@ opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
 
-if vim.fn.has("nvim-0.10") == 1 then
-    opt.smoothscroll = true
-    opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
-    opt.foldmethod = "expr"
-    opt.foldtext = ""
-else
-    opt.foldmethod = "indent"
-    opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
-end
-
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
--- vim.api.nvim_create_autocmd("FileType", {
---     pattern = { "markdown", "org" },
---     callback = function()
---         vim.opt.colorcolumn = "80"
---         vim.opt.spell = true
---         vim.opt.spelllang = "es"
---     end,
--- })
 
--- vim.api.nvim_create_autocmd("BufEnter", {
---     callback = function()
---         local ft = vim.bo.filetype
---         if ft ~= "markdown" and ft ~= "org" then
---             vim.opt.colorcolumn = "120"
---         end
---     end,
--- })
-
--- vim.api.nvim_create_autocmd("BufEnter", {
---     pattern = "*",
---     callback = function()
---         if vim.bo.filetype == "javascript" or vim.bo.filetype == "typescript" then
---             vim.opt_local.shiftwidth = 2
---             vim.opt_local.tabstop = 2
---         elseif vim.bo.filetype == "java" then
---             vim.opt_local.shiftwidth = 4
---             vim.opt_local.tabstop = 4
---         end
---     end,
--- })

@@ -23,7 +23,7 @@ return {
         },
         input = { enabled = true },
         notifier = {
-            enabled = true,
+            enabled = false, -- Desactivado para usar Noice
             timeout = 3000,
         },
         picker = { enabled = true },
@@ -34,7 +34,11 @@ return {
         words = { enabled = true },
         styles = {
             notification = {
-                -- wo = { wrap = true } -- Wrap notifications
+                wo = { wrap = true }, -- Wrap notifications
+                border = "rounded",
+                zindex = 100,
+                ft = "markdown",
+                title_pos = "center",
             },
         },
     },

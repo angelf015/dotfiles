@@ -2,13 +2,6 @@
 
 # Copy dotfiles
 rsync -a --delete ~/.config/kitty ~/dotfiles/.config
-# rsync -a --delete ~/.config/mpd ~/dotfiles/.config
-# rsync -a --delete ~/.config/ncmpcpp ~/dotfiles/.config
-# rsync -a --delete ~/.config/qtile ~/dotfiles/.config
-# rsync -a --delete ~/.config/rofi ~/dotfiles/.config
-# rsync -a --delete ~/.config/picom ~/dotfiles/.config
-# rsync -a --delete ~/.config/chadwm ~/dotfiles/.config
-rsync -a --delete ~/.config/doom ~/dotfiles/.config
 rsync -a --delete ~/.config/starship.toml ~/dotfiles/.config
 rsync -a --delete ~/.config/wezterm ~/dotfiles/.config
 rsync -a --delete ~/.config/nvim ~/dotfiles/.config
@@ -17,13 +10,6 @@ rsync -a --delete ~/.config/zellij ~/dotfiles/.config
 rsync -a --delete ~/.ideavimrc ~/dotfiles
 rsync -a --delete ~/.config/ghostty ~/dotfiles/.config
 rsync -a --delete ~/.local/bin ~/dotfiles/.local
-# rsync -a --delete ~/wallpaper ~/dotfiles
-# rsync -a --delete ~/.bashrc ~/dotfiles
-# rsync -a --delete ~/.Xmodmap ~/dotfiles
-# rsync -a --delete ~/.xprofile ~/dotfiles
-# rsync -a --delete ~/wallpaper.fish ~/dotfiles
-
-# Delete .git folder
-rm -rf ~/.config/chadwm/.git/
-rm -rf ~/.config/rofi/.git/
-rm -rf ~/.config/qtile/.git/
+rsync -a --delete ~/.tmux ~/dotfiles
+rsync -a --delete ~/.tmux.conf ~/dotfiles
+rsync -a --delete ~/.config/opencode/themes ~/dotfiles

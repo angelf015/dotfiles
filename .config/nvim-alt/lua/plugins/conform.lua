@@ -3,13 +3,69 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      -- Conform will run multiple formatters sequentially
       python = { "isort", "black" },
-      -- You can customize some of the format options for the filetype (:help conform.format)
       rust = { "rustfmt", lsp_format = "fallback" },
-      -- Conform will run the first available formatter
       javascript = { "prettierd", "prettier", stop_after_first = true },
+      typescript = { "prettierd", "prettier", stop_after_first = true },
+      typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+      javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+      json = { "prettierd", "prettier", stop_after_first = true },
+      jsonc = { "prettierd", "prettier", stop_after_first = true },
+      yaml = { "prettierd", "prettier", stop_after_first = true },
+      yml = { "prettierd", "prettier", stop_after_first = true },
+      markdown = { "prettierd", "prettier", stop_after_first = true },
       html = { "prettierd", "prettier", stop_after_first = true },
+      css = { "prettierd", "prettier", stop_after_first = true },
+      scss = { "prettierd", "prettier", stop_after_first = true },
+      sass = { "prettierd", "prettier", stop_after_first = true },
+      less = { "prettierd", "prettier", stop_after_first = true },
+      vue = { "prettierd", "prettier", stop_after_first = true },
+      svelte = { "prettierd", "prettier", stop_after_first = true },
+      go = { "gofmt", "goimports" },
+      java = { "google-java-format" },
+      kotlin = { "ktfmt" },
+      ruby = { "rubocop" },
+      php = { "pint", "php_cs_fixer" },
+      c = { "clang-format" },
+      cpp = { "clang-format" },
+      cs = { "csharpier" },
+      dart = { "dart format" },
+      elixir = { "mix format" },
+      haskell = { "fourmolu" },
+      nix = { "nixfmt" },
+      sh = { "shfmt" },
+      bash = { "shfmt" },
+      zsh = { "shfmt" },
+      fish = { "fish_indent" },
+      toml = { "taplo" },
+      sql = { "sql-formatter" },
+      graphql = { "prettierd", "prettier", stop_after_first = true },
+      xml = { "prettierd", "prettier", stop_after_first = true },
+    },
+    format_on_save = {
+      timeout_ms = 2000,
+      lsp_fallback = true,
+    },
+    format_after_save = {
+      lsp_fallback = true,
+    },
+    formatters = {
+      prettier = {
+        command = "prettier",
+        args = { "--tab-width", "2" },
+      },
+      prettierd = {
+        command = "prettierd",
+        args = { "--tab-width", "2" },
+      },
+      ["google-java-format"] = {
+        command = "google-java-format",
+        args = { "--aosp" },
+      },
+      shfmt = {
+        command = "shfmt",
+        args = { "-i", "2", "-ci", "-sr" },
+      },
     },
   },
 }

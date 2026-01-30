@@ -9,7 +9,7 @@ return {
         nls.setup({
             debug = false,
             sources = {
-                -- nls.builtins.formatting.stylua,
+                -- Solo mantener diagnósticos, no formatters
                 nls.builtins.diagnostics.yamllint.with({
                     args = {
                         "-d",
@@ -30,12 +30,6 @@ return {
                         "-",
                     },
                 }),
-                nls.builtins.formatting.prettierd.with({
-                    disabled_filetypes = { "markdown", "yaml", "html" },
-                }),
-                -- nls.builtins.formatting.sql_formatter.with({
-                --     command = { "sleek" },
-                -- }),
             },
         })
     end,

@@ -6,7 +6,7 @@ local function keybinds(config)
 
 	-- stylua: ignore
 	config.keys = {
-		-- Global actions
+		-- Essential Wezterm actions (tmux handles panes/tabs/windows)
     { key = "c", mods = "SUPER", action = wezterm.action.CopyTo('Clipboard') },
 		{ key = "v", mods = "SUPER", action = wezterm.action.PasteFrom("Clipboard") },
     { key = "=", mods = "SUPER", action = wezterm.action.IncreaseFontSize },
@@ -14,55 +14,9 @@ local function keybinds(config)
     { key = "0", mods = "SUPER", action = wezterm.action.ResetFontSize },
 		{ key = "q", mods = "SUPER", action = wezterm.action.QuitApplication },
 		{ key = "n", mods = "SUPER", action = wezterm.action.SpawnWindow },
-		{ key = "t", mods = "SUPER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
-    { key = "t", mods = "SHIFT|SUPER", action = wezterm.action.SpawnCommandInNewTab({ args = { "nvim" } }) },
     { key = "d", mods = "SHIFT|SUPER", action = wezterm.action.ShowDebugOverlay },
-
-		-- Pane actions
-		{ key = "w", mods = "CTRL", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
-		{ key = "w", mods = "SHIFT|SUPER", action = wezterm.action.CloseCurrentTab({ confirm = true }) },
-    { key = "d", mods = "CTRL|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-    { key = "e", mods = "CTRL|SHIFT", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
-
-		-- Pane navigation
-		{ key = "h", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Left") },
-		{ key = "j", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Down") },
-		{ key = "k", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Up") },
-		{ key = "l", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Right") },
-		{ key = "h", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Left", 2 }) },
-		{ key = "j", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Down", 2 }) },
-		{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Up", 2 }) },
-		{ key = "l", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Right", 2 }) },
-
-    -- Move panes
-    { key = "h", mods = "SUPER|SHIFT", action = wezterm.action_callback(require('utils.pane').switch_pane_direction('Left')) },
-    { key = "j", mods = "SHIFT|SUPER", action = wezterm.action_callback(require('utils.pane').switch_pane_direction('Down')) },
-    { key = "k", mods = "SHIFT|SUPER", action = wezterm.action_callback(require('utils.pane').switch_pane_direction('Up')) },
-    { key = "l", mods = "SHIFT|SUPER", action = wezterm.action_callback(require('utils.pane').switch_pane_direction('Right')) },
-
-		-- Navigation between tabs
-		{ key = "Tab", mods = "CTRL", action = wezterm.action.ActivateTabRelative(1) },
-		{ key = "Tab", mods = "SHIFT|CTRL", action = wezterm.action.ActivateTabRelative(-1) },
-		{ key = "{", mods = "SHIFT|SUPER", action = wezterm.action.ActivateTabRelative(-1) },
-		{ key = "}", mods = "SHIFT|SUPER", action = wezterm.action.ActivateTabRelative(1) },
-		{ key = "1", mods = "SUPER", action = wezterm.action.ActivateTab(0) },
-		{ key = "2", mods = "SUPER", action = wezterm.action.ActivateTab(1) },
-		{ key = "3", mods = "SUPER", action = wezterm.action.ActivateTab(2) },
-		{ key = "4", mods = "SUPER", action = wezterm.action.ActivateTab(3) },
-		{ key = "5", mods = "SUPER", action = wezterm.action.ActivateTab(4) },
-		{ key = "6", mods = "SUPER", action = wezterm.action.ActivateTab(5) },
-		{ key = "7", mods = "SUPER", action = wezterm.action.ActivateTab(6) },
-		{ key = "8", mods = "SUPER", action = wezterm.action.ActivateTab(7) },
-		{ key = "9", mods = "SUPER", action = wezterm.action.ActivateTab(-1) },
-
-		-- Move tabs
-		{ key = "p", mods = "SHIFT|SUPER", action = wezterm.action.MoveTabRelative(-1) },
-		{ key = "n", mods = "SHIFT|SUPER", action = wezterm.action.MoveTabRelative(1) },
-
-		-- Basic actions
 		{ key = "f", mods = "SUPER", action = wezterm.action.Search("CurrentSelectionOrEmptyString") },
 		{ key = "y", mods = "SUPER", action = wezterm.action.ActivateCopyMode },
-		{ key = "z", mods = "SUPER", action = wezterm.action.TogglePaneZoomState },
 		{ key = "r", mods = "SUPER", action = wezterm.action.ReloadConfiguration },
 		{
       key = "r",

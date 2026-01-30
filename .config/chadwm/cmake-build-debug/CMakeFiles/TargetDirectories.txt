@@ -1,3 +1,0 @@
-/home/archi/.config/chadwm/cmake-build-debug/CMakeFiles/chadwm.dir
-/home/archi/.config/chadwm/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/archi/.config/chadwm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
