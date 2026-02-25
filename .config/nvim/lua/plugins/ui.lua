@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "onenord",
     },
   },
   {
@@ -148,34 +148,13 @@ return {
     lazy = false,
     priority = 1000,
     setup = function()
-      vim.nord_disable_background = true
-      vim.g.nord_uniform_diff_background = true
+      require("nord").setup({
+        nord_disable_background = true,
+      })
+      -- vim.nord_disable_background = true
+      -- vim.g.nord_uniform_diff_background = false
     end,
   },
-  -- {
-  --   "navarasu/onedark.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("onedark").setup({
-  --       style = "cool", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-  --       transparent = false,
-  --       ending_tildes = true,
-  --       code_style = {
-  --         comments = "italic",
-  --         keywords = "bold",
-  --         functions = "italic",
-  --         strings = "italic",
-  --         variables = "bold",
-  --       },
-  --
-  --       -- Lualine options --
-  --       lualine = {
-  --         transparent = true, -- lualine center bar transparency
-  --       },
-  --     })
-  --   end,
-  -- },
   {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
@@ -349,4 +328,5 @@ return {
       })
     end,
   },
+  { "savq/melange-nvim" },
 }

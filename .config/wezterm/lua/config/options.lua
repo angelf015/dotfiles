@@ -28,8 +28,8 @@ local function options(config)
 	config.animation_fps = 60
 
 	-- Set color scheme
-	config.color_scheme = "Tokyo Night Moon"
-	config.colors = wezterm.color.get_builtin_schemes()["Tokyo Night Moon"]
+config.color_scheme = "nord"
+config.colors = wezterm.color.get_builtin_schemes()["nord"]
 	config.window_background_opacity = 0.9
 	config.macos_window_background_blur = 20
 

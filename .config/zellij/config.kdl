@@ -606,13 +606,13 @@ themes {
 // Choose the theme that is specified in the themes section.
 // Default:
 //
-theme "tokyonight"
+theme "nord"
 
 // The name of the default layout to load on startup
 // Default: "work"
 //
 
-default_layout "tokyonight"
+default_layout "nord"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal

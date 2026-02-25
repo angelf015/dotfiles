@@ -1,121 +1,168 @@
-"source ~/.vimrc
-" Find more examples here: https://jb.gg/share-ideavimrc
+" ============================================================================
+" IDEAVIMRC - Configuración de IdeaVim
+" ============================================================================
 
+" ----------------------------------------------------------------------------
+" CONFIGURACIÓN BÁSICA
+" ----------------------------------------------------------------------------
 let mapleader=" "
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-"set number relativenumber
-set norelativenumber
-set clipboard=unnamedplus
+" Opciones de visualización
+set number relativenumber
 set scrolloff=5
-set history=1000
-set visualbell
 set showmode
+set visualbell
+set clipboard=unnamedplus
+set clipboard^=ideaput
+
+" Búsqueda
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 set gdefault
+
+" Comportamiento
+set history=1000
 set notimeout
 set timeoutlen=5000
-set showmode
 
+" ----------------------------------------------------------------------------
+" PLUGINS DE IDEAVIM
+" ----------------------------------------------------------------------------
 set highlightedyank
 set NERDTree
-set sneak
-set easymotion
 set which-key
+set commentary
+set surround
+set argtextobj
+set textobj-entire
+set functiontextobj
 
-"let g:NERDTreeWinSize=30
-"let g:NERDTreeMapPreview = 'O'
-nmap <leader>e :NERDTreeToggle<CR>
-nmap <leader>pv :NERDTreeFocus<CR>
+" Plugins externos (solo los necesarios)
+Plug 'preservim/nerdtree'
 
-nnoremap <c-d> <c-d>zz
-nnoremap <c-u> <c-u>zz
+" ----------------------------------------------------------------------------
+" SETHANDLER - Control de teclas entre IdeaVim e IntelliJ
+" ----------------------------------------------------------------------------
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+sethandler <c-v> a:vim
 
-" continuous shift
+" ----------------------------------------------------------------------------
+" MAPEOS GENERALES
+" ----------------------------------------------------------------------------
+" No usar Ex mode, usar Q para formateo
+map Q gq
+
+" Limpiar búsqueda
+nmap <esc> :nohlsearch<CR>
+
+" Mantener selección al indentar
 xnoremap < <gv
 xnoremap > >gv
 
-nmap <esc> :nohlsearch<CR>
+" Centrar pantalla al scrollear
+nnoremap <c-d> <c-d>zz
+nnoremap <c-u> <c-u>zz
 
-""" Window navigation
-nnoremap <leader>w/ :action SplitVertically<CR>
-nnoremap <leader>w- :action SplitHorizontally<CR>
-nnoremap <leader>w= :action Unsplit<CR>
-nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
-"nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
-nnoremap <leader>uz :action TogglePresentationMode<CR>
-
-nmap <leader>te :action GotoTest<CR>
-nmap <leader>bd :action CloseContent<CR>
-nmap <leader>d :edit DuplicateLine<CR>
-
-" Move selected line / block of text in visual mode
+" Mover líneas en modo visual
 xnoremap J :m '>+1<CR>gv=gv
 xnoremap K :m '<-2<CR>gv=gv
 
-" Finding things
-nnoremap <leader>sf :action FindInPath<CR>
-nnoremap <leader>cs :action ActivateStructureToolWindow<CR>
-noremap <leader>fs :action FileStructurePopup<CR>
-nnoremap <leader>o :action RecentFiles<CR>
-nnoremap <leader>sh :action Find<CR>
-nnoremap <leader>rh :action Replace<CR>
-nnoremap <leader>ra :action ReplaceInPath<CR>
+" ----------------------------------------------------------------------------
+" NAVEGACIÓN DE VENTANAS Y TABS
+" ----------------------------------------------------------------------------
+nnoremap <leader>w/ :action SplitVertically<CR>
+nnoremap <leader>w- :action SplitHorizontally<CR>
+nnoremap <leader>w= :action Unsplit<CR>
+nnoremap <leader>wm :action MoveEditorToOppositeTabGroup<CR>
 
-" Code completion
-nnoremap <c-a> :action GotoAction<CR>
-nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <c-p> :action RecentFiles<CR>
-nnoremap <c-m> :action RunMenu<CR>
-nnoremap <c-g> :action Generate<CR>
-nnoremap <leader><Tab> :action ShowNavBar<CR>
-
-" Jump
+" Tabs
 nmap <s-h> :action PreviousTab<CR>
 nmap <s-l> :action NextTab<CR>
-nmap gep :action GotoPreviousError<CR>
-nmap gen :action GotoNextError<CR>
-nmap [u :action GotoPrevElementUnderCaretUsage<CR>
-nmap ]u :action GotoNextElementUnderCaretUsage<CR>
-nmap [o :action PreviousOccurence<CR>
-nmap ]o :action NextOccurence<CR>
-nmap [m :action MethodUp<CR>
-nmap ]m :action MethodDown<CR>
+nmap <leader>bd :action CloseContent<CR>
+
+" ----------------------------------------------------------------------------
+" NAVEGACIÓN DE CÓDIGO
+" ----------------------------------------------------------------------------
+" Errores
+nmap [d :action GotoPreviousError<CR>
+nmap ]d :action GotoNextError<CR>
+
+" Cambios
 nmap [c :action JumpToLastChange<CR>
 nmap ]c :action JumpToNextChange<CR>
 
-" LSP
-nnoremap <leader>cr :action RenameElement<CR>
-nnoremap <leader>cR :action RenameFile<CR>
-nnoremap <leader>cf :action ReformatCode<CR>
-nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>ca :action ShowIntentionActions<CR>
-nnoremap <leader>cl :action ActivateProblemsViewToolWindow<CR>
-nnoremap <leader>co :action OptimizeImports<CR>
-" gotos
+" Métodos
+nmap [m :action MethodUp<CR>
+nmap ]m :action MethodDown<CR>
+
+" Ocurrencias
+nmap [o :action PreviousOccurence<CR>
+nmap ]o :action NextOccurence<CR>
+
+" Usages
+nmap [u :action GotoPrevElementUnderCaretUsage<CR>
+nmap ]u :action GotoNextElementUnderCaretUsage<CR>
+
+" ----------------------------------------------------------------------------
+" GOTO - Navegación rápida
+" ----------------------------------------------------------------------------
 nmap <leader>a :action GotoAction<CR>
 nmap ga :action GotoAction<CR>
-nmap gf :action GotoFile<CR>
-nmap gs :action GotoSymbol<CR>
-nmap gT :action TextSearchAction<CR>
-nmap go :action GotoSuperMethod<CR>
 nmap gd :action GotoDeclaration<CR>
 nmap gD :action GotoTypeDeclaration<CR>
 nmap gi :action GotoImplementation<CR>
 nmap gI :action QuickImplementations<CR>
-nmap gn :action ShowNavBar<CR>
 nmap gr :action FindUsages<CR>
+nmap go :action GotoSuperMethod<CR>
+nmap gf :action GotoFile<CR>
+nmap gs :action GotoSymbol<CR>
+nmap gT :action TextSearchAction<CR>
+nmap gn :action ShowNavBar<CR>
+
+" ----------------------------------------------------------------------------
+" BÚSQUEDA Y ARCHIVOS
+" ----------------------------------------------------------------------------
+nnoremap <leader>sf :action FindInPath<CR>
+nnoremap <leader>sh :action Find<CR>
+nnoremap <leader>rh :action Replace<CR>
+nnoremap <leader>ra :action ReplaceInPath<CR>
+nnoremap <leader>fs :action FileStructurePopup<CR>
+nnoremap <leader>o :action RecentFiles<CR>
+
+" ----------------------------------------------------------------------------
+" REFACTORING Y CODE ACTIONS
+" ----------------------------------------------------------------------------
+nnoremap <leader>cr :action RenameElement<CR>
+nnoremap <leader>cR :action RenameFile<CR>
+nnoremap <leader>cf :action ReformatCode<CR>
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+nnoremap <leader>co :action OptimizeImports<CR>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 nmap gC :action CommentByBlockComment<CR>
 
-" Todo
-nmap <leader>to :action ActivateTODOToolWindow<CR>
+" ----------------------------------------------------------------------------
+" HERRAMIENTAS Y PANELES
+" ----------------------------------------------------------------------------
+nmap <leader>e :NERDTreeToggle<CR>
+nmap <leader>pv :NERDTreeFocus<CR>
+nnoremap <leader>cs :action ActivateStructureToolWindow<CR>
+nnoremap <leader>cl :action ActivateProblemsViewToolWindow<CR>
+nnoremap <leader>to :action ActivateTODOToolWindow<CR>
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 
-" Menu
+" ----------------------------------------------------------------------------
+" GENERACIÓN Y COMPLETADO
+" ----------------------------------------------------------------------------
+nnoremap <c-g> :action Generate<CR>
+nnoremap <c-a> :action GotoAction<CR>
+nmap <leader>te :action GotoTest<CR>
+
+" ----------------------------------------------------------------------------
+" MENUS
+" ----------------------------------------------------------------------------
 nmap <leader>mm :action MainMenu<CR>
 nmap <leader>ma :action AnalyzeMenu<CR>
 nmap <leader>mb :action BuildMenu<CR>
@@ -126,37 +173,41 @@ nmap <leader>ms :action ScopeViewPopupMenu<CR>
 nmap <leader>mt :action EditorTabPopupMenu<CR>
 nmap <leader>mw :action ToolWindowsGroup<CR>
 
-" configuration for flash
+" ----------------------------------------------------------------------------
+" VIM-FLASH - Navegación rápida mejorada
+" ----------------------------------------------------------------------------
+" Búsqueda y salto
 nmap s <Action>(flash.search)
 xmap s <Action>(flash.search)
 
+" Mejoras de f/t/F/T
+nmap f <Action>(flash.find)
+xmap f <Action>(flash.find)
+nmap F <Action>(flash.find_backward)
+xmap F <Action>(flash.find_backward)
+nmap t <Action>(flash.till)
+xmap t <Action>(flash.till)
+nmap T <Action>(flash.till_backward)
+xmap T <Action>(flash.till_backward)
 
-sethandler <c-j> a:vim
-sethandler <c-k> a:vim
+" Repetir búsquedas
+nmap ; <Action>(flash.repeat)
+xmap ; <Action>(flash.repeat)
+nmap , <Action>(flash.repeat_backward)
+xmap , <Action>(flash.repeat_backward)
 
-Plug 'preservim/nerdtree'
-"Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-commentary'
-Plug 'machakann/vim-highlightedyank'
-set clipboard^=ideaput
-Plug 'vim-matchit'
-Plug 'chrisbra/matchit'
-set matchit
+" Selección sintáctica (treesitter)
+nmap S <Action>(flash.treesitter)
+xmap S <Action>(flash.treesitter)
 
-Plug 'tpope/vim-surround'
+" Operaciones remotas
+omap r <Action>(flash.remote)
 
-" Para seleccionar todo el texto del buffer
-" Atajo: vae
-Plug 'kana/vim-textobj-entire'
+" ----------------------------------------------------------------------------
+" OTROS
+" ----------------------------------------------------------------------------
+nnoremap <leader>uz :action TogglePresentationMode<CR>
 
-" Para eliminar argumentos, parametros de funciones
-" Eliminar argumento: daa
-" Cambiar argumento: cia
-" Seleccionar argumento: vaa/via
-Plug 'vim-scripts/argtextobj.vim'
-
-" Para eliminar funciones, clases, bloques de código
-" Eliminar cuerpo de función: dif
-" Cambiar función entera: caf
-" Seleccionar cuerpo o toda la función: vaf/vif
-set functiontextobj
+" ============================================================================
+" FIN DE CONFIGURACIÓN
+" ============================================================================

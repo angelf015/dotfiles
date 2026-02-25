@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[╭](bold overlay1)$username\
+[╭](bold overlay0)$username\
 $directory\
 $git_branch\
 $git_status\
@@ -18,35 +18,35 @@ $lua\
 $docker_context\
 $line_break$character"""
 
-palette = 'nord'
+palette = 'solarized_dark'
 
-[palettes.nord]
-rosewater = "#f0c674"
-flamingo = "#cc6666"
-pink = "#b294bb"
-orange = "#de935f"
-red = "#cc6666"
-maroon = "#a54242"
-peach = "#d08770"
-yellow = "#f0c674"
-green = "#8abeb7"
-teal = "#8abeb7"
-sky = "#81a2be"
-sapphire = "#81a2be"
-blue = "#5e81ac"
-lavender = "#b48ead"
-text = "#d8dee9"
-subtext1 = "#e5e9f0"
-subtext0 = "#eceff4"
-overlay2 = "#4c566a"
-overlay1 = "#434c5e"
-overlay0 = "#3b4252"
-surface2 = "#2e3440"
-surface1 = "#2e3440"
-surface0 = "#2e3440"
-base = "#2e3440"
-mantle = "#3b4252"
-crust = "#434c5e"
+[palettes.solarized_dark]
+rosewater = "#d33682"
+flamingo = "#cb4b16"
+pink = "#6c71c4"
+orange = "#b58900"
+red = "#dc322f"
+maroon = "#859900"
+peach = "#b58900"
+yellow = "#b58900"
+green = "#859900"
+teal = "#2aa198"
+sky = "#268bd2"
+sapphire = "#073642"
+blue = "#268bd2"
+lavender = "#6c71c4"
+text = "#fdf6e3"
+subtext1 = "#eee8d5"
+subtext0 = "#93a1a1"
+overlay2 = "#839496"
+overlay1 = "#657b83"
+overlay0 = "#586e75"
+surface2 = "#073642"
+surface1 = "#002b36"
+surface0 = "#001f27"
+base = "#002b36"
+mantle = "#001f27"
+crust = "#000d11"
 
 # OS Module
 [os]
@@ -193,6 +193,6 @@ disabled = false
 # Character Module
 [character]
 format = """
-[╰─$symbol](fg:overlay1) """
+[╰─$symbol](fg:overlay0) """
 success_symbol = '[](fg:bold text)'
 error_symbol = '[×](fg:bold red)'

@@ -77,18 +77,18 @@ done
 # Cambia el tema en Wezterm, Nvim, Zellij y Starship
 
 # Wezterm
-color="config.color_scheme = \"$WEZTERM\""
-colors="config.colors = wezterm.color.get_builtin_schemes()[\"$WEZTERM\"]"
-theme="theme = \"$WEZTERM\","
-sed -i '' "/config.color_scheme/ {
-  s/.*/$color/
-  }" /Users/arch/.config/wezterm/lua/config/options.lua
-sed -i '' "/config.colors/ {
-  s/.*/$colors/
-  }" /Users/arch/.config/wezterm/lua/config/options.lua
-sed -i '' "/theme/ {
-  s/.*/$theme/
-  }" /Users/arch/.config/wezterm/lua/plugins/tabline.lua
+# color="config.color_scheme = \"$WEZTERM\""
+# colors="config.colors = wezterm.color.get_builtin_schemes()[\"$WEZTERM\"]"
+# theme="theme = \"$WEZTERM\","
+# sed -i '' "/config.color_scheme/ {
+#   s/.*/$color/
+#   }" /Users/arch/.config/wezterm/lua/config/options.lua
+# sed -i '' "/config.colors/ {
+#   s/.*/$colors/
+#   }" /Users/arch/.config/wezterm/lua/config/options.lua
+# sed -i '' "/theme/ {
+#   s/.*/$theme/
+#   }" /Users/arch/.config/wezterm/lua/plugins/tabline.lua
 
 # Nvim
 color="      colorscheme = \"$NVIM\","
