@@ -62,6 +62,7 @@ opt.mouse = "a" -- Enable mouse mode
 opt.number = true -- Print line number
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
+opt.pummaxwidth = 50 -- Maximum width of popup menu (new in 0.12)
 opt.relativenumber = true -- Relative line numbers
 opt.ruler = false -- Disable the default ruler
 opt.scrolloff = 4 -- Lines of context
@@ -89,6 +90,9 @@ opt.virtualedit = "block" -- Allow cursor to move where there is no text in visu
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
+
+-- Neovim 0.12: New options
+opt.maxsearchcount = 999 -- Maximum value for searchcount() (default is 99)
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0

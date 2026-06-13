@@ -35,12 +35,13 @@ vim.diagnostic.config({
     header = "",
     prefix = "",
   },
+  -- Neovim 0.12: signs configuration is now part of diagnostic.config
   signs = {
     text = {
-      [vim.diagnostic.severity.HINT] = " ",
-      [vim.diagnostic.severity.INFO] = " ",
-      [vim.diagnostic.severity.WARN] = " ",
-      [vim.diagnostic.severity.ERROR] = " ",
+      [vim.diagnostic.severity.HINT] = " ",
+      [vim.diagnostic.severity.INFO] = " ",
+      [vim.diagnostic.severity.WARN] = " ",
+      [vim.diagnostic.severity.ERROR] = " ",
     },
   },
 })
@@ -116,9 +117,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     vim.keymap.set("i", "<M-t>", vim.lsp.buf.signature_help, { buffer = args.buf })
 
-    -- inlay hints
+    -- inlay hints (Neovim 0.12: improved inlay hints API)
     nmap("<leader>ii", function()
-      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = args.buf }), { bufnr = args.buf })
     end, "Toggle inlay hints")
 
     vim.api.nvim_buf_create_user_command(args.buf, "Fmt", function(_)

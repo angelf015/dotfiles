@@ -181,7 +181,8 @@ map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
--- native snippets. only needed on < 0.11, as 0.11 creates these by default
+-- native snippets. only needed on < 0.11, as 0.11+ creates these by default
+-- Neovim 0.12 has improved snippet support
 if vim.fn.has("nvim-0.11") == 0 then
   map("s", "<Tab>", function()
     return vim.snippet.active({ direction = 1 }) and "<cmd>lua vim.snippet.jump(1)<cr>" or "<Tab>"
@@ -195,6 +196,13 @@ end
 vim.keymap.set({ "n", "v" }, "<leader>cf", function()
   require("conform").format({ force = true })
 end, { desc = "Format" })
+
+-- Neovim 0.12: New LSP mappings
+-- grt for type definitions (new in 0.12)
+map("n", "grt", vim.lsp.buf.type_definition, { desc = "LSP: Type Definition" })
+
+-- grx for codelens (new in 0.12)
+map("n", "grx", vim.lsp.codelens.run, { desc = "LSP: Run Code Lens" })
 
 
 

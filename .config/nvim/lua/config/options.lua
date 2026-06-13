@@ -1,15 +1,18 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
--- vim.opt.colorcolumn = "120"
-vim.opt.number = true
-vim.opt.relativenumber = true
+
+-- Mantiene el cursor centrado verticalmente en la pantalla
+-- vim.opt.scrolloff = 1000 -- Number of lines to leave before/after the cursor when scrolling. Setting a high value keep the cursor centered.
+-- vim.opt.sidescrolloff = 8 -- Same but for side scrolling.
+vim.opt.spelllang = { "en", "es" }
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "org" },
   callback = function()
-    vim.opt.colorcolumn = "80"
-    vim.opt.spell = true
-    vim.opt.spelllang = "es"
+    vim.opt_local.colorcolumn = "80" -- Cambiado a opt_local
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "es"
   end,
 })
 
@@ -17,7 +20,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     local ft = vim.bo.filetype
     if ft ~= "markdown" and ft ~= "org" then
-      vim.opt.colorcolumn = "120"
+      vim.opt_local.colorcolumn = "120" -- Cambiado a opt_local
     end
   end,
 })
@@ -34,10 +37,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end,
 })
-
--- Blink cursor
--- vim.opt.guicursor = {
---   "n-v-c:block-Cursor/lCursor-blinkon100-blinkoff100",
---   "i-ci:ver25-Cursor/lCursor-blinkon100-blinkoff100",
---   "r-cr:hor20-Cursor/lCursor-blinkon100-blinkoff100",
--- }

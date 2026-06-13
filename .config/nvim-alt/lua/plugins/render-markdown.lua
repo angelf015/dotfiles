@@ -1,5 +1,16 @@
+-- NOTA IMPORTANTE:
+-- Este plugin está temporalmente deshabilitado debido a incompatibilidad con Neovim 0.12
+-- Error: "attempt to call method 'range' (a nil value)" en treesitter.lua:196
+-- 
+-- Para re-habilitar cuando se arregle:
+-- 1. Cambiar 'enabled = false' a 'enabled = true'
+-- 2. Ejecutar :Lazy sync
+--
+-- Para más información ver: RENDER_MARKDOWN_FIX.md
+
 return {
   "MeanderingProgrammer/render-markdown.nvim",
+  enabled = false,  -- Deshabilitado temporalmente (Neovim 0.12 incompatibilidad)
   opts = {
     code = {
       -- Turn on / off code block & inline code rendering.

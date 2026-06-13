@@ -37,7 +37,7 @@ font-style-bold-italic = "Bold Italic"
 # O un ajuste manual más sutil:
 font-synthetic-style = bold
 
-font-size                      = 14
+font-size                      = 13
 window-inherit-font-size       = true
 
 # Look and Feel
@@ -46,7 +46,8 @@ adjust-underline-position      = 3
 bold-is-bright                 = true
 cursor-invert-fg-bg            = true
 cursor-opacity                 = 0.8
-cursor-style                   = underline
+cursor-style                   = block
+cursor-style-blink             = true
 link-url                       = true
 mouse-hide-while-typing        = true
 theme                          = nord

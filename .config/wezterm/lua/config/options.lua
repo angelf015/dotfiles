@@ -28,8 +28,8 @@ local function options(config)
 	config.animation_fps = 60
 
 	-- Set color scheme
-config.color_scheme = "nord"
-config.colors = wezterm.color.get_builtin_schemes()["nord"]
+	config.color_scheme = "nord"
+	config.colors = wezterm.color.get_builtin_schemes()["nord"]
 	config.window_background_opacity = 0.9
 	config.macos_window_background_blur = 20
 
@@ -48,7 +48,7 @@ config.colors = wezterm.color.get_builtin_schemes()["nord"]
 	}
 
 	-- Font size
-	config.font_size = 15
+	config.font_size = 12
 	config.line_height = 1.2
 
 	-- Use integrated titlebar with terminal colors

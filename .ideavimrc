@@ -1,21 +1,23 @@
 " ============================================================================
-" IDEAVIMRC - Configuración de IdeaVim
+" IDEAVIMRC - LazyVim Style Configuration
 " ============================================================================
 
 " ----------------------------------------------------------------------------
 " CONFIGURACIÓN BÁSICA
 " ----------------------------------------------------------------------------
 let mapleader=" "
+let maplocalleader="\\"
 
 " Opciones de visualización
 set number relativenumber
-set scrolloff=5
+set scrolloff=8
+set sidescrolloff=8
 set showmode
 set visualbell
-set clipboard=unnamedplus
+set clipboard=unnamedplus,unnamed,ideaput
 set clipboard^=ideaput
 
-" Búsqueda
+" Búsqueda mejorada
 set hlsearch
 set incsearch
 set ignorecase
@@ -23,12 +25,23 @@ set smartcase
 set gdefault
 
 " Comportamiento
-set history=1000
+set history=10000
 set notimeout
-set timeoutlen=5000
+set timeoutlen=1000
+set undolevels=10000
+
+" Indentación y wrapping
+set wrap
+set linebreak
+set breakindent
+
+" Mejoras de edición
+set ideajoin
+set idearefactormode=keep
+set ideastatusicon=gray
 
 " ----------------------------------------------------------------------------
-" PLUGINS DE IDEAVIM
+" PLUGINS DE IDEAVIM (LazyVim-like)
 " ----------------------------------------------------------------------------
 set highlightedyank
 set NERDTree
@@ -37,51 +50,136 @@ set commentary
 set surround
 set argtextobj
 set textobj-entire
-set functiontextobj
+set exchange
+set quickscope
+set easymotion
+set sneak
 
-" Plugins externos (solo los necesarios)
-Plug 'preservim/nerdtree'
+" Configuración de plugins
+let g:highlightedyank_highlight_duration = "200"
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_DefaultDelay = 1000
 
 " ----------------------------------------------------------------------------
 " SETHANDLER - Control de teclas entre IdeaVim e IntelliJ
 " ----------------------------------------------------------------------------
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
 sethandler <c-v> a:vim
+sethandler <c-s> a:ide
+sethandler <c-z> a:ide
+sethandler <c-y> a:ide
+sethandler <c-a> a:vim
+sethandler <c-b> a:vim
+sethandler <c-d> a:vim
+sethandler <c-e> a:vim
+sethandler <c-f> a:vim
+sethandler <c-n> a:vim
+sethandler <c-p> a:vim
+sethandler <c-r> a:vim
+sethandler <c-t> a:vim
+sethandler <c-u> a:vim
+sethandler <c-w> a:vim
+sethandler <c-x> a:vim
+sethandler <c-o> a:vim
+sethandler <c-i> a:vim
 
 " ----------------------------------------------------------------------------
-" MAPEOS GENERALES
+" MAPEOS GENERALES (LazyVim Style)
 " ----------------------------------------------------------------------------
+" Better up/down - considera wrapped lines
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+
 " No usar Ex mode, usar Q para formateo
 map Q gq
 
-" Limpiar búsqueda
-nmap <esc> :nohlsearch<CR>
+" Limpiar búsqueda con <esc>
+nnoremap <esc> :nohlsearch<CR>
 
-" Mantener selección al indentar
-xnoremap < <gv
-xnoremap > >gv
+" Better indenting - mantener selección
+vnoremap < <gv
+vnoremap > >gv
 
-" Centrar pantalla al scrollear
+" Centrar pantalla al navegar
 nnoremap <c-d> <c-d>zz
 nnoremap <c-u> <c-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap * *zzzv
+nnoremap # #zzzv
+nnoremap g* g*zzzv
+nnoremap g# g#zzzv
 
-" Mover líneas en modo visual
-xnoremap J :m '>+1<CR>gv=gv
-xnoremap K :m '<-2<CR>gv=gv
+" Move lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Better paste - no perder el contenido del registro
+xnoremap p P
+
+" Save file
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
+" Quit all
+nnoremap <leader>qq :action Exit<CR>
+
+" Navegar con hjkl en modo insert (como Emacs)
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+" Add undo break-points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ; ;<c-g>u
+
+" Better word navigation
+nnoremap W <Action>(EditorNextWord)
+nnoremap B <Action>(EditorPreviousWord)
+nnoremap E <Action>(EditorNextWordEnd)
 
 " ----------------------------------------------------------------------------
-" NAVEGACIÓN DE VENTANAS Y TABS
+" BUFFERS / TABS (LazyVim Style)
 " ----------------------------------------------------------------------------
-nnoremap <leader>w/ :action SplitVertically<CR>
-nnoremap <leader>w- :action SplitHorizontally<CR>
-nnoremap <leader>w= :action Unsplit<CR>
-nnoremap <leader>wm :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <S-h> :action PreviousTab<CR>
+nnoremap <S-l> :action NextTab<CR>
 
-" Tabs
-nmap <s-h> :action PreviousTab<CR>
-nmap <s-l> :action NextTab<CR>
-nmap <leader>bd :action CloseContent<CR>
+" Buffer management
+nnoremap <leader>bd :action CloseContent<CR>
+nnoremap <leader>bo :action CloseAllEditorsButActive<CR>
+nnoremap <leader>bD :action CloseAllEditors<CR>
+nnoremap <leader>bp :action PinActiveEditorTab<CR>
+nnoremap [b :action PreviousTab<CR>
+nnoremap ]b :action NextTab<CR>
+
+" Navigate between splits
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" ----------------------------------------------------------------------------
+" WINDOWS (LazyVim Style)
+" ----------------------------------------------------------------------------
+" Split windows
+nnoremap <leader>- :action SplitHorizontally<CR>
+nnoremap <leader>| :action SplitVertically<CR>
+nnoremap <leader>ww <c-w>w
+nnoremap <leader>wd :action Unsplit<CR>
+nnoremap <leader>wm :action HideAllWindows<CR>
+
+" Resize windows
+nnoremap <c-Up> :action StretchSplitToTop<CR>
+nnoremap <c-Down> :action StretchSplitToBottom<CR>
+nnoremap <c-Left> :action StretchSplitToLeft<CR>
+nnoremap <c-Right> :action StretchSplitToRight<CR>
 
 " ----------------------------------------------------------------------------
 " NAVEGACIÓN DE CÓDIGO
@@ -89,6 +187,8 @@ nmap <leader>bd :action CloseContent<CR>
 " Errores
 nmap [d :action GotoPreviousError<CR>
 nmap ]d :action GotoNextError<CR>
+nmap <leader>cd :action ShowErrorDescription<CR>
+nmap <leader>xx :action ActivateProblemsViewToolWindow<CR>
 
 " Cambios
 nmap [c :action JumpToLastChange<CR>
@@ -107,58 +207,171 @@ nmap [u :action GotoPrevElementUnderCaretUsage<CR>
 nmap ]u :action GotoNextElementUnderCaretUsage<CR>
 
 " ----------------------------------------------------------------------------
-" GOTO - Navegación rápida
+" GOTO - Navegación rápida (LSP-like)
 " ----------------------------------------------------------------------------
-nmap <leader>a :action GotoAction<CR>
-nmap ga :action GotoAction<CR>
 nmap gd :action GotoDeclaration<CR>
 nmap gD :action GotoTypeDeclaration<CR>
 nmap gi :action GotoImplementation<CR>
 nmap gI :action QuickImplementations<CR>
 nmap gr :action FindUsages<CR>
+nmap gR :action ShowUsages<CR>
+nmap gy :action GotoTypeDeclaration<CR>
 nmap go :action GotoSuperMethod<CR>
+nmap K :action QuickJavaDoc<CR>
+nmap gK :action QuickImplementations<CR>
+
+" File navigation
 nmap gf :action GotoFile<CR>
 nmap gs :action GotoSymbol<CR>
 nmap gT :action TextSearchAction<CR>
-nmap gn :action ShowNavBar<CR>
 
 " ----------------------------------------------------------------------------
-" BÚSQUEDA Y ARCHIVOS
+" FIND / SEARCH (LazyVim Style)
 " ----------------------------------------------------------------------------
-nnoremap <leader>sf :action FindInPath<CR>
-nnoremap <leader>sh :action Find<CR>
-nnoremap <leader>rh :action Replace<CR>
-nnoremap <leader>ra :action ReplaceInPath<CR>
-nnoremap <leader>fs :action FileStructurePopup<CR>
-nnoremap <leader>o :action RecentFiles<CR>
+" Find files
+nnoremap <leader><leader> :action GotoFile<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader>fb :action RecentFiles<CR>
+nnoremap <leader>fn :action NewFile<CR>
+
+" Search
+nnoremap <leader>/ :action Find<CR>
+nnoremap <leader>sg :action FindInPath<CR>
+nnoremap <leader>sw :action FindWordAtCaret<CR>
+nnoremap <leader>ss :action FileStructurePopup<CR>
+nnoremap <leader>sS :action GotoSymbol<CR>
+nnoremap <leader>sr :action ReplaceInPath<CR>
+
+" Recent and navigation
+nnoremap <leader>fR :action RecentChangedFiles<CR>
+nnoremap <leader>fo :action RecentLocations<CR>
 
 " ----------------------------------------------------------------------------
-" REFACTORING Y CODE ACTIONS
+" REFACTORING Y CODE ACTIONS (LazyVim Style)
 " ----------------------------------------------------------------------------
+" Code actions
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+vnoremap <leader>ca :action ShowIntentionActions<CR>
+
+" Rename
 nnoremap <leader>cr :action RenameElement<CR>
 nnoremap <leader>cR :action RenameFile<CR>
+
+" Format
 nnoremap <leader>cf :action ReformatCode<CR>
-nnoremap <leader>ca :action ShowIntentionActions<CR>
+vnoremap <leader>cf :action ReformatCode<CR>
+
+" Optimize imports
 nnoremap <leader>co :action OptimizeImports<CR>
+
+" Generate
+nnoremap <leader>cg :action Generate<CR>
+
+" Refactor menu
 nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>re :action RenameElement<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+nnoremap <leader>rf :action IntroduceField<CR>
+nnoremap <leader>rc :action IntroduceConstant<CR>
+nnoremap <leader>rp :action IntroduceParameter<CR>
+
+" Comment
+nmap gcc :action CommentByLineComment<CR>
+vmap gc :action CommentByLineComment<CR>
 nmap gC :action CommentByBlockComment<CR>
+vmap gC :action CommentByBlockComment<CR>
 
 " ----------------------------------------------------------------------------
 " HERRAMIENTAS Y PANELES
 " ----------------------------------------------------------------------------
+" File explorer
 nmap <leader>e :NERDTreeToggle<CR>
-nmap <leader>pv :NERDTreeFocus<CR>
+nmap <leader>E :NERDTreeFocus<CR>
+nnoremap <leader>pv :NERDTreeFocus<CR>
+
+" Tool windows
 nnoremap <leader>cs :action ActivateStructureToolWindow<CR>
 nnoremap <leader>cl :action ActivateProblemsViewToolWindow<CR>
 nnoremap <leader>to :action ActivateTODOToolWindow<CR>
+
+" Terminal
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>ft :action ActivateTerminalToolWindow<CR>
+
+" Git (LazyVim style)
+nnoremap <leader>gg :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>gc :action CheckinProject<CR>
+nnoremap <leader>gb :action Git.Branches<CR>
+nnoremap <leader>gl :action Vcs.Show.Log<CR>
+nnoremap <leader>gp :action Vcs.Push<CR>
+nnoremap <leader>gP :action Vcs.Pull<CR>
+nnoremap <leader>gf :action Git.Fetch<CR>
+nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+nnoremap <leader>gd :action Compare.SameVersion<CR>
+
+" Git hunks (cambios)
+nmap [h :action VcsShowPrevChangeMarker<CR>
+nmap ]h :action VcsShowNextChangeMarker<CR>
+nmap <leader>hs :action Vcs.Show.Local.Changes<CR>
+nmap <leader>hr :action Vcs.RollbackChangedLines<CR>
+nmap <leader>hp :action VcsShowCurrentChangeMarker<CR>
+
+" ----------------------------------------------------------------------------
+" RUN / DEBUG (LazyVim Style)
+" ----------------------------------------------------------------------------
+nnoremap <leader>rn :action Run<CR>
+nnoremap <leader>rc :action RunClass<CR>
+nnoremap <leader>rf :action ChooseRunConfiguration<CR>
+nnoremap <leader>rs :action Stop<CR>
+
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <leader>dd :action Debug<CR>
+nnoremap <leader>dD :action DebugClass<CR>
+nnoremap <leader>de :action EvaluateExpression<CR>
+nnoremap <leader>dv :action ViewBreakpoints<CR>
+
+" ----------------------------------------------------------------------------
+" TEST (LazyVim Style)
+" ----------------------------------------------------------------------------
+nnoremap <leader>tt :action GotoTest<CR>
+nnoremap <leader>tT :action RunClass<CR>
+nnoremap <leader>tr :action RerunTests<CR>
+nnoremap <leader>tf :action RerunFailedTests<CR>
+nnoremap <leader>tl :action ActivateTestRunnerToolWindow<CR>
+
+" ----------------------------------------------------------------------------
+" UI / VISUAL (LazyVim Style)
+" ----------------------------------------------------------------------------
+nnoremap <leader>uz :action TogglePresentationMode<CR>
+nnoremap <leader>uf :action ToggleFullScreen<CR>
+nnoremap <leader>ud :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>ul :action EditorToggleShowLineNumbers<CR>
+nnoremap <leader>ur :action EditorToggleShowWhitespaces<CR>
+
+" ----------------------------------------------------------------------------
+" PROJECT (LazyVim Style)
+" ----------------------------------------------------------------------------
+nnoremap <leader>pp :action ManageRecentProjects<CR>
+nnoremap <leader>pf :action GotoFile<CR>
+nnoremap <leader>ps :action GotoSymbol<CR>
+nnoremap <leader>pr :action RecentFiles<CR>
 
 " ----------------------------------------------------------------------------
 " GENERACIÓN Y COMPLETADO
 " ----------------------------------------------------------------------------
 nnoremap <c-g> :action Generate<CR>
 nnoremap <c-a> :action GotoAction<CR>
-nmap <leader>te :action GotoTest<CR>
+nnoremap <leader>a :action GotoAction<CR>
+
+" ----------------------------------------------------------------------------
+" BOOKMARKS (LazyVim Style)
+" ----------------------------------------------------------------------------
+nnoremap <leader>mm :action ToggleBookmark<CR>
+nnoremap <leader>ml :action ShowBookmarks<CR>
+nnoremap <leader>mn :action GotoNextBookmark<CR>
+nnoremap <leader>mp :action GotoPreviousBookmark<CR>
 
 " ----------------------------------------------------------------------------
 " MENUS
@@ -203,10 +416,6 @@ xmap S <Action>(flash.treesitter)
 " Operaciones remotas
 omap r <Action>(flash.remote)
 
-" ----------------------------------------------------------------------------
-" OTROS
-" ----------------------------------------------------------------------------
-nnoremap <leader>uz :action TogglePresentationMode<CR>
 
 " ============================================================================
 " FIN DE CONFIGURACIÓN
