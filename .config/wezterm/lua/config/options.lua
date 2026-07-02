@@ -4,6 +4,7 @@ local function options(config)
 	-- Ensure system binaries are available in PATH
 	config.set_environment_variables = {
 		PATH = "/usr/local/bin:/usr/bin:/bin:" .. (os.getenv("PATH") or ""),
+		TERM = "xterm-256color",
 	}
 
 	-- Quit wezterm when all windows are closed
@@ -16,24 +17,24 @@ local function options(config)
 	config.enable_kitty_keyboard = true
 	config.enable_csi_u_key_encoding = false
 
-	-- Make Option key work as expected
+	-- Make Option key work as expected (right option as alt like in kitty)
 	config.send_composed_key_when_left_alt_is_pressed = true
-	config.send_composed_key_when_right_alt_is_pressed = true
+	config.send_composed_key_when_right_alt_is_pressed = false
 
-	-- Optimize scrollback for tmux usage
-	config.scrollback_lines = 3000
+	-- Scrollback lines (matching kitty: 10000)
+	config.scrollback_lines = 10000
 
 	-- Optimize frame rate for performance
 	config.max_fps = 60
 	config.animation_fps = 60
 
-	-- Set color scheme
+	-- Set color scheme (Nord theme)
 	config.color_scheme = "nord"
 	config.colors = wezterm.color.get_builtin_schemes()["nord"]
-	config.window_background_opacity = 0.9
-	config.macos_window_background_blur = 20
+	config.window_background_opacity = 1.9
+	config.macos_window_background_blur = 8
 
-	-- Font style with ligatures
+	-- Font style with ligatures (matching kitty: size 13)
 	config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Medium" })
 
 	config.font_rules = {
@@ -47,19 +48,19 @@ local function options(config)
 		},
 	}
 
-	-- Font size
-	config.font_size = 12
+	-- Font size (matching kitty: 13)
+	config.font_size = 13
 	config.line_height = 1.2
 
 	-- Use integrated titlebar with terminal colors
 	config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
-	-- Disable window padding
+	-- Window padding (matching kitty: 1 5 2 2)
 	config.window_padding = {
-		left = 0,
-		right = 0,
-		top = 40,
-		bottom = 0,
+		left = 5,
+		right = 2,
+		top = 41,
+		bottom = 2,
 	}
 
 	-- Disable dimming of inactive panes (tmux handles this)
@@ -72,8 +73,22 @@ local function options(config)
 	config.underline_position = "150%"
 	config.underline_thickness = "200%"
 
-	-- Disable tab bar (using tmux instead)
+	-- Cursor style (matching kitty: beam cursor with blink)
+	config.default_cursor_style = "BlinkingBar"
+	config.cursor_blink_rate = 500
+	config.cursor_blink_ease_in = "Constant"
+	config.cursor_blink_ease_out = "Constant"
+	config.cursor_thickness = "1.5pt"
+
+	-- Disable audio bell
+	config.audible_bell = "Disabled"
+
+	-- Tab bar settings (hide tab bar, using tmux instead)
 	config.enable_tab_bar = false
+	config.hide_tab_bar_if_only_one_tab = true
+
+	-- Start shell with tmux (matching kitty behavior)
+	config.default_prog = { "zsh", "--login" }
 end
 
 return options

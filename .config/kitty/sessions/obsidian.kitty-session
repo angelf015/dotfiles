@@ -10,7 +10,7 @@
 # https://sw.kovidgoyal.net/kitty/layouts/#arrange-windows
 layout tall
 
-cd ~/github/obsidian_main
+cd ~/workspace/org/brain
 
 # How to get the title from within kitty:
 # kitten @ ls | jq -r '.[] | select(.is_focused) | .tabs[] | select(.is_focused) | .windows[] | select(.is_focused) | .title'
